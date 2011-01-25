@@ -27,20 +27,20 @@
 		016C5E4F12EEF41900C1740C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		016C5E5012EEF41900C1740C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		016C5E5112EEF41900C1740C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		016C5E5412EEF41900C1740C /* StudioMan-Info.plist */ = {isa = PBXFileReference; path = "StudioMan-Info.plist"; sourceTree = "<group>"; };
+		016C5E5412EEF41900C1740C /* StudioMan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudioMan-Info.plist"; sourceTree = "<group>"; };
 		016C5E5612EEF41900C1740C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		016C5E5812EEF41900C1740C /* StudioMan-Prefix.pch */ = {isa = PBXFileReference; path = "StudioMan-Prefix.pch"; sourceTree = "<group>"; };
+		016C5E5812EEF41900C1740C /* StudioMan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudioMan-Prefix.pch"; sourceTree = "<group>"; };
 		016C5E5912EEF41900C1740C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		016C5E5C12EEF41900C1740C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		016C5E5E12EEF41900C1740C /* SMTerm.h */ = {isa = PBXFileReference; path = SMTerm.h; sourceTree = "<group>"; };
+		016C5E5E12EEF41900C1740C /* SMTerm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMTerm.h; sourceTree = "<group>"; };
 		016C5E5F12EEF41900C1740C /* SMTerm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTerm.m; sourceTree = "<group>"; };
 		016C5E6212EEF41900C1740C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SMTerm.xib; sourceTree = "<group>"; };
 		016C5E6512EEF41A00C1740C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		016C5E6812EEF41A00C1740C /* SMTerm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SMTerm.xcdatamodel; sourceTree = "<group>"; };
 		016C5E6F12EEF41A00C1740C /* StudioManTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudioManTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		016C5E7312EEF41A00C1740C /* StudioManTests-Info.plist */ = {isa = PBXFileReference; path = "StudioManTests-Info.plist"; sourceTree = "<group>"; };
+		016C5E7312EEF41A00C1740C /* StudioManTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudioManTests-Info.plist"; sourceTree = "<group>"; };
 		016C5E7512EEF41A00C1740C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		016C5E7712EEF41A00C1740C /* StudioManTests-Prefix.pch */ = {isa = PBXFileReference; path = "StudioManTests-Prefix.pch"; sourceTree = "<group>"; };
+		016C5E7712EEF41A00C1740C /* StudioManTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudioManTests-Prefix.pch"; sourceTree = "<group>"; };
 		016C5E7812EEF41A00C1740C /* StudioManTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudioManTests.h; sourceTree = "<group>"; };
 		016C5E7A12EEF41A00C1740C /* StudioManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudioManTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
