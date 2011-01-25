@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		016C5E4D12EEF41900C1740C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016C5E4C12EEF41900C1740C /* Cocoa.framework */; };
+		016C5E5712EEF41900C1740C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E5512EEF41900C1740C /* InfoPlist.strings */; };
+		016C5E5A12EEF41900C1740C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C5E5912EEF41900C1740C /* main.m */; };
+		016C5E5D12EEF41900C1740C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E5B12EEF41900C1740C /* Credits.rtf */; };
+		016C5E6012EEF41900C1740C /* SMTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C5E5F12EEF41900C1740C /* SMTerm.m */; };
+		016C5E6312EEF41900C1740C /* SMTerm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E6112EEF41900C1740C /* SMTerm.xib */; };
+		016C5E6612EEF41A00C1740C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E6412EEF41A00C1740C /* MainMenu.xib */; };
+		016C5E6912EEF41A00C1740C /* SMTerm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 016C5E6712EEF41A00C1740C /* SMTerm.xcdatamodeld */; };
+		016C5E7012EEF41A00C1740C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016C5E4C12EEF41900C1740C /* Cocoa.framework */; };
+		016C5E7612EEF41A00C1740C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E7412EEF41A00C1740C /* InfoPlist.strings */; };
+		016C5E7912EEF41A00C1740C /* StudioManTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E7812EEF41A00C1740C /* StudioManTests.h */; };
+		016C5E7B12EEF41A00C1740C /* StudioManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C5E7A12EEF41A00C1740C /* StudioManTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		016C5E4812EEF41900C1740C /* StudioMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudioMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		016C5E4C12EEF41900C1740C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		016C5E4F12EEF41900C1740C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		016C5E5012EEF41900C1740C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		016C5E5112EEF41900C1740C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		016C5E5412EEF41900C1740C /* StudioMan-Info.plist */ = {isa = PBXFileReference; path = "StudioMan-Info.plist"; sourceTree = "<group>"; };
+		016C5E5612EEF41900C1740C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		016C5E5812EEF41900C1740C /* StudioMan-Prefix.pch */ = {isa = PBXFileReference; path = "StudioMan-Prefix.pch"; sourceTree = "<group>"; };
+		016C5E5912EEF41900C1740C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		016C5E5C12EEF41900C1740C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		016C5E5E12EEF41900C1740C /* SMTerm.h */ = {isa = PBXFileReference; path = SMTerm.h; sourceTree = "<group>"; };
+		016C5E5F12EEF41900C1740C /* SMTerm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMTerm.m; sourceTree = "<group>"; };
+		016C5E6212EEF41900C1740C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SMTerm.xib; sourceTree = "<group>"; };
+		016C5E6512EEF41A00C1740C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		016C5E6812EEF41A00C1740C /* SMTerm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SMTerm.xcdatamodel; sourceTree = "<group>"; };
+		016C5E6F12EEF41A00C1740C /* StudioManTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudioManTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		016C5E7312EEF41A00C1740C /* StudioManTests-Info.plist */ = {isa = PBXFileReference; path = "StudioManTests-Info.plist"; sourceTree = "<group>"; };
+		016C5E7512EEF41A00C1740C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		016C5E7712EEF41A00C1740C /* StudioManTests-Prefix.pch */ = {isa = PBXFileReference; path = "StudioManTests-Prefix.pch"; sourceTree = "<group>"; };
+		016C5E7812EEF41A00C1740C /* StudioManTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudioManTests.h; sourceTree = "<group>"; };
+		016C5E7A12EEF41A00C1740C /* StudioManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudioManTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		016C5E4512EEF41900C1740C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016C5E4D12EEF41900C1740C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016C5E6B12EEF41A00C1740C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016C5E7012EEF41A00C1740C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		016C5E3D12EEF41900C1740C = {
+			isa = PBXGroup;
+			children = (
+				016C5E5212EEF41900C1740C /* StudioMan */,
+				016C5E7112EEF41A00C1740C /* StudioManTests */,
+				016C5E4B12EEF41900C1740C /* Frameworks */,
+				016C5E4912EEF41900C1740C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		016C5E4912EEF41900C1740C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				016C5E4812EEF41900C1740C /* StudioMan.app */,
+				016C5E6F12EEF41A00C1740C /* StudioManTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		016C5E4B12EEF41900C1740C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				016C5E4C12EEF41900C1740C /* Cocoa.framework */,
+				016C5E4E12EEF41900C1740C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		016C5E4E12EEF41900C1740C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				016C5E4F12EEF41900C1740C /* AppKit.framework */,
+				016C5E5012EEF41900C1740C /* CoreData.framework */,
+				016C5E5112EEF41900C1740C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		016C5E5212EEF41900C1740C /* StudioMan */ = {
+			isa = PBXGroup;
+			children = (
+				016C5E5E12EEF41900C1740C /* SMTerm.h */,
+				016C5E5F12EEF41900C1740C /* SMTerm.m */,
+				016C5E6112EEF41900C1740C /* SMTerm.xib */,
+				016C5E6412EEF41A00C1740C /* MainMenu.xib */,
+				016C5E6712EEF41A00C1740C /* SMTerm.xcdatamodeld */,
+				016C5E5312EEF41900C1740C /* Supporting Files */,
+			);
+			path = StudioMan;
+			sourceTree = "<group>";
+		};
+		016C5E5312EEF41900C1740C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				016C5E5412EEF41900C1740C /* StudioMan-Info.plist */,
+				016C5E5512EEF41900C1740C /* InfoPlist.strings */,
+				016C5E5812EEF41900C1740C /* StudioMan-Prefix.pch */,
+				016C5E5912EEF41900C1740C /* main.m */,
+				016C5E5B12EEF41900C1740C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		016C5E7112EEF41A00C1740C /* StudioManTests */ = {
+			isa = PBXGroup;
+			children = (
+				016C5E7812EEF41A00C1740C /* StudioManTests.h */,
+				016C5E7A12EEF41A00C1740C /* StudioManTests.m */,
+				016C5E7212EEF41A00C1740C /* Supporting Files */,
+			);
+			path = StudioManTests;
+			sourceTree = "<group>";
+		};
+		016C5E7212EEF41A00C1740C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				016C5E7312EEF41A00C1740C /* StudioManTests-Info.plist */,
+				016C5E7412EEF41A00C1740C /* InfoPlist.strings */,
+				016C5E7712EEF41A00C1740C /* StudioManTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		016C5E4712EEF41900C1740C /* StudioMan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 016C5E7E12EEF41A00C1740C /* Build configuration list for PBXNativeTarget "StudioMan" */;
+			buildPhases = (
+				016C5E4412EEF41900C1740C /* Sources */,
+				016C5E4512EEF41900C1740C /* Frameworks */,
+				016C5E4612EEF41900C1740C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudioMan;
+			productName = StudioMan;
+			productReference = 016C5E4812EEF41900C1740C /* StudioMan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		016C5E6E12EEF41A00C1740C /* StudioManTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 016C5E8112EEF41A00C1740C /* Build configuration list for PBXNativeTarget "StudioManTests" */;
+			buildPhases = (
+				016C5E6A12EEF41A00C1740C /* Sources */,
+				016C5E6B12EEF41A00C1740C /* Frameworks */,
+				016C5E6C12EEF41A00C1740C /* Resources */,
+				016C5E6D12EEF41A00C1740C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudioManTests;
+			productName = StudioManTests;
+			productReference = 016C5E6F12EEF41A00C1740C /* StudioManTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		016C5E3F12EEF41900C1740C /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 016C5E4212EEF41900C1740C /* Build configuration list for PBXProject "StudioMan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 016C5E3D12EEF41900C1740C;
+			productRefGroup = 016C5E4912EEF41900C1740C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				016C5E4712EEF41900C1740C /* StudioMan */,
+				016C5E6E12EEF41A00C1740C /* StudioManTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		016C5E4612EEF41900C1740C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016C5E5712EEF41900C1740C /* InfoPlist.strings in Resources */,
+				016C5E5D12EEF41900C1740C /* Credits.rtf in Resources */,
+				016C5E6312EEF41900C1740C /* SMTerm.xib in Resources */,
+				016C5E6612EEF41A00C1740C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016C5E6C12EEF41A00C1740C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016C5E7612EEF41A00C1740C /* InfoPlist.strings in Resources */,
+				016C5E7912EEF41A00C1740C /* StudioManTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		016C5E6D12EEF41A00C1740C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		016C5E4412EEF41900C1740C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016C5E5A12EEF41900C1740C /* main.m in Sources */,
+				016C5E6012EEF41900C1740C /* SMTerm.m in Sources */,
+				016C5E6912EEF41A00C1740C /* SMTerm.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016C5E6A12EEF41A00C1740C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016C5E7B12EEF41A00C1740C /* StudioManTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		016C5E5512EEF41900C1740C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016C5E5612EEF41900C1740C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		016C5E5B12EEF41900C1740C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016C5E5C12EEF41900C1740C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		016C5E6112EEF41900C1740C /* SMTerm.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016C5E6212EEF41900C1740C /* en */,
+			);
+			name = SMTerm.xib;
+			sourceTree = "<group>";
+		};
+		016C5E6412EEF41A00C1740C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016C5E6512EEF41A00C1740C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		016C5E7412EEF41A00C1740C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016C5E7512EEF41A00C1740C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		016C5E7C12EEF41A00C1740C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		016C5E7D12EEF41A00C1740C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		016C5E7F12EEF41A00C1740C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudioMan/StudioMan-Prefix.pch";
+				INFOPLIST_FILE = "StudioMan/StudioMan-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		016C5E8012EEF41A00C1740C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudioMan/StudioMan-Prefix.pch";
+				INFOPLIST_FILE = "StudioMan/StudioMan-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		016C5E8212EEF41A00C1740C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StudioMan.app/Contents/MacOS/StudioMan";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudioManTests/StudioManTests-Prefix.pch";
+				INFOPLIST_FILE = "StudioManTests/StudioManTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		016C5E8312EEF41A00C1740C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StudioMan.app/Contents/MacOS/StudioMan";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StudioManTests/StudioManTests-Prefix.pch";
+				INFOPLIST_FILE = "StudioManTests/StudioManTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		016C5E4212EEF41900C1740C /* Build configuration list for PBXProject "StudioMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016C5E7C12EEF41A00C1740C /* Debug */,
+				016C5E7D12EEF41A00C1740C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		016C5E7E12EEF41A00C1740C /* Build configuration list for PBXNativeTarget "StudioMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016C5E7F12EEF41A00C1740C /* Debug */,
+				016C5E8012EEF41A00C1740C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		016C5E8112EEF41A00C1740C /* Build configuration list for PBXNativeTarget "StudioManTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016C5E8212EEF41A00C1740C /* Debug */,
+				016C5E8312EEF41A00C1740C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		016C5E6712EEF41A00C1740C /* SMTerm.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				016C5E6812EEF41A00C1740C /* SMTerm.xcdatamodel */,
+			);
+			currentVersion = 016C5E6812EEF41A00C1740C /* SMTerm.xcdatamodel */;
+			path = SMTerm.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 016C5E3F12EEF41900C1740C /* Project object */;
+}

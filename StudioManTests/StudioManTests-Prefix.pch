@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'StudioManTests' target in the 'StudioManTests' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
