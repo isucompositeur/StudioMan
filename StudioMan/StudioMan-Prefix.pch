@@ -1,5 +1,9 @@
 /******************************************************************************
  *                                                                            *
+ * StudioMan: Music studio management software                                *
+ *                                                                            *
+ * Copyright (C) 2011 Nicholas Meyer                                          *               
+ *                                                                            *
  * This file is part of StudioMan.                                            *
  *                                                                            *
  * StudioMan is free software: you can redistribute it and/or modify it under *
