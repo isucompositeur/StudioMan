@@ -54,4 +54,50 @@
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
 }
 
+# pragma mark -
+# pragma mark NSSplitViewDelegate methods
+
+- (BOOL)splitView:(NSSplitView *)splitView shouldAdjustSizeOfSubview:(NSView *)subview {
+    if(subview == helperView || subview == [sidebarSplitView superview]) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+- (BOOL)splitView:(NSSplitView *)splitView canCollapseSubview:(NSView *)subview {
+    if(subview == helperView) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMin ofSubviewAt:(NSInteger)dividerIndex {
+    if(splitView == mainSplitView) {
+        return 240.0;
+    } else if (splitView == sidebarSplitView) {
+        return [splitView frame].size.height - (240.0 + [splitView dividerThickness]);
+    } else {
+        return proposedMin;
+    }
+}
+
+- (CGFloat)splitView:(NSSplitView *)splitView constrainMaxCoordinate:(CGFloat)proposedMax ofSubviewAt:(NSInteger)dividerIndex {
+    if(splitView == sidebarSplitView) {
+        return [splitView frame].size.height - (240.0 + [splitView dividerThickness]);
+    } else {
+        return proposedMax;
+    }
+}
+
+- (BOOL)splitView:(NSSplitView *)splitView shouldCollapseSubview:(NSView *)subview forDoubleClickOnDividerAtIndex:(NSInteger)dividerIndex {
+    if (subview == helperView) {
+        NSLog(@"hey, i should collapse this!");
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 @end

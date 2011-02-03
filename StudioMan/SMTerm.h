@@ -31,7 +31,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SMTerm : NSPersistentDocument {
+@interface SMTerm : NSPersistentDocument <NSSplitViewDelegate> {
+    
+    IBOutlet NSWindow *window; // temp until XCode4 is fixed
+    
+    IBOutlet NSSplitView *mainSplitView;
+    IBOutlet NSSplitView *sidebarSplitView;
+    
+    IBOutlet NSView *sourceView;
+    IBOutlet NSView *helperView;
+    IBOutlet NSView *mainView;
 
 }
 
