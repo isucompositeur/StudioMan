@@ -1,0 +1,437 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/585/trunk/CoreNetworking
+END
+AFNetworkTypes.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/495/trunk/CoreNetworking/AFNetworkTypes.m
+END
+AFNetworkConstants.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkConstants.h
+END
+AFNetworkDocument.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkDocument.h
+END
+AFNetworkConstants.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/362/trunk/CoreNetworking/AFNetworkConstants.m
+END
+AFNetworkPacketWrite.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkPacketWrite.h
+END
+AFNetworkDocument.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/535/trunk/CoreNetworking/AFNetworkDocument.m
+END
+AFNetworkMacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkMacros.h
+END
+NSURLRequest+AFNetworkAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/521/trunk/CoreNetworking/NSURLRequest+AFNetworkAdditions.h
+END
+AFNetworkPacketWrite.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/552/trunk/CoreNetworking/AFNetworkPacketWrite.m
+END
+AFNetworkServiceDiscoveryRunLoopSource.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/562/trunk/CoreNetworking/AFNetworkServiceDiscoveryRunLoopSource.h
+END
+AFNetworkMacros.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/521/trunk/CoreNetworking/AFNetworkMacros.m
+END
+AFHTTPHeadersPacket.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/524/trunk/CoreNetworking/AFHTTPHeadersPacket.h
+END
+NSURLRequest+AFNetworkAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/523/trunk/CoreNetworking/NSURLRequest+AFNetworkAdditions.m
+END
+AFNetworkServiceDiscoveryRunLoopSource.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/564/trunk/CoreNetworking/AFNetworkServiceDiscoveryRunLoopSource.m
+END
+AFHTTPHeadersPacket.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/551/trunk/CoreNetworking/AFHTTPHeadersPacket.m
+END
+AFHTTPMessagePacket.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/524/trunk/CoreNetworking/AFHTTPMessagePacket.h
+END
+AFHTTPClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/547/trunk/CoreNetworking/AFHTTPClient.h
+END
+AFNetworkPacket.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/552/trunk/CoreNetworking/AFNetworkPacket.h
+END
+AFHTTPMessagePacket.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/551/trunk/CoreNetworking/AFHTTPMessagePacket.m
+END
+AFHTTPClient.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/575/trunk/CoreNetworking/AFHTTPClient.m
+END
+AFHTTPBodyPacket.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/524/trunk/CoreNetworking/AFHTTPBodyPacket.h
+END
+AFHTTPTransaction.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/506/trunk/CoreNetworking/AFHTTPTransaction.h
+END
+AFNetworkDelegateProxy.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkDelegateProxy.h
+END
+AFNetworkPacket.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/552/trunk/CoreNetworking/AFNetworkPacket.m
+END
+AFNetworkLayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/547/trunk/CoreNetworking/AFNetworkLayer.h
+END
+CoreNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/548/trunk/CoreNetworking/CoreNetworking.h
+END
+AFHTTPBodyPacket.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/581/trunk/CoreNetworking/AFHTTPBodyPacket.m
+END
+AFHTTPTransaction.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/441/trunk/CoreNetworking/AFHTTPTransaction.m
+END
+AFNetworkLayer.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/580/trunk/CoreNetworking/AFNetworkLayer.m
+END
+AFNetworkDelegateProxy.m
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkDelegateProxy.m
+END
+CoreNetworking.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/521/trunk/CoreNetworking/CoreNetworking.m
+END
+AFHTTPConnection.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/575/trunk/CoreNetworking/AFHTTPConnection.h
+END
+AFNetworkTransportLayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/537/trunk/CoreNetworking/AFNetworkTransportLayer.h
+END
+AFHTTPConnection.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/575/trunk/CoreNetworking/AFHTTPConnection.m
+END
+AFNetworkStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/558/trunk/CoreNetworking/AFNetworkStream.h
+END
+AFHTTPServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/537/trunk/CoreNetworking/AFHTTPServer.h
+END
+AFNetworkConnection.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkConnection.h
+END
+AFNetworkService.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/562/trunk/CoreNetworking/AFNetworkService.h
+END
+AFNetworkStream.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/572/trunk/CoreNetworking/AFNetworkStream.m
+END
+AFHTTPServer.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/573/trunk/CoreNetworking/AFHTTPServer.m
+END
+AFNetworkPacketRead.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/551/trunk/CoreNetworking/AFNetworkPacketRead.h
+END
+AFNetworkConnection.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/568/trunk/CoreNetworking/AFNetworkConnection.m
+END
+AFNetworkService.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/562/trunk/CoreNetworking/AFNetworkService.m
+END
+AFNetworkServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/537/trunk/CoreNetworking/AFNetworkServer.h
+END
+AFNetworkPacketRead.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/556/trunk/CoreNetworking/AFNetworkPacketRead.m
+END
+AFNetworkFunctions.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/566/trunk/CoreNetworking/AFNetworkFunctions.h
+END
+AFNetworkPool.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkPool.h
+END
+AFHTTPMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/579/trunk/CoreNetworking/AFHTTPMessage.h
+END
+AFNetworkServer.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/559/trunk/CoreNetworking/AFNetworkServer.m
+END
+AFNetworkPacketQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkPacketQueue.h
+END
+CoreNetworking-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/542/trunk/CoreNetworking/CoreNetworking-Info.plist
+END
+AFNetworkFunctions.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/568/trunk/CoreNetworking/AFNetworkFunctions.m
+END
+AFNetworkPacketWriteFromReadStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/551/trunk/CoreNetworking/AFNetworkPacketWriteFromReadStream.h
+END
+AFNetworkPool.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkPool.m
+END
+AFHTTPMessage.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/579/trunk/CoreNetworking/AFHTTPMessage.m
+END
+NSDictionary+AFNetworkAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/521/trunk/CoreNetworking/NSDictionary+AFNetworkAdditions.h
+END
+AFNetworkPacketQueue.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkPacketQueue.m
+END
+AFNetworkPacketWriteFromReadStream.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/553/trunk/CoreNetworking/AFNetworkPacketWriteFromReadStream.m
+END
+NSDictionary+AFNetworkAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/521/trunk/CoreNetworking/NSDictionary+AFNetworkAdditions.m
+END
+AFNetworkSocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/524/trunk/CoreNetworking/AFNetworkSocket.h
+END
+AFNetworkConnectionLayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/537/trunk/CoreNetworking/AFNetworkConnectionLayer.h
+END
+AFNetworkSocket.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/547/trunk/CoreNetworking/AFNetworkSocket.m
+END
+AFNetworkFormDocument.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/519/trunk/CoreNetworking/AFNetworkFormDocument.h
+END
+AFNetworkFormDocument.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/585/trunk/CoreNetworking/AFNetworkFormDocument.m
+END
+corenetworking.doxyconf
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/420/trunk/CoreNetworking/corenetworking.doxyconf
+END
+AFXMLElementPacket.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/524/trunk/CoreNetworking/AFXMLElementPacket.h
+END
+AFNetworkTransport.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/552/trunk/CoreNetworking/AFNetworkTransport.h
+END
+AFNetworkPacketReadToWriteStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/562/trunk/CoreNetworking/AFNetworkPacketReadToWriteStream.h
+END
+AFXMLElementPacket.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/551/trunk/CoreNetworking/AFXMLElementPacket.m
+END
+AFNetworkTransport.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/559/trunk/CoreNetworking/AFNetworkTransport.m
+END
+AFNetworkPacketReadToWriteStream.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/552/trunk/CoreNetworking/AFNetworkPacketReadToWriteStream.m
+END
+AFNetworkTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/498/trunk/CoreNetworking/AFNetworkTypes.h
+END

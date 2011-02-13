@@ -20,18 +20,22 @@
  * with StudioMan.  If not, see <http://www.gnu.org/licenses/>.               *
  *                                                                            *
  ******************************************************************************/
- 
-//
-//  SMTerm.h
-//  StudioMan
-//
-//  Created by Nicholas Meyer on 1/25/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+
+/******************************************************************************
+ *                                                                            *
+ * SMTerm                                                                     *
+ * StudioMan                                                                  *
+ *                                                                            *
+ * This class is a subclass of NSPersistentDocument that acts as the          *
+ * document class for StudioMan. It is the delegate for the toolbar and       *
+ * split views that make up part of the interface.                            *
+ *                                                                            *
+ ******************************************************************************/
 
 #import <Cocoa/Cocoa.h>
+#import "NSSplitView+Additions.h"
 
-@interface SMTerm : NSPersistentDocument <NSSplitViewDelegate> {
+@interface SMTerm : NSPersistentDocument <NSSplitViewDelegate, NSSplitViewDelegateAdditions> {
     
     IBOutlet NSWindow *window; // temp until XCode4 is fixed
     
@@ -41,7 +45,11 @@
     IBOutlet NSView *sourceView;
     IBOutlet NSView *helperView;
     IBOutlet NSView *mainView;
+    
+    NSMutableDictionary *collapsedViewRects;
 
 }
+
+- (IBAction)clickSideBarControl:(id)sender;
 
 @end

@@ -21,15 +21,20 @@
  *                                                                            *
  ******************************************************************************/
 
-//
-//  SMTerm.m
-//  StudioMan
-//
-//  Created by Nicholas Meyer on 1/25/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/******************************************************************************
+ *                                                                            *
+ * SMTerm                                                                     *
+ * StudioMan                                                                  *
+ *                                                                            *
+ * This class is a subclass of NSPersistentDocument that acts as the          *
+ * document class for StudioMan. It is the delegate for the toolbar and       *
+ * split views that make up part of the interface.                            *
+ *                                                                            *
+ ******************************************************************************/
 
 #import "SMTerm.h"
+
+static const int SMCalendarControlShowHideSegmentIndex = 1;
 
 @implementation SMTerm
 
@@ -39,6 +44,7 @@
     if (self) {
         // Add your subclass-specific initialization here.
         // If an error occurs here, send a [self release] message and return nil.
+        collapsedViewRects = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -65,19 +71,11 @@
     }
 }
 
-- (BOOL)splitView:(NSSplitView *)splitView canCollapseSubview:(NSView *)subview {
-    if(subview == helperView) {
-        return YES;
-    } else {
-        return NO;
-    }
-}
-
 - (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMin ofSubviewAt:(NSInteger)dividerIndex {
     if(splitView == mainSplitView) {
-        return 240.0;
+        return 180.0;
     } else if (splitView == sidebarSplitView) {
-        return [splitView frame].size.height - (240.0 + [splitView dividerThickness]);
+        return [splitView frame].size.height - (180.0 + [splitView dividerThickness]);
     } else {
         return proposedMin;
     }
@@ -85,19 +83,54 @@
 
 - (CGFloat)splitView:(NSSplitView *)splitView constrainMaxCoordinate:(CGFloat)proposedMax ofSubviewAt:(NSInteger)dividerIndex {
     if(splitView == sidebarSplitView) {
-        return [splitView frame].size.height - (240.0 + [splitView dividerThickness]);
+        return [splitView frame].size.height - (180.0 + [splitView dividerThickness]);
     } else {
         return proposedMax;
     }
 }
 
-- (BOOL)splitView:(NSSplitView *)splitView shouldCollapseSubview:(NSView *)subview forDoubleClickOnDividerAtIndex:(NSInteger)dividerIndex {
-    if (subview == helperView) {
-        NSLog(@"hey, i should collapse this!");
-        return YES;
-    } else {
-        return NO;
-    }
+- (BOOL)splitView:(NSSplitView *)splitView shouldHideDividerAtIndex:(NSInteger)dividerIndex
+{
+    return YES;
 }
+
+
+# pragma mark -
+# pragma mark NSSplitViewDelegateAdditions methods
+
+- (void)setOriginalRect:(NSRect)rect forSubview:(NSView *)subview
+{
+    [collapsedViewRects setValue:NSStringFromRect(rect) forKey:[subview description]];
+}
+
+- (NSRect)originalRectForSubview:(NSView *)subview
+{
+    NSString *rectString = [collapsedViewRects valueForKey:[subview description]];
+    return NSRectFromString(rectString);
+}
+
+- (IBAction)clickSideBarControl:(id)sender
+{
+    NSSegmentedControl *sideBarControl = (NSSegmentedControl *)sender;
+    int clickedSegment = [sideBarControl selectedSegment];
+    
+    switch (clickedSegment) {
+        case 0:
+            break;
+        case SMCalendarControlShowHideSegmentIndex:
+            NSLog(@"clicked cal icon. Selected: %s",[sideBarControl isSelectedForSegment:clickedSegment] ? "YES" : "NO");
+            [sidebarSplitView toggleSubview:helperView];
+            if ([sideBarControl isSelectedForSegment:clickedSegment]) {
+                [sideBarControl setImage:[NSImage imageNamed:@"Calendars_On"] forSegment:clickedSegment];
+            } else {
+                [sideBarControl setImage:[NSImage imageNamed:@"Calendars_Off"] forSegment:clickedSegment];
+            }
+            break;
+        case 2:
+            break;
+    }
+    
+}
+
 
 @end

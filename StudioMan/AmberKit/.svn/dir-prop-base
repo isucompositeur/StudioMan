@@ -1,0 +1,9 @@
+K 13
+svn:externals
+V 282
+switchcontrol http://switchcontrol.googlecode.com/svn/tags/1.0.2/code
+sourcelist http://sourcelist.googlecode.com/svn/tags/0.2/code
+calendarcontrol http://calendarcontrol.googlecode.com/svn/tags/1.0.0/code
+activationcontrol http://activationcontrol.googlecode.com/svn/tags/0.2/code
+
+END
