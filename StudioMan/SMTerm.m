@@ -33,8 +33,10 @@
  ******************************************************************************/
 
 #import "SMTerm.h"
+#import <Foundation/NSGeometry.h>
 
 static const int SMCalendarControlShowHideSegmentIndex = 1;
+static const NSString *SMTermEntity = @"Term";
 
 @implementation SMTerm
 
@@ -46,6 +48,10 @@ static const int SMCalendarControlShowHideSegmentIndex = 1;
         // If an error occurs here, send a [self release] message and return nil.
         collapsedViewRects = [[NSMutableDictionary alloc] init];
     }
+    
+    NSManagedObject *newTerm = [NSEntityDescription insertNewObjectForEntityForName:SMTermEntity inManagedObjectContext:[self managedObjectContext]];
+    [newTerm setValue:@"Untitled term" forKey:@"displayTitle"];
+    
     return self;
 }
 
@@ -58,6 +64,37 @@ static const int SMCalendarControlShowHideSegmentIndex = 1;
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
+    //[sidebarSegmentedControl setMenu:addButtonMenu forSegment:0];
+}
+
+- (IBAction)clickSideBarControl:(id)sender
+{
+    NSSegmentedControl *sidebarControl = (NSSegmentedControl *)sender;
+    int clickedSegment = [sidebarControl selectedSegment];
+    NSPoint point;
+    //NSEvent *event;
+    
+    switch (clickedSegment) {
+        case 0:
+            point = [sidebarControl convertPoint:[sidebarControl frame].origin fromView:nil];
+            NSEvent *event = [NSEvent mouseEventWithType:NSLeftMouseDown location:NSMakePoint(0, 0) modifierFlags:0 timestamp:[NSDate timeIntervalSinceReferenceDate] windowNumber:[[sidebarControl window] windowNumber] context:[[sidebarControl window] graphicsContext] eventNumber:0 clickCount:1 pressure:0];
+            [NSMenu popUpContextMenu:addButtonMenu withEvent:event forView:sidebarControl withFont:[NSFont systemFontOfSize:11]];
+            break;
+        case SMCalendarControlShowHideSegmentIndex:
+            NSLog(@"clicked cal icon. Selected: %s",[sidebarControl isSelectedForSegment:clickedSegment] ? "YES" : "NO");
+            [sidebarSplitView toggleSubview:helperView];
+            if ([sidebarControl isSelectedForSegment:clickedSegment]) {
+                [sidebarControl setImage:[NSImage imageNamed:@"Calendars_On"] forSegment:clickedSegment];
+                [sidebarControl setSelected:YES forSegment:clickedSegment];
+            } else {
+                [sidebarControl setImage:[NSImage imageNamed:@"Calendars_Off"] forSegment:clickedSegment];
+                [sidebarControl setSelected:NO forSegment:clickedSegment];
+            }
+            break;
+        case 2:
+            break;
+    }
+    
 }
 
 # pragma mark -
@@ -82,7 +119,9 @@ static const int SMCalendarControlShowHideSegmentIndex = 1;
 }
 
 - (CGFloat)splitView:(NSSplitView *)splitView constrainMaxCoordinate:(CGFloat)proposedMax ofSubviewAt:(NSInteger)dividerIndex {
-    if(splitView == sidebarSplitView) {
+    if(splitView == mainSplitView) {
+        return [splitView frame].size.width / 2.0;
+    } else if(splitView == sidebarSplitView) {
         return [splitView frame].size.height - (180.0 + [splitView dividerThickness]);
     } else {
         return proposedMax;
@@ -109,28 +148,10 @@ static const int SMCalendarControlShowHideSegmentIndex = 1;
     return NSRectFromString(rectString);
 }
 
-- (IBAction)clickSideBarControl:(id)sender
-{
-    NSSegmentedControl *sideBarControl = (NSSegmentedControl *)sender;
-    int clickedSegment = [sideBarControl selectedSegment];
-    
-    switch (clickedSegment) {
-        case 0:
-            break;
-        case SMCalendarControlShowHideSegmentIndex:
-            NSLog(@"clicked cal icon. Selected: %s",[sideBarControl isSelectedForSegment:clickedSegment] ? "YES" : "NO");
-            [sidebarSplitView toggleSubview:helperView];
-            if ([sideBarControl isSelectedForSegment:clickedSegment]) {
-                [sideBarControl setImage:[NSImage imageNamed:@"Calendars_On"] forSegment:clickedSegment];
-            } else {
-                [sideBarControl setImage:[NSImage imageNamed:@"Calendars_Off"] forSegment:clickedSegment];
-            }
-            break;
-        case 2:
-            break;
-    }
-    
-}
+# pragma mark -
+# pragma mark NSOutlineViewDelegate methods
+
+
 
 
 @end

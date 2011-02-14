@@ -53,6 +53,9 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
+    [[NSColor whiteColor] set];
+    NSBezierPath *framePath = [NSBezierPath bezierPathWithRect:[self bounds]];
+    [framePath fill];
     // Drawing code here.
 }
 

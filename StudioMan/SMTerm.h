@@ -35,9 +35,10 @@
 #import <Cocoa/Cocoa.h>
 #import "NSSplitView+Additions.h"
 
-@interface SMTerm : NSPersistentDocument <NSSplitViewDelegate, NSSplitViewDelegateAdditions> {
+@interface SMTerm : NSPersistentDocument <NSSplitViewDelegate, NSSplitViewDelegateAdditions, NSOutlineViewDelegate> {
     
     IBOutlet NSWindow *window; // temp until XCode4 is fixed
+    IBOutlet NSManagedObjectContext *managedObjectContext; // temp until XCode4 is fixed
     
     IBOutlet NSSplitView *mainSplitView;
     IBOutlet NSSplitView *sidebarSplitView;
@@ -46,7 +47,11 @@
     IBOutlet NSView *helperView;
     IBOutlet NSView *mainView;
     
+    IBOutlet NSSegmentedControl *sidebarSegmentedControl;
+    IBOutlet NSMenu *addButtonMenu;
+    
     NSMutableDictionary *collapsedViewRects;
+    IBOutlet NSObjectController *termController;
 
 }
 
