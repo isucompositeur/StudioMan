@@ -20,13 +20,69 @@
 		016C5E7912EEF41A00C1740C /* StudioManTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E7812EEF41A00C1740C /* StudioManTests.h */; };
 		016C5E7B12EEF41A00C1740C /* StudioManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C5E7A12EEF41A00C1740C /* StudioManTests.m */; };
 		016C5E8512EF234A00C1740C /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E8412EF234A00C1740C /* COPYING */; };
-		F3280CFD12FF365F00628F2A /* SMCalendarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F3280CFC12FF365F00628F2A /* SMCalendarControl.m */; };
+		01CC741A131647C4000A681E /* AmberFoundation-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01CC73F2131647C4000A681E /* AmberFoundation-Info.plist */; };
+		01CC741B131647C4000A681E /* amberfoundation.doxyconf in Resources */ = {isa = PBXBuildFile; fileRef = 01CC73F3131647C4000A681E /* amberfoundation.doxyconf */; };
+		01CC747B1316484B000A681E /* AmberKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01CC743B1316484B000A681E /* AmberKit-Info.plist */; };
+		01CC747C1316484B000A681E /* amberkit.doxyconf in Resources */ = {isa = PBXBuildFile; fileRef = 01CC743C1316484B000A681E /* amberkit.doxyconf */; };
+		01CC74A4131649EF000A681E /* AmberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CC74A3131649EF000A681E /* AmberKit.framework */; };
 		F37EB13C1308825900BBEEDA /* SMCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37EB13B1308825900BBEEDA /* SMCalendarView.m */; };
 		F388BBEF13084C6700DF97BE /* NSSplitView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F388BBEE13084C6700DF97BE /* NSSplitView+Additions.m */; };
 		F3A3F45D1301AD110094138A /* plus.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F45C1301AD110094138A /* plus.tiff */; };
 		F3A3F45F1301ADA80094138A /* Calendars_Off.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F45E1301ADA80094138A /* Calendars_Off.png */; };
 		F3A3F4611301ADB00094138A /* Calendars_On.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F4601301ADB00094138A /* Calendars_On.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01CC7428131647C5000A681E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC73F6131647C4000A681E /* AmberFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 539A60C30D2698B7001CD14A;
+			remoteInfo = AmberFoundation;
+		};
+		01CC742A131647C5000A681E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC73F6131647C4000A681E /* AmberFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 532F73DE0F0EB1AA004D6056;
+			remoteInfo = "AmberFoundation Touch";
+		};
+		01CC742D131647E8000A681E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC73F6131647C4000A681E /* AmberFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 539A60C20D2698B7001CD14A;
+			remoteInfo = AmberFoundation;
+		};
+		01CC74971316484B000A681E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC743F1316484B000A681E /* AmberKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53EE97470F190070008AD8C0;
+			remoteInfo = AmberKit;
+		};
+		01CC74991316484B000A681E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC743F1316484B000A681E /* AmberKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53599FA610A86D900064F48C;
+			remoteInfo = "AmberKit Touch";
+		};
+		01CC749B1316484B000A681E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC743F1316484B000A681E /* AmberKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 537917750F7FC43B0064EB92;
+			remoteInfo = CoreAmberKit;
+		};
+		01CC749D13164885000A681E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC743F1316484B000A681E /* AmberKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 53EE97460F190070008AD8C0;
+			remoteInfo = AmberKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		016C5E4812EEF41900C1740C /* StudioMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudioMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,8 +107,114 @@
 		016C5E7812EEF41A00C1740C /* StudioManTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudioManTests.h; sourceTree = "<group>"; };
 		016C5E7A12EEF41A00C1740C /* StudioManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudioManTests.m; sourceTree = "<group>"; };
 		016C5E8412EF234A00C1740C /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
-		F3280CFB12FF365F00628F2A /* SMCalendarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCalendarControl.h; sourceTree = "<group>"; };
-		F3280CFC12FF365F00628F2A /* SMCalendarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCalendarControl.m; sourceTree = "<group>"; };
+		01CC73DC131647C4000A681E /* AFFoundationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFoundationConstants.h; sourceTree = "<group>"; };
+		01CC73DD131647C4000A681E /* AFFoundationConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFoundationConstants.m; sourceTree = "<group>"; };
+		01CC73DE131647C4000A681E /* AFFoundationMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFoundationMacros.h; sourceTree = "<group>"; };
+		01CC73DF131647C4000A681E /* AFFoundationMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFoundationMacros.m; sourceTree = "<group>"; };
+		01CC73E0131647C4000A681E /* AFKeyIndexedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFKeyIndexedArray.h; sourceTree = "<group>"; };
+		01CC73E1131647C4000A681E /* AFKeyIndexedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFKeyIndexedArray.m; sourceTree = "<group>"; };
+		01CC73E2131647C4000A681E /* AFKeyIndexedSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFKeyIndexedSet.h; sourceTree = "<group>"; };
+		01CC73E3131647C4000A681E /* AFKeyIndexedSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFKeyIndexedSet.m; sourceTree = "<group>"; };
+		01CC73E4131647C4000A681E /* AFKeyPathAccumulatorProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFKeyPathAccumulatorProxy.h; sourceTree = "<group>"; };
+		01CC73E5131647C4000A681E /* AFKeyPathAccumulatorProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFKeyPathAccumulatorProxy.m; sourceTree = "<group>"; };
+		01CC73E6131647C4000A681E /* AFPriorityProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPriorityProxy.h; sourceTree = "<group>"; };
+		01CC73E7131647C4000A681E /* AFPriorityProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPriorityProxy.m; sourceTree = "<group>"; };
+		01CC73E8131647C4000A681E /* AFPropertyListProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListProtocol.h; sourceTree = "<group>"; };
+		01CC73E9131647C4000A681E /* AFPropertyListProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListProtocol.m; sourceTree = "<group>"; };
+		01CC73EA131647C4000A681E /* AFProtocolProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFProtocolProxy.h; sourceTree = "<group>"; };
+		01CC73EB131647C4000A681E /* AFProtocolProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFProtocolProxy.m; sourceTree = "<group>"; };
+		01CC73EC131647C4000A681E /* AFRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRange.h; sourceTree = "<group>"; };
+		01CC73ED131647C4000A681E /* AFRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRange.m; sourceTree = "<group>"; };
+		01CC73EE131647C4000A681E /* AFTargetProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTargetProxy.h; sourceTree = "<group>"; };
+		01CC73EF131647C4000A681E /* AFTargetProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTargetProxy.m; sourceTree = "<group>"; };
+		01CC73F0131647C4000A681E /* AFUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFUserDefaults.h; sourceTree = "<group>"; };
+		01CC73F1131647C4000A681E /* AFUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFUserDefaults.m; sourceTree = "<group>"; };
+		01CC73F2131647C4000A681E /* AmberFoundation-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AmberFoundation-Info.plist"; sourceTree = "<group>"; };
+		01CC73F3131647C4000A681E /* amberfoundation.doxyconf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amberfoundation.doxyconf; sourceTree = "<group>"; };
+		01CC73F4131647C4000A681E /* AmberFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmberFoundation.h; sourceTree = "<group>"; };
+		01CC73F5131647C4000A681E /* AmberFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmberFoundation.m; sourceTree = "<group>"; };
+		01CC73F6131647C4000A681E /* AmberFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AmberFoundation.xcodeproj; sourceTree = "<group>"; };
+		01CC73F9131647C4000A681E /* AmberFoundation_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmberFoundation_Prefix.pch; sourceTree = "<group>"; };
+		01CC73FA131647C4000A681E /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
+		01CC73FB131647C4000A681E /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
+		01CC73FC131647C4000A681E /* NSBundle+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Additions.h"; sourceTree = "<group>"; };
+		01CC73FD131647C4000A681E /* NSBundle+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Additions.m"; sourceTree = "<group>"; };
+		01CC73FE131647C4000A681E /* NSData+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Additions.h"; sourceTree = "<group>"; };
+		01CC73FF131647C4000A681E /* NSData+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Additions.m"; sourceTree = "<group>"; };
+		01CC7400131647C4000A681E /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
+		01CC7401131647C4000A681E /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
+		01CC7402131647C4000A681E /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additions.h"; sourceTree = "<group>"; };
+		01CC7403131647C4000A681E /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additions.m"; sourceTree = "<group>"; };
+		01CC7404131647C4000A681E /* NSObject+Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Metadata.h"; sourceTree = "<group>"; };
+		01CC7405131647C4000A681E /* NSObject+Metadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Metadata.m"; sourceTree = "<group>"; };
+		01CC7406131647C4000A681E /* NSSet+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+Additions.h"; sourceTree = "<group>"; };
+		01CC7407131647C4000A681E /* NSSet+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+Additions.m"; sourceTree = "<group>"; };
+		01CC7408131647C4000A681E /* NSSortDescriptor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSortDescriptor+Additions.h"; sourceTree = "<group>"; };
+		01CC7409131647C4000A681E /* NSSortDescriptor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSortDescriptor+Additions.m"; sourceTree = "<group>"; };
+		01CC740A131647C4000A681E /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		01CC740B131647C4000A681E /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		01CC74311316484B000A681E /* AFActivationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFActivationCell.h; sourceTree = "<group>"; };
+		01CC74321316484B000A681E /* AFActivationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFActivationCell.m; sourceTree = "<group>"; };
+		01CC74331316484B000A681E /* AFActivationControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFActivationControl.h; sourceTree = "<group>"; };
+		01CC74341316484B000A681E /* AFActivationControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFActivationControl.m; sourceTree = "<group>"; };
+		01CC74351316484B000A681E /* AFGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFGeometry.h; sourceTree = "<group>"; };
+		01CC74361316484B000A681E /* AFGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFGeometry.m; sourceTree = "<group>"; };
+		01CC74371316484B000A681E /* AFKeyValueBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFKeyValueBinding.h; sourceTree = "<group>"; };
+		01CC74381316484B000A681E /* AFKeyValueBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFKeyValueBinding.m; sourceTree = "<group>"; };
+		01CC74391316484B000A681E /* AFKitConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFKitConstants.h; sourceTree = "<group>"; };
+		01CC743A1316484B000A681E /* AFKitConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFKitConstants.m; sourceTree = "<group>"; };
+		01CC743B1316484B000A681E /* AmberKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AmberKit-Info.plist"; sourceTree = "<group>"; };
+		01CC743C1316484B000A681E /* amberkit.doxyconf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amberkit.doxyconf; sourceTree = "<group>"; };
+		01CC743D1316484B000A681E /* AmberKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmberKit.h; sourceTree = "<group>"; };
+		01CC743E1316484B000A681E /* AmberKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmberKit.m; sourceTree = "<group>"; };
+		01CC743F1316484B000A681E /* AmberKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AmberKit.xcodeproj; sourceTree = "<group>"; };
+		01CC74421316484B000A681E /* AmberKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmberKit_Prefix.pch; sourceTree = "<group>"; };
+		01CC74441316484B000A681E /* AFCalendarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCalendarButton.h; sourceTree = "<group>"; };
+		01CC74451316484B000A681E /* AFCalendarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFCalendarButton.m; sourceTree = "<group>"; };
+		01CC74461316484B000A681E /* AFCalendarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCalendarControl.h; sourceTree = "<group>"; };
+		01CC74471316484B000A681E /* AFCalendarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFCalendarControl.m; sourceTree = "<group>"; };
+		01CC74481316484B000A681E /* AFCalendarControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCalendarControlCell.h; sourceTree = "<group>"; };
+		01CC74491316484B000A681E /* AFCalendarControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFCalendarControlCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01CC744A1316484B000A681E /* AFSegmentedWeekControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSegmentedWeekControl.h; sourceTree = "<group>"; };
+		01CC744B1316484B000A681E /* AFSegmentedWeekControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSegmentedWeekControl.m; sourceTree = "<group>"; };
+		01CC744C1316484B000A681E /* AFWeekSegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFWeekSegmentCell.h; sourceTree = "<group>"; };
+		01CC744D1316484B000A681E /* AFWeekSegmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFWeekSegmentCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01CC744E1316484B000A681E /* CoreAmberKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CoreAmberKit.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		01CC744F1316484B000A681E /* CoreAmberKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CoreAmberKit.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01CC74501316484B000A681E /* NSBezierPath+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+Additions.h"; sourceTree = "<group>"; };
+		01CC74511316484B000A681E /* NSBezierPath+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+Additions.m"; sourceTree = "<group>"; };
+		01CC74521316484B000A681E /* NSBundle+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Additions.h"; sourceTree = "<group>"; };
+		01CC74531316484B000A681E /* NSBundle+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Additions.m"; sourceTree = "<group>"; };
+		01CC74541316484B000A681E /* NSControl+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSControl+Additions.h"; sourceTree = "<group>"; };
+		01CC74551316484B000A681E /* NSControl+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSControl+Additions.m"; sourceTree = "<group>"; };
+		01CC74561316484B000A681E /* NSGradient+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSGradient+Additions.h"; sourceTree = "<group>"; };
+		01CC74571316484B000A681E /* NSGradient+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSGradient+Additions.m"; sourceTree = "<group>"; };
+		01CC74581316484B000A681E /* NSTreeController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTreeController+Additions.h"; sourceTree = "<group>"; };
+		01CC74591316484B000A681E /* NSTreeController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTreeController+Additions.m"; sourceTree = "<group>"; };
+		01CC745A1316484B000A681E /* NSTreeNode+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTreeNode+Additions.h"; sourceTree = "<group>"; };
+		01CC745B1316484B000A681E /* NSTreeNode+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTreeNode+Additions.m"; sourceTree = "<group>"; };
+		01CC745D1316484B000A681E /* AFDisclosureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDisclosureButton.h; sourceTree = "<group>"; };
+		01CC745E1316484B000A681E /* AFDisclosureButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDisclosureButton.m; sourceTree = "<group>"; };
+		01CC745F1316484B000A681E /* AFImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageTextCell.h; sourceTree = "<group>"; };
+		01CC74601316484B000A681E /* AFImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageTextCell.m; sourceTree = "<group>"; };
+		01CC74611316484B000A681E /* AFLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFLibrary.h; sourceTree = "<group>"; };
+		01CC74621316484B000A681E /* AFLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFLibrary.m; sourceTree = "<group>"; };
+		01CC74631316484B000A681E /* AFLocateLibraryWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFLocateLibraryWindowController.h; sourceTree = "<group>"; };
+		01CC74641316484B000A681E /* AFLocateLibraryWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFLocateLibraryWindowController.m; sourceTree = "<group>"; };
+		01CC74651316484B000A681E /* AFSourceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSourceList.h; sourceTree = "<group>"; };
+		01CC74661316484B000A681E /* AFSourceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFSourceList.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01CC74671316484B000A681E /* AFSourceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSourceNode.h; sourceTree = "<group>"; };
+		01CC74681316484B000A681E /* AFSourceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSourceNode.m; sourceTree = "<group>"; };
+		01CC74691316484B000A681E /* AFTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTextFieldCell.h; sourceTree = "<group>"; };
+		01CC746A1316484B000A681E /* AFTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTextFieldCell.m; sourceTree = "<group>"; };
+		01CC746C1316484B000A681E /* AFGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFGradientButton.h; sourceTree = "<group>"; };
+		01CC746D1316484B000A681E /* AFGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFGradientButton.m; sourceTree = "<group>"; };
+		01CC746E1316484B000A681E /* AFGradientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFGradientCell.h; sourceTree = "<group>"; };
+		01CC746F1316484B000A681E /* AFGradientCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFGradientCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01CC74701316484B000A681E /* AFSwitchControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSwitchControl.h; sourceTree = "<group>"; };
+		01CC74711316484B000A681E /* AFSwitchControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFSwitchControl.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		01CC74A3131649EF000A681E /* AmberKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AmberKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01CC74A5131649F4000A681E /* AmberFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AmberFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37EB13A1308825900BBEEDA /* SMCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCalendarView.h; sourceTree = "<group>"; };
 		F37EB13B1308825900BBEEDA /* SMCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCalendarView.m; sourceTree = "<group>"; };
 		F388BBED13084C6700DF97BE /* NSSplitView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSplitView+Additions.h"; sourceTree = "<group>"; };
@@ -67,6 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CC74A4131649EF000A681E /* AmberKit.framework in Frameworks */,
 				016C5E4D12EEF41900C1740C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +248,10 @@
 		016C5E3D12EEF41900C1740C = {
 			isa = PBXGroup;
 			children = (
+				01CC74A5131649F4000A681E /* AmberFoundation.framework */,
+				01CC74A3131649EF000A681E /* AmberKit.framework */,
+				01CC742F1316484B000A681E /* AmberKit */,
+				01CC73DB131647C4000A681E /* AmberFoundation */,
 				016C5E5212EEF41900C1740C /* StudioMan */,
 				016C5E7112EEF41A00C1740C /* StudioManTests */,
 				016C5E4B12EEF41900C1740C /* Frameworks */,
@@ -127,8 +294,6 @@
 				016C5E5F12EEF41900C1740C /* SMTerm.m */,
 				F37EB13A1308825900BBEEDA /* SMCalendarView.h */,
 				F37EB13B1308825900BBEEDA /* SMCalendarView.m */,
-				F3280CFB12FF365F00628F2A /* SMCalendarControl.h */,
-				F3280CFC12FF365F00628F2A /* SMCalendarControl.m */,
 				F388BBED13084C6700DF97BE /* NSSplitView+Additions.h */,
 				F388BBEE13084C6700DF97BE /* NSSplitView+Additions.m */,
 				016C5E6112EEF41900C1740C /* SMTerm.xib */,
@@ -175,6 +340,177 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		01CC73DB131647C4000A681E /* AmberFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				01CC73DC131647C4000A681E /* AFFoundationConstants.h */,
+				01CC73DD131647C4000A681E /* AFFoundationConstants.m */,
+				01CC73DE131647C4000A681E /* AFFoundationMacros.h */,
+				01CC73DF131647C4000A681E /* AFFoundationMacros.m */,
+				01CC73E0131647C4000A681E /* AFKeyIndexedArray.h */,
+				01CC73E1131647C4000A681E /* AFKeyIndexedArray.m */,
+				01CC73E2131647C4000A681E /* AFKeyIndexedSet.h */,
+				01CC73E3131647C4000A681E /* AFKeyIndexedSet.m */,
+				01CC73E4131647C4000A681E /* AFKeyPathAccumulatorProxy.h */,
+				01CC73E5131647C4000A681E /* AFKeyPathAccumulatorProxy.m */,
+				01CC73E6131647C4000A681E /* AFPriorityProxy.h */,
+				01CC73E7131647C4000A681E /* AFPriorityProxy.m */,
+				01CC73E8131647C4000A681E /* AFPropertyListProtocol.h */,
+				01CC73E9131647C4000A681E /* AFPropertyListProtocol.m */,
+				01CC73EA131647C4000A681E /* AFProtocolProxy.h */,
+				01CC73EB131647C4000A681E /* AFProtocolProxy.m */,
+				01CC73EC131647C4000A681E /* AFRange.h */,
+				01CC73ED131647C4000A681E /* AFRange.m */,
+				01CC73EE131647C4000A681E /* AFTargetProxy.h */,
+				01CC73EF131647C4000A681E /* AFTargetProxy.m */,
+				01CC73F0131647C4000A681E /* AFUserDefaults.h */,
+				01CC73F1131647C4000A681E /* AFUserDefaults.m */,
+				01CC73F2131647C4000A681E /* AmberFoundation-Info.plist */,
+				01CC73F3131647C4000A681E /* amberfoundation.doxyconf */,
+				01CC73F4131647C4000A681E /* AmberFoundation.h */,
+				01CC73F5131647C4000A681E /* AmberFoundation.m */,
+				01CC73F6131647C4000A681E /* AmberFoundation.xcodeproj */,
+				01CC73F9131647C4000A681E /* AmberFoundation_Prefix.pch */,
+				01CC73FA131647C4000A681E /* NSArray+Additions.h */,
+				01CC73FB131647C4000A681E /* NSArray+Additions.m */,
+				01CC73FC131647C4000A681E /* NSBundle+Additions.h */,
+				01CC73FD131647C4000A681E /* NSBundle+Additions.m */,
+				01CC73FE131647C4000A681E /* NSData+Additions.h */,
+				01CC73FF131647C4000A681E /* NSData+Additions.m */,
+				01CC7400131647C4000A681E /* NSDate+Additions.h */,
+				01CC7401131647C4000A681E /* NSDate+Additions.m */,
+				01CC7402131647C4000A681E /* NSObject+Additions.h */,
+				01CC7403131647C4000A681E /* NSObject+Additions.m */,
+				01CC7404131647C4000A681E /* NSObject+Metadata.h */,
+				01CC7405131647C4000A681E /* NSObject+Metadata.m */,
+				01CC7406131647C4000A681E /* NSSet+Additions.h */,
+				01CC7407131647C4000A681E /* NSSet+Additions.m */,
+				01CC7408131647C4000A681E /* NSSortDescriptor+Additions.h */,
+				01CC7409131647C4000A681E /* NSSortDescriptor+Additions.m */,
+				01CC740A131647C4000A681E /* NSString+Additions.h */,
+				01CC740B131647C4000A681E /* NSString+Additions.m */,
+			);
+			path = AmberFoundation;
+			sourceTree = "<group>";
+		};
+		01CC73F7131647C4000A681E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01CC7429131647C5000A681E /* AmberFoundation.framework */,
+				01CC742B131647C5000A681E /* libAmberFoundation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01CC742F1316484B000A681E /* AmberKit */ = {
+			isa = PBXGroup;
+			children = (
+				01CC74301316484B000A681E /* activationcontrol */,
+				01CC74351316484B000A681E /* AFGeometry.h */,
+				01CC74361316484B000A681E /* AFGeometry.m */,
+				01CC74371316484B000A681E /* AFKeyValueBinding.h */,
+				01CC74381316484B000A681E /* AFKeyValueBinding.m */,
+				01CC74391316484B000A681E /* AFKitConstants.h */,
+				01CC743A1316484B000A681E /* AFKitConstants.m */,
+				01CC743B1316484B000A681E /* AmberKit-Info.plist */,
+				01CC743C1316484B000A681E /* amberkit.doxyconf */,
+				01CC743D1316484B000A681E /* AmberKit.h */,
+				01CC743E1316484B000A681E /* AmberKit.m */,
+				01CC743F1316484B000A681E /* AmberKit.xcodeproj */,
+				01CC74421316484B000A681E /* AmberKit_Prefix.pch */,
+				01CC74431316484B000A681E /* calendarcontrol */,
+				01CC744E1316484B000A681E /* CoreAmberKit.h */,
+				01CC744F1316484B000A681E /* CoreAmberKit.m */,
+				01CC74501316484B000A681E /* NSBezierPath+Additions.h */,
+				01CC74511316484B000A681E /* NSBezierPath+Additions.m */,
+				01CC74521316484B000A681E /* NSBundle+Additions.h */,
+				01CC74531316484B000A681E /* NSBundle+Additions.m */,
+				01CC74541316484B000A681E /* NSControl+Additions.h */,
+				01CC74551316484B000A681E /* NSControl+Additions.m */,
+				01CC74561316484B000A681E /* NSGradient+Additions.h */,
+				01CC74571316484B000A681E /* NSGradient+Additions.m */,
+				01CC74581316484B000A681E /* NSTreeController+Additions.h */,
+				01CC74591316484B000A681E /* NSTreeController+Additions.m */,
+				01CC745A1316484B000A681E /* NSTreeNode+Additions.h */,
+				01CC745B1316484B000A681E /* NSTreeNode+Additions.m */,
+				01CC745C1316484B000A681E /* sourcelist */,
+				01CC746B1316484B000A681E /* switchcontrol */,
+			);
+			path = AmberKit;
+			sourceTree = "<group>";
+		};
+		01CC74301316484B000A681E /* activationcontrol */ = {
+			isa = PBXGroup;
+			children = (
+				01CC74311316484B000A681E /* AFActivationCell.h */,
+				01CC74321316484B000A681E /* AFActivationCell.m */,
+				01CC74331316484B000A681E /* AFActivationControl.h */,
+				01CC74341316484B000A681E /* AFActivationControl.m */,
+			);
+			path = activationcontrol;
+			sourceTree = "<group>";
+		};
+		01CC74401316484B000A681E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01CC74981316484B000A681E /* AmberKit.framework */,
+				01CC749A1316484B000A681E /* libAmberKit.a */,
+				01CC749C1316484B000A681E /* libCoreAmberKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01CC74431316484B000A681E /* calendarcontrol */ = {
+			isa = PBXGroup;
+			children = (
+				01CC74441316484B000A681E /* AFCalendarButton.h */,
+				01CC74451316484B000A681E /* AFCalendarButton.m */,
+				01CC74461316484B000A681E /* AFCalendarControl.h */,
+				01CC74471316484B000A681E /* AFCalendarControl.m */,
+				01CC74481316484B000A681E /* AFCalendarControlCell.h */,
+				01CC74491316484B000A681E /* AFCalendarControlCell.m */,
+				01CC744A1316484B000A681E /* AFSegmentedWeekControl.h */,
+				01CC744B1316484B000A681E /* AFSegmentedWeekControl.m */,
+				01CC744C1316484B000A681E /* AFWeekSegmentCell.h */,
+				01CC744D1316484B000A681E /* AFWeekSegmentCell.m */,
+			);
+			path = calendarcontrol;
+			sourceTree = "<group>";
+		};
+		01CC745C1316484B000A681E /* sourcelist */ = {
+			isa = PBXGroup;
+			children = (
+				01CC745D1316484B000A681E /* AFDisclosureButton.h */,
+				01CC745E1316484B000A681E /* AFDisclosureButton.m */,
+				01CC745F1316484B000A681E /* AFImageTextCell.h */,
+				01CC74601316484B000A681E /* AFImageTextCell.m */,
+				01CC74611316484B000A681E /* AFLibrary.h */,
+				01CC74621316484B000A681E /* AFLibrary.m */,
+				01CC74631316484B000A681E /* AFLocateLibraryWindowController.h */,
+				01CC74641316484B000A681E /* AFLocateLibraryWindowController.m */,
+				01CC74651316484B000A681E /* AFSourceList.h */,
+				01CC74661316484B000A681E /* AFSourceList.m */,
+				01CC74671316484B000A681E /* AFSourceNode.h */,
+				01CC74681316484B000A681E /* AFSourceNode.m */,
+				01CC74691316484B000A681E /* AFTextFieldCell.h */,
+				01CC746A1316484B000A681E /* AFTextFieldCell.m */,
+			);
+			path = sourcelist;
+			sourceTree = "<group>";
+		};
+		01CC746B1316484B000A681E /* switchcontrol */ = {
+			isa = PBXGroup;
+			children = (
+				01CC746C1316484B000A681E /* AFGradientButton.h */,
+				01CC746D1316484B000A681E /* AFGradientButton.m */,
+				01CC746E1316484B000A681E /* AFGradientCell.h */,
+				01CC746F1316484B000A681E /* AFGradientCell.m */,
+				01CC74701316484B000A681E /* AFSwitchControl.h */,
+				01CC74711316484B000A681E /* AFSwitchControl.m */,
+			);
+			path = switchcontrol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +525,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				01CC742E131647E8000A681E /* PBXTargetDependency */,
+				01CC749E13164885000A681E /* PBXTargetDependency */,
 			);
 			name = StudioMan;
 			productName = StudioMan;
@@ -228,6 +566,16 @@
 			mainGroup = 016C5E3D12EEF41900C1740C;
 			productRefGroup = 016C5E4912EEF41900C1740C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 01CC73F7131647C4000A681E /* Products */;
+					ProjectRef = 01CC73F6131647C4000A681E /* AmberFoundation.xcodeproj */;
+				},
+				{
+					ProductGroup = 01CC74401316484B000A681E /* Products */;
+					ProjectRef = 01CC743F1316484B000A681E /* AmberKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				016C5E4712EEF41900C1740C /* StudioMan */,
@@ -235,6 +583,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		01CC7429131647C5000A681E /* AmberFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AmberFoundation.framework;
+			remoteRef = 01CC7428131647C5000A681E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		01CC742B131647C5000A681E /* libAmberFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAmberFoundation.a;
+			remoteRef = 01CC742A131647C5000A681E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		01CC74981316484B000A681E /* AmberKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AmberKit.framework;
+			remoteRef = 01CC74971316484B000A681E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		01CC749A1316484B000A681E /* libAmberKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAmberKit.a;
+			remoteRef = 01CC74991316484B000A681E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		01CC749C1316484B000A681E /* libCoreAmberKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCoreAmberKit.a;
+			remoteRef = 01CC749B1316484B000A681E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		016C5E4612EEF41900C1740C /* Resources */ = {
@@ -249,6 +635,10 @@
 				F3A3F45D1301AD110094138A /* plus.tiff in Resources */,
 				F3A3F45F1301ADA80094138A /* Calendars_Off.png in Resources */,
 				F3A3F4611301ADB00094138A /* Calendars_On.png in Resources */,
+				01CC741A131647C4000A681E /* AmberFoundation-Info.plist in Resources */,
+				01CC741B131647C4000A681E /* amberfoundation.doxyconf in Resources */,
+				01CC747B1316484B000A681E /* AmberKit-Info.plist in Resources */,
+				01CC747C1316484B000A681E /* amberkit.doxyconf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +677,6 @@
 				016C5E5A12EEF41900C1740C /* main.m in Sources */,
 				016C5E6012EEF41900C1740C /* SMTerm.m in Sources */,
 				016C5E6912EEF41A00C1740C /* SMTerm.xcdatamodeld in Sources */,
-				F3280CFD12FF365F00628F2A /* SMCalendarControl.m in Sources */,
 				F388BBEF13084C6700DF97BE /* NSSplitView+Additions.m in Sources */,
 				F37EB13C1308825900BBEEDA /* SMCalendarView.m in Sources */,
 			);
@@ -302,6 +691,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01CC742E131647E8000A681E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AmberFoundation;
+			targetProxy = 01CC742D131647E8000A681E /* PBXContainerItemProxy */;
+		};
+		01CC749E13164885000A681E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AmberKit;
+			targetProxy = 01CC749D13164885000A681E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		016C5E5512EEF41900C1740C /* InfoPlist.strings */ = {

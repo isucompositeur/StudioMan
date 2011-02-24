@@ -33,6 +33,7 @@
  ******************************************************************************/
 
 #import "SMTerm.h"
+#import "AmberKit/AmberKit.h"
 #import <Foundation/NSGeometry.h>
 
 static const NSUInteger SMCalendarControlShowHideSegmentIndex = 1;
