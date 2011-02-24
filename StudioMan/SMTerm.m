@@ -35,7 +35,8 @@
 #import "SMTerm.h"
 #import <Foundation/NSGeometry.h>
 
-static const int SMCalendarControlShowHideSegmentIndex = 1;
+static const NSUInteger SMCalendarControlShowHideSegmentIndex = 1;
+static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
 static const NSString *SMTermEntity = @"Term";
 
 @implementation SMTerm
@@ -51,6 +52,7 @@ static const NSString *SMTermEntity = @"Term";
     
     NSManagedObject *newTerm = [NSEntityDescription insertNewObjectForEntityForName:SMTermEntity inManagedObjectContext:[self managedObjectContext]];
     [newTerm setValue:@"Untitled term" forKey:@"displayTitle"];
+    calendarIsActive = YES;
     
     return self;
 }
@@ -82,19 +84,28 @@ static const NSString *SMTermEntity = @"Term";
             break;
         case SMCalendarControlShowHideSegmentIndex:
             NSLog(@"clicked cal icon. Selected: %s",[sidebarControl isSelectedForSegment:clickedSegment] ? "YES" : "NO");
-            [sidebarSplitView toggleSubview:helperView];
-            if ([sidebarControl isSelectedForSegment:clickedSegment]) {
-                [sidebarControl setImage:[NSImage imageNamed:@"Calendars_On"] forSegment:clickedSegment];
-                [sidebarControl setSelected:YES forSegment:clickedSegment];
-            } else {
-                [sidebarControl setImage:[NSImage imageNamed:@"Calendars_Off"] forSegment:clickedSegment];
-                [sidebarControl setSelected:NO forSegment:clickedSegment];
+            if (!isAnimating) {
+                [sidebarSplitView toggleSubview:helperView withDuration:SMCalendarControlAnimationDuration];
+                //This is crude, but necessary until I implement a proper CAAnimation for this.
+                isAnimating = YES; 
+                [self performSelector:@selector(animationDidEnd) withObject:nil afterDelay:SMCalendarControlAnimationDuration];
+                if (calendarIsActive) {
+                    [sidebarControl setImage:[NSImage imageNamed:@"Calendars_Off"] forSegment:clickedSegment];
+                    calendarIsActive = NO;
+                } else {
+                    [sidebarControl setImage:[NSImage imageNamed:@"Calendars_On"] forSegment:clickedSegment];
+                    calendarIsActive = YES;
+                }
             }
             break;
         case 2:
             break;
     }
     
+}
+
+- (void)animationDidEnd {
+    isAnimating = NO;
 }
 
 # pragma mark -
@@ -151,7 +162,8 @@ static const NSString *SMTermEntity = @"Term";
 # pragma mark -
 # pragma mark NSOutlineViewDelegate methods
 
-
+# pragma mark -
+# pragma mark NSToolbarDelegate methods
 
 
 @end

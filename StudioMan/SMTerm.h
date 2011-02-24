@@ -35,7 +35,8 @@
 #import <Cocoa/Cocoa.h>
 #import "NSSplitView+Additions.h"
 
-@interface SMTerm : NSPersistentDocument <NSSplitViewDelegate, NSSplitViewDelegateAdditions, NSOutlineViewDelegate> {
+@interface SMTerm : NSPersistentDocument <NSSplitViewDelegate,NSSplitViewDelegateAdditions,
+NSOutlineViewDelegate,NSToolbarDelegate> {
     
     IBOutlet NSWindow *window; // temp until XCode4 is fixed
     IBOutlet NSManagedObjectContext *managedObjectContext; // temp until XCode4 is fixed
@@ -49,6 +50,9 @@
     
     IBOutlet NSSegmentedControl *sidebarSegmentedControl;
     IBOutlet NSMenu *addButtonMenu;
+    BOOL calendarIsActive;
+    BOOL isAnimating;
+    
     
     NSMutableDictionary *collapsedViewRects;
     IBOutlet NSObjectController *termController;
@@ -56,5 +60,6 @@
 }
 
 - (IBAction)clickSideBarControl:(id)sender;
+- (void)animationDidEnd;
 
 @end

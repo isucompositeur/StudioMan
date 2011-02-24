@@ -34,10 +34,11 @@
 
 #import "NSSplitView+Additions.h"
 
+static const NSTimeInterval SMSubviewToggleAnimationDurationDefault = 0.2;
 
 @implementation NSSplitView (SMAdditions)
 
-- (void) toggleSubview: (NSView*)subview
+- (void) toggleSubview:(NSView*)subview withDuration:(NSTimeInterval) duration
 {
     NSUInteger viewIndex = [[self subviews] indexOfObject:subview];
     NSRect viewTargetFrame;
@@ -79,9 +80,14 @@
     } 
     
     [NSAnimationContext beginGrouping];
-    [[NSAnimationContext currentContext] setDuration:0.2];
+    [[NSAnimationContext currentContext] setDuration:duration];
     [[subview animator] setFrame:viewTargetFrame];
     [NSAnimationContext endGrouping];
+}
+
+- (void)toggleSubview:(NSView *)subView
+{
+    [self toggleSubview:subView withDuration:SMSubviewToggleAnimationDurationDefault];
 }
 
 @end

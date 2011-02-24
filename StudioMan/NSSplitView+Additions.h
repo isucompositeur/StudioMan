@@ -38,6 +38,7 @@
 @interface NSSplitView (SMAdditions)
 
 - (void) toggleSubview: (NSView*)subView;
+- (void) toggleSubview: (NSView*)subView withDuration:(NSTimeInterval)duration;
 
 @end
 
