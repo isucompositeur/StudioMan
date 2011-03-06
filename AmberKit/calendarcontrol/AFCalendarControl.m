@@ -624,6 +624,7 @@ NS_INLINE NSRectArray _AFCalendarControlCreateCalendarRowRects(NSRect calendarRe
 	// Draw the grid
 	{
 		[NSGraphicsContext saveGraphicsState];
+        [[NSGraphicsContext currentContext] setShouldAntialias:NO];
 		
 		NSBezierPath *grid = [NSBezierPath bezierPath];
 		
@@ -657,12 +658,13 @@ NS_INLINE NSRectArray _AFCalendarControlCreateCalendarRowRects(NSRect calendarRe
 		NSBezierPath *gridShadow = [shiftTransform transformBezierPath:grid];
 		
 		[[NSColor colorWithCalibratedWhite:(255.0/255.0) alpha:0.8] set];
-		[gridShadow stroke];
+		//[gridShadow stroke];
 		
 		if ([[self window] isKeyWindow])
-			[[NSColor colorWithCalibratedRed:(145.0/255.0) green:(159.0/255.0) blue:(177.0/255.0) alpha:1.0] set];
+            [[NSColor colorWithCalibratedWhite:0.0 alpha:0.20] set];
+			//[[NSColor colorWithCalibratedRed:(145.0/255.0) green:(159.0/255.0) blue:(177.0/255.0) alpha:0.8] set];
 		else
-			[[NSColor colorWithCalibratedWhite:(159.0/255.0) alpha:1.0] set];
+			[[NSColor colorWithCalibratedWhite:(159.0/255.0) alpha:0.8] set];
 		
 		[grid stroke];
 		

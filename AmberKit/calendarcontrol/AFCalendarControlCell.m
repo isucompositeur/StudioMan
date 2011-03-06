@@ -33,6 +33,7 @@
 	
 	drawingRect = [self drawingRectForBounds:bounds];
 	drawingRect = NSInsetRect(drawingRect, 0.0, NSHeight(drawingRect)/5.0);
+    drawingRect = NSOffsetRect(drawingRect, 0, -(NSHeight(bounds)/15.0));
 	
 	return drawingRect;
 }
@@ -87,16 +88,17 @@
 
 - (void)_applyTodayShadow:(NSBezierPath *)bezel {
 	NSShadow *interiorShadow = [[NSShadow alloc] init];
-	[interiorShadow setShadowColor:[NSColor colorWithCalibratedWhite:0.333 alpha:0.7]];
-	[interiorShadow setShadowBlurRadius:2.0];
+	[interiorShadow setShadowColor:[NSColor shadowColor]];
+	[interiorShadow setShadowBlurRadius:4.0];
 	
-	// Bottom and left sides
-	[interiorShadow setShadowOffset:NSMakeSize(NSWidth([bezel bounds])/20.0, NSHeight([bezel bounds])/20.0)];
+    [bezel applyInnerShadow:interiorShadow];
+	/*// Bottom and left sides
+	[interiorShadow setShadowOffset:NSMakeSize(0,0)];
 	[bezel applyInnerShadow:interiorShadow];
 	
 	// Top and right sides
-	[interiorShadow setShadowOffset:NSMakeSize(-NSWidth([bezel bounds])/20.0, -NSHeight([bezel bounds])/15.0)];
-	[bezel applyInnerShadow:interiorShadow];
+	[interiorShadow setShadowOffset:NSMakeSize(-1,-1)];
+	[bezel applyInnerShadow:interiorShadow];*/
 	
 	[interiorShadow release];
 }
@@ -128,16 +130,12 @@
 		[self _applyTodayShadow:bezel];
 	} else if (![self isToday] && [self isSelected]) {
 		if (drawKey) {
+
+            NSColor *baseColor = [NSColor alternateSelectedControlColor];
+            NSColor *highlightColor = [NSColor selectedControlColor];
 			
-			//
-			// The following non-today selected gradient was written by Jonathan Dann
-			//
-			
-			NSColor *baseColor = [NSColor colorWithCalibratedRed:0.0 green:0.447 blue:0.886 alpha:1.0];
-			NSColor *finalHighlightColor = [NSColor colorWithCalibratedRed:0.498 green:0.725 blue:0.945 alpha:1.0];
-			NSColor *baseHiglightColor = [NSColor colorWithCalibratedRed:0.184 green:0.545 blue:0.906 alpha:1.0];
-			
-			NSGradient *gradient = [[NSGradient alloc] initWithColorsAndLocations:baseColor, 0.45, baseHiglightColor, 0.5, finalHighlightColor, 0.8, nil];
+            NSGradient *gradient = [[NSGradient alloc] initWithColorsAndLocations:baseColor,0.38,highlightColor,1.0, nil];
+
 			[gradient drawInBezierPath:bezel angle:90];
 			[gradient release];
 		} else {
@@ -145,7 +143,7 @@
 			[gradient drawInBezierPath:bezel angle:-90];
 			[gradient release];
 		}
-	} else if (![self isToday] && ![self isSelected]) { /* the cell is enabled */
+        	} else if (![self isToday] && ![self isSelected]) { /* the cell is enabled */
 		if (drawKey) {
 			[[NSColor colorWithCalibratedRed:(187.0/255.0) green:(195.0/255.0) blue:(204.0/255.0) alpha:1.0] set];
 			[bezel fill];
@@ -154,6 +152,22 @@
 			[bezel fill];
 		}
 	}
+    
+    if(![self isToday]) {
+        [NSGraphicsContext saveGraphicsState];
+        [[NSGraphicsContext currentContext] setShouldAntialias:NO];
+        
+        NSBezierPath *highlightPath = [[NSBezierPath alloc] init];
+        [highlightPath setLineWidth:1.0];
+        [highlightPath moveToPoint:NSMakePoint(NSMinX(frame) + 1, NSMinY(frame) + 1)];
+        [highlightPath lineToPoint:NSMakePoint(NSMinX(frame) + 1, NSMaxY(frame) - 1)];
+        [highlightPath lineToPoint:NSMakePoint(NSMaxX(frame) - 1, NSMaxY(frame) - 1)];
+        
+        [[NSColor colorWithCalibratedWhite:1.0 alpha:0.33] set];
+        [highlightPath stroke];
+        [NSGraphicsContext restoreGraphicsState];
+    }
+    
 }
 
 @end
