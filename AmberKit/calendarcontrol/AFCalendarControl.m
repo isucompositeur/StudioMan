@@ -276,13 +276,6 @@ NS_INLINE NSRectArray _AFCalendarControlCreateCalendarRowRects(NSRect calendarRe
 	[self _drawCalendarRect:calendarRect];
 }
 
-- (void)resetCursorRects {
-	NSRect titleRect, calendarRect;
-	_AFCalendarControlBoundsRects([self bounds], &titleRect, &calendarRect);
-	
-	[self addCursorRect:calendarRect cursor:[NSCursor pointingHandCursor]];
-}
-
 - (void)mouseDown:(NSEvent *)event {
 	NSPoint clickPoint = [self convertPoint:[event locationInWindow] fromView:nil];
 	

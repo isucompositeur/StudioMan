@@ -34,12 +34,14 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NSSplitView+Additions.h"
+#import "AmberKit/AFSourceList.h"
 
 @interface SMTerm : NSPersistentDocument <NSSplitViewDelegate,NSSplitViewDelegateAdditions,
-NSOutlineViewDelegate,NSToolbarDelegate> {
+NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     
     IBOutlet NSWindow *window; // temp until XCode4 is fixed
     IBOutlet NSManagedObjectContext *managedObjectContext; // temp until XCode4 is fixed
+    NSManagedObject *rootTermObject;
     
     IBOutlet NSSplitView *mainSplitView;
     IBOutlet NSSplitView *sidebarSplitView;
@@ -50,9 +52,13 @@ NSOutlineViewDelegate,NSToolbarDelegate> {
     
     IBOutlet NSSegmentedControl *sidebarSegmentedControl;
     IBOutlet NSMenu *addButtonMenu;
-    BOOL calendarIsActive;
-    BOOL isAnimating;
     
+    BOOL calendarIsActive;
+    BOOL isAnimating; // HACK... need to bring this into the view by
+                      // proper use of Core Animation
+    
+    IBOutlet NSTreeController *sourceListTreeController;
+    IBOutlet NSOutlineView *sourceList;
     
     NSMutableDictionary *collapsedViewRects;
     IBOutlet NSObjectController *termController;
@@ -61,5 +67,6 @@ NSOutlineViewDelegate,NSToolbarDelegate> {
 
 - (IBAction)clickSideBarControl:(id)sender;
 - (void)animationDidEnd;
+- (BOOL)itemIsGroup:(id)item;
 
 @end

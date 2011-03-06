@@ -38,7 +38,8 @@
 
 static const NSUInteger SMCalendarControlShowHideSegmentIndex = 1;
 static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
-static const NSString *SMTermEntity = @"Term";
+static NSString * const SMTermEntity = @"Term";
+static NSString * const SMGroupEntity = @"Group";
 
 @implementation SMTerm
 
@@ -51,8 +52,11 @@ static const NSString *SMTermEntity = @"Term";
         collapsedViewRects = [[NSMutableDictionary alloc] init];
     }
     
-    NSManagedObject *newTerm = [NSEntityDescription insertNewObjectForEntityForName:SMTermEntity inManagedObjectContext:[self managedObjectContext]];
-    [newTerm setValue:@"Untitled term" forKey:@"displayTitle"];
+    rootTermObject = [NSEntityDescription insertNewObjectForEntityForName:SMTermEntity inManagedObjectContext:[self managedObjectContext]];
+    [rootTermObject setValue:@"Untitled term" forKey:@"displayTitle"];
+    NSManagedObject *newGroup = [NSEntityDescription insertNewObjectForEntityForName:SMGroupEntity inManagedObjectContext:[self managedObjectContext]];
+    [newGroup setValue:@"Students" forKey:@"displayTitle"];
+    [newGroup setValue:rootTermObject forKey:@"term"];
     calendarIsActive = YES;
     
     return self;
@@ -70,6 +74,11 @@ static const NSString *SMTermEntity = @"Term";
     //[sidebarSegmentedControl setMenu:addButtonMenu forSegment:0];
 }
 
+- (void)awakeFromNib
+{
+    
+}
+
 - (IBAction)clickSideBarControl:(id)sender
 {
     NSSegmentedControl *sidebarControl = (NSSegmentedControl *)sender;
@@ -79,9 +88,8 @@ static const NSString *SMTermEntity = @"Term";
     
     switch (clickedSegment) {
         case 0:
-            point = [sidebarControl convertPoint:[sidebarControl frame].origin fromView:nil];
-            NSEvent *event = [NSEvent mouseEventWithType:NSLeftMouseDown location:NSMakePoint(0, 0) modifierFlags:0 timestamp:[NSDate timeIntervalSinceReferenceDate] windowNumber:[[sidebarControl window] windowNumber] context:[[sidebarControl window] graphicsContext] eventNumber:0 clickCount:1 pressure:0];
-            [NSMenu popUpContextMenu:addButtonMenu withEvent:event forView:sidebarControl withFont:[NSFont systemFontOfSize:11]];
+            [sourceListTreeController addChild:sidebarControl];
+            //NSLog(@"%@",[rootTermObject valueForKey:@"groups"]);
             break;
         case SMCalendarControlShowHideSegmentIndex:
             NSLog(@"clicked cal icon. Selected: %s",[sidebarControl isSelectedForSegment:clickedSegment] ? "YES" : "NO");
@@ -107,6 +115,10 @@ static const NSString *SMTermEntity = @"Term";
 
 - (void)animationDidEnd {
     isAnimating = NO;
+}
+
+- (BOOL)itemIsGroup:(id)item {
+    return [[[(NSManagedObject *)[item representedObject] entity] name] isEqualToString:SMGroupEntity];
 }
 
 # pragma mark -
@@ -163,6 +175,23 @@ static const NSString *SMTermEntity = @"Term";
 # pragma mark -
 # pragma mark NSOutlineViewDelegate methods
 
+- (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item
+{
+    if([self itemIsGroup:item]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (void)outlineView:(NSOutlineView *)sender willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item {
+    if([self itemIsGroup:item]) {
+        NSMutableAttributedString *newTitle = [[cell attributedStringValue] mutableCopy];
+        [newTitle replaceCharactersInRange:NSMakeRange(0,[newTitle length]) withString:[[newTitle string] uppercaseString]];
+        [cell setAttributedStringValue:newTitle];
+        [newTitle release];
+    }
+}
 # pragma mark -
 # pragma mark NSToolbarDelegate methods
 
