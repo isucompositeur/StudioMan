@@ -32,6 +32,7 @@
  *                                                                            *
  ******************************************************************************/
 
+#import <QuartzCore/QuartzCore.h>
 #import "NSSplitView+Additions.h"
 
 static const NSTimeInterval SMSubviewToggleAnimationDurationDefault = 0.2;
@@ -43,16 +44,9 @@ static const NSTimeInterval SMSubviewToggleAnimationDurationDefault = 0.2;
     NSUInteger viewIndex = [[self subviews] indexOfObject:subview];
     NSRect viewTargetFrame;
     
-    BOOL isCollapsing;
-    if ([self isVertical]) {
-        [subview frame].size.width == 0 ? (isCollapsing = NO) : (isCollapsing = YES);
-    } else {
-        [subview frame].size.height == 0 ? (isCollapsing = NO) : (isCollapsing = YES);
-    }
-    
     id <NSSplitViewDelegateAdditions> addDelegate = (id <NSSplitViewDelegateAdditions>)[self delegate];
     
-    if(isCollapsing) {
+    if([self isCollapsing:subview]) {
         
         [addDelegate setOriginalRect:[subview frame] forSubview:subview];
         
@@ -77,17 +71,44 @@ static const NSTimeInterval SMSubviewToggleAnimationDurationDefault = 0.2;
         }
     } else {
         viewTargetFrame = [addDelegate originalRectForSubview:subview];
-    } 
+    }
     
-    [NSAnimationContext beginGrouping];
-    [[NSAnimationContext currentContext] setDuration:duration];
+    NSMutableDictionary *newAnimations = [NSMutableDictionary dictionary];
+    [newAnimations addEntriesFromDictionary:[subview animations]];
+    [newAnimations setObject:[self collapseAnimation:subview] forKey:@"frameOrigin"];
+    [newAnimations setObject:[self collapseAnimation:subview] forKey:@"frameSize"];
+    [subview setAnimations:newAnimations];
+    
     [[subview animator] setFrame:viewTargetFrame];
-    [NSAnimationContext endGrouping];
+
 }
 
 - (void)toggleSubview:(NSView *)subView
 {
     [self toggleSubview:subView withDuration:SMSubviewToggleAnimationDurationDefault];
+}
+
+- (CABasicAnimation *)collapseAnimation:(NSView *)subview
+{
+    CABasicAnimation *anim = [CABasicAnimation animation];
+    [anim setDuration:SMSubviewToggleAnimationDurationDefault];
+    if([self isCollapsing:subview]) {
+        [anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+    } else {
+        [anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+    }
+    return anim;
+}
+
+- (BOOL)isCollapsing:(NSView *)subview
+{
+    BOOL isCollapsing;
+    if ([self isVertical]) {
+        [subview frame].size.width == 0 ? (isCollapsing = NO) : (isCollapsing = YES);
+    } else {
+        [subview frame].size.height == 0 ? (isCollapsing = NO) : (isCollapsing = YES);
+    }
+    return isCollapsing;
 }
 
 @end

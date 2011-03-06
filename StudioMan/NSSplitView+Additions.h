@@ -33,12 +33,15 @@
  ******************************************************************************/
 
 #import <Cocoa/Cocoa.h>
+#import <QuartzCore/QuartzCore.h>
 
 
 @interface NSSplitView (SMAdditions)
 
 - (void) toggleSubview: (NSView*)subView;
 - (void) toggleSubview: (NSView*)subView withDuration:(NSTimeInterval)duration;
+- (CABasicAnimation *)collapseAnimation:(NSView *)subview;
+- (BOOL) isCollapsing: (NSView *)subview;
 
 @end
 

@@ -20,6 +20,7 @@
 		016C5E7912EEF41A00C1740C /* StudioManTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E7812EEF41A00C1740C /* StudioManTests.h */; };
 		016C5E7B12EEF41A00C1740C /* StudioManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C5E7A12EEF41A00C1740C /* StudioManTests.m */; };
 		016C5E8512EF234A00C1740C /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E8412EF234A00C1740C /* COPYING */; };
+		01A43B2813240852005EEA4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A43B2713240852005EEA4B /* QuartzCore.framework */; };
 		01CC741A131647C4000A681E /* AmberFoundation-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01CC73F2131647C4000A681E /* AmberFoundation-Info.plist */; };
 		01CC741B131647C4000A681E /* amberfoundation.doxyconf in Resources */ = {isa = PBXBuildFile; fileRef = 01CC73F3131647C4000A681E /* amberfoundation.doxyconf */; };
 		01CC747B1316484B000A681E /* AmberKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01CC743B1316484B000A681E /* AmberKit-Info.plist */; };
@@ -107,6 +108,7 @@
 		016C5E7812EEF41A00C1740C /* StudioManTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudioManTests.h; sourceTree = "<group>"; };
 		016C5E7A12EEF41A00C1740C /* StudioManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudioManTests.m; sourceTree = "<group>"; };
 		016C5E8412EF234A00C1740C /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		01A43B2713240852005EEA4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		01CC73DC131647C4000A681E /* AFFoundationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFoundationConstants.h; sourceTree = "<group>"; };
 		01CC73DD131647C4000A681E /* AFFoundationConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFoundationConstants.m; sourceTree = "<group>"; };
 		01CC73DE131647C4000A681E /* AFFoundationMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFoundationMacros.h; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A43B2813240852005EEA4B /* QuartzCore.framework in Frameworks */,
 				01CC74A4131649EF000A681E /* AmberKit.framework in Frameworks */,
 				016C5E4D12EEF41900C1740C /* Cocoa.framework in Frameworks */,
 			);
@@ -248,6 +251,7 @@
 		016C5E3D12EEF41900C1740C = {
 			isa = PBXGroup;
 			children = (
+				01A43B2713240852005EEA4B /* QuartzCore.framework */,
 				01CC74A5131649F4000A681E /* AmberFoundation.framework */,
 				01CC74A3131649EF000A681E /* AmberKit.framework */,
 				01CC742F1316484B000A681E /* AmberKit */,

@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">1294</string>
+			<string key="NS.object.0">1305</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -410,6 +410,7 @@
 																									<reference key="NSSuperview" ref="2811858"/>
 																									<reference key="NSWindow"/>
 																									<reference key="NSNextKeyView" ref="678002101"/>
+																									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																									<bool key="NSEnabled">YES</bool>
 																									<object class="_NSCornerView" key="NSCornerView">
 																										<nil key="NSNextResponder"/>
@@ -514,6 +515,7 @@
 																							<reference key="NSSuperview" ref="742396377"/>
 																							<reference key="NSWindow"/>
 																							<reference key="NSNextKeyView" ref="1063112511"/>
+																							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																							<reference key="NSDocView" ref="1063112511"/>
 																							<reference key="NSBGColor" ref="887687357"/>
 																							<int key="NScvFlags">4</int>
@@ -525,6 +527,7 @@
 																							<reference key="NSSuperview" ref="742396377"/>
 																							<reference key="NSWindow"/>
 																							<reference key="NSNextKeyView" ref="470207181"/>
+																							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																							<reference key="NSTarget" ref="742396377"/>
 																							<string key="NSAction">_doScroller:</string>
 																							<double key="NSPercent">0.94827586206896552</double>
@@ -536,6 +539,7 @@
 																							<reference key="NSSuperview" ref="742396377"/>
 																							<reference key="NSWindow"/>
 																							<reference key="NSNextKeyView" ref="626219020"/>
+																							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																							<int key="NSsFlags">1</int>
 																							<reference key="NSTarget" ref="742396377"/>
 																							<string key="NSAction">_doScroller:</string>
@@ -546,6 +550,7 @@
 																					<reference key="NSSuperview" ref="160676796"/>
 																					<reference key="NSWindow"/>
 																					<reference key="NSNextKeyView" ref="2811858"/>
+																					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																					<int key="NSsFlags">560</int>
 																					<reference key="NSVScroller" ref="678002101"/>
 																					<reference key="NSHScroller" ref="470207181"/>
@@ -557,12 +562,14 @@
 																			<reference key="NSSuperview" ref="431726317"/>
 																			<reference key="NSWindow"/>
 																			<reference key="NSNextKeyView" ref="742396377"/>
+																			<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																		</object>
 																	</object>
 																	<string key="NSFrameSize">{180, 290}</string>
 																	<reference key="NSSuperview" ref="329097097"/>
 																	<reference key="NSWindow"/>
 																	<reference key="NSNextKeyView" ref="160676796"/>
+																	<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																	<reference key="NSDocView" ref="160676796"/>
 																	<object class="NSColor" key="NSBGColor" id="125112798">
 																		<int key="NSColorSpace">6</int>
@@ -579,6 +586,7 @@
 																	<reference key="NSSuperview" ref="329097097"/>
 																	<reference key="NSWindow"/>
 																	<reference key="NSNextKeyView" ref="197221884"/>
+																	<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																	<reference key="NSTarget" ref="329097097"/>
 																	<string key="NSAction">_doScroller:</string>
 																	<double key="NSCurValue">1</double>
@@ -591,6 +599,7 @@
 																	<reference key="NSSuperview" ref="329097097"/>
 																	<reference key="NSWindow"/>
 																	<reference key="NSNextKeyView" ref="509794781"/>
+																	<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																	<int key="NSsFlags">1</int>
 																	<reference key="NSTarget" ref="329097097"/>
 																	<string key="NSAction">_doScroller:</string>
@@ -601,6 +610,7 @@
 															<reference key="NSSuperview" ref="635125561"/>
 															<reference key="NSWindow"/>
 															<reference key="NSNextKeyView" ref="431726317"/>
+															<int key="NSViewLayerContentsRedrawPolicy">2</int>
 															<int key="NSsFlags">560</int>
 															<reference key="NSVScroller" ref="626219020"/>
 															<reference key="NSHScroller" ref="197221884"/>
@@ -642,7 +652,7 @@
 																				<string key="NSFrameSize">{180, 180}</string>
 																				<reference key="NSSuperview" ref="396215917"/>
 																				<reference key="NSWindow"/>
-																				<reference key="NSNextKeyView" ref="635134640"/>
+																				<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																				<string key="NSClassName">AFCalendarControl</string>
 																			</object>
 																		</object>
@@ -744,7 +754,7 @@
 																<string key="NSFrame">{{17, 443}, {506, 17}}</string>
 																<reference key="NSSuperview" ref="715011801"/>
 																<reference key="NSWindow"/>
-																<reference key="NSNextKeyView" ref="118095720"/>
+																<reference key="NSNextKeyView" ref="1039600158"/>
 																<bool key="NSEnabled">YES</bool>
 																<object class="NSTextFieldCell" key="NSCell" id="670021363">
 																	<int key="NSCellFlags">68288064</int>
