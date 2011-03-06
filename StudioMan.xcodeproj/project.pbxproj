@@ -21,6 +21,7 @@
 		016C5E7B12EEF41A00C1740C /* StudioManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C5E7A12EEF41A00C1740C /* StudioManTests.m */; };
 		016C5E8512EF234A00C1740C /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E8412EF234A00C1740C /* COPYING */; };
 		01A43B2813240852005EEA4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A43B2713240852005EEA4B /* QuartzCore.framework */; };
+		01A43B331324267E005EEA4B /* SMRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A43B321324267D005EEA4B /* SMRecord.m */; };
 		01CC741A131647C4000A681E /* AmberFoundation-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01CC73F2131647C4000A681E /* AmberFoundation-Info.plist */; };
 		01CC741B131647C4000A681E /* amberfoundation.doxyconf in Resources */ = {isa = PBXBuildFile; fileRef = 01CC73F3131647C4000A681E /* amberfoundation.doxyconf */; };
 		01CC747B1316484B000A681E /* AmberKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01CC743B1316484B000A681E /* AmberKit-Info.plist */; };
@@ -109,6 +110,8 @@
 		016C5E7A12EEF41A00C1740C /* StudioManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudioManTests.m; sourceTree = "<group>"; };
 		016C5E8412EF234A00C1740C /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		01A43B2713240852005EEA4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		01A43B311324267D005EEA4B /* SMRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMRecord.h; sourceTree = "<group>"; };
+		01A43B321324267D005EEA4B /* SMRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMRecord.m; sourceTree = "<group>"; };
 		01CC73DC131647C4000A681E /* AFFoundationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFoundationConstants.h; sourceTree = "<group>"; };
 		01CC73DD131647C4000A681E /* AFFoundationConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFoundationConstants.m; sourceTree = "<group>"; };
 		01CC73DE131647C4000A681E /* AFFoundationMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFoundationMacros.h; sourceTree = "<group>"; };
@@ -294,6 +297,8 @@
 		016C5E5212EEF41900C1740C /* StudioMan */ = {
 			isa = PBXGroup;
 			children = (
+				01A43B311324267D005EEA4B /* SMRecord.h */,
+				01A43B321324267D005EEA4B /* SMRecord.m */,
 				016C5E5E12EEF41900C1740C /* SMTerm.h */,
 				016C5E5F12EEF41900C1740C /* SMTerm.m */,
 				F37EB13A1308825900BBEEDA /* SMCalendarView.h */,
@@ -683,6 +688,7 @@
 				016C5E6912EEF41A00C1740C /* SMTerm.xcdatamodeld in Sources */,
 				F388BBEF13084C6700DF97BE /* NSSplitView+Additions.m in Sources */,
 				F37EB13C1308825900BBEEDA /* SMCalendarView.m in Sources */,
+				01A43B331324267E005EEA4B /* SMRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
