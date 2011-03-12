@@ -38,10 +38,9 @@
 
 static const NSUInteger SMCalendarControlShowHideSegmentIndex = 1;
 static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
-static NSString * const SMTermEntity = @"Term";
-static NSString * const SMGroupEntity = @"Group";
 
 @implementation SMTerm
+@synthesize calendarControl;
 
 - (id)init
 {
@@ -53,9 +52,9 @@ static NSString * const SMGroupEntity = @"Group";
     }
     
     rootTermObject = [NSEntityDescription insertNewObjectForEntityForName:SMTermEntity inManagedObjectContext:[self managedObjectContext]];
-    [rootTermObject setValue:@"Untitled term" forKey:@"displayTitle"];
+    [rootTermObject setValue:@"Untitled term" forKey:@"displayText"];
     NSManagedObject *newGroup = [NSEntityDescription insertNewObjectForEntityForName:SMGroupEntity inManagedObjectContext:[self managedObjectContext]];
-    [newGroup setValue:@"Students" forKey:@"displayTitle"];
+    [newGroup setValue:@"Students" forKey:@"displayText"];
     [newGroup setValue:rootTermObject forKey:@"term"];
     calendarIsActive = YES;
     
@@ -71,7 +70,8 @@ static NSString * const SMGroupEntity = @"Group";
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
-    //[sidebarSegmentedControl setMenu:addButtonMenu forSegment:0];
+    NSLog(@"%@",[calendarControl exposedBindings]);
+    [calendarControl bind:@"contentDate" toObject:testDatePicker withKeyPath:@"dateValue" options:nil];
 }
 
 - (void)awakeFromNib
@@ -83,7 +83,6 @@ static NSString * const SMGroupEntity = @"Group";
 {
     NSSegmentedControl *sidebarControl = (NSSegmentedControl *)sender;
     int clickedSegment = [sidebarControl selectedSegment];
-    NSPoint point;
     //NSEvent *event;
     
     switch (clickedSegment) {

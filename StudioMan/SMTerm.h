@@ -34,7 +34,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NSSplitView+Additions.h"
-#import "AmberKit/AFSourceList.h"
+#import "AmberKit/AFCalendarControl.h"
+#import "SMConstants.h"
 
 @interface SMTerm : NSPersistentDocument <NSSplitViewDelegate,NSSplitViewDelegateAdditions,
 NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
@@ -53,6 +54,8 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     IBOutlet NSSegmentedControl *sidebarSegmentedControl;
     IBOutlet NSMenu *addButtonMenu;
     
+    IBOutlet NSDatePicker *testDatePicker;
+    IBOutlet AFCalendarControl *calendarControl;
     BOOL calendarIsActive;
     BOOL isAnimating; // HACK... need to bring this into the view by
                       // proper use of Core Animation
@@ -64,6 +67,8 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     IBOutlet NSObjectController *termController;
 
 }
+
+@property (retain) AFCalendarControl *calendarControl;
 
 - (IBAction)clickSideBarControl:(id)sender;
 - (void)animationDidEnd;

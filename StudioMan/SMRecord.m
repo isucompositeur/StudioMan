@@ -15,4 +15,9 @@
 @dynamic modificationDate;
 @dynamic displayText;
 
+- (void)awakeFromInsert
+{
+    self.creationDate = [NSDate date];
+}
+
 @end

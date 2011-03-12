@@ -13,9 +13,9 @@
 @interface SMRecord : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) UNKNOWN_TYPE uniqueId;
+@property (nonatomic, retain) NSString * uniqueId;
 @property (nonatomic, retain) NSDate * creationDate;
 @property (nonatomic, retain) NSDate * modificationDate;
-@property (nonatomic, retain) UNKNOWN_TYPE displayText;
+@property (nonatomic, retain) NSString * displayText;
 
 @end
