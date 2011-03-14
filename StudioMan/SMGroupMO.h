@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "SMRecordMO.h"
 
+@class SMPersonMO;
 
 @interface SMGroupMO : SMRecordMO {
 @private
