@@ -20,15 +20,22 @@
 		016C5E7912EEF41A00C1740C /* StudioManTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E7812EEF41A00C1740C /* StudioManTests.h */; };
 		016C5E7B12EEF41A00C1740C /* StudioManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C5E7A12EEF41A00C1740C /* StudioManTests.m */; };
 		016C5E8512EF234A00C1740C /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E8412EF234A00C1740C /* COPYING */; };
+		01813E7C132DB0D300A4B975 /* SMTermMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01813E7B132DB0D300A4B975 /* SMTermMO.m */; };
+		01813E7E132DB22100A4B975 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01813E7D132DB22100A4B975 /* AddressBook.framework */; };
+		01813E81132DB54800A4B975 /* SMRecordMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01813E80132DB54800A4B975 /* SMRecordMO.m */; };
 		01A43B2813240852005EEA4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A43B2713240852005EEA4B /* QuartzCore.framework */; };
-		01A43B331324267E005EEA4B /* SMRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A43B321324267D005EEA4B /* SMRecord.m */; };
-		01A43B3613248B68005EEA4B /* SMGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A43B3513248B67005EEA4B /* SMGroup.m */; };
+		01A43B3613248B68005EEA4B /* SMGroupMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A43B3513248B67005EEA4B /* SMGroupMO.m */; };
 		01A43B3913248CCB005EEA4B /* SMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A43B3813248CCA005EEA4B /* SMConstants.m */; };
 		01CC741A131647C4000A681E /* AmberFoundation-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01CC73F2131647C4000A681E /* AmberFoundation-Info.plist */; };
 		01CC741B131647C4000A681E /* amberfoundation.doxyconf in Resources */ = {isa = PBXBuildFile; fileRef = 01CC73F3131647C4000A681E /* amberfoundation.doxyconf */; };
 		01CC747B1316484B000A681E /* AmberKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01CC743B1316484B000A681E /* AmberKit-Info.plist */; };
 		01CC747C1316484B000A681E /* amberkit.doxyconf in Resources */ = {isa = PBXBuildFile; fileRef = 01CC743C1316484B000A681E /* amberkit.doxyconf */; };
 		01CC74A4131649EF000A681E /* AmberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CC74A3131649EF000A681E /* AmberKit.framework */; };
+		01CE6F14132DCA66000878F5 /* SMPropertyMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F13132DCA66000878F5 /* SMPropertyMO.m */; };
+		01CE6F17132DCA8E000878F5 /* SMEmailMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F16132DCA8E000878F5 /* SMEmailMO.m */; };
+		01CE6F1D132DCAF1000878F5 /* SMAddressMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F1C132DCAF1000878F5 /* SMAddressMO.m */; };
+		01CE6F20132DCB05000878F5 /* SMPhoneMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F1F132DCB05000878F5 /* SMPhoneMO.m */; };
+		01CE6F23132DCB16000878F5 /* SMPersonMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F22132DCB16000878F5 /* SMPersonMO.m */; };
 		F37EB13C1308825900BBEEDA /* SMCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37EB13B1308825900BBEEDA /* SMCalendarView.m */; };
 		F388BBEF13084C6700DF97BE /* NSSplitView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F388BBEE13084C6700DF97BE /* NSSplitView+Additions.m */; };
 		F3A3F45D1301AD110094138A /* plus.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F45C1301AD110094138A /* plus.tiff */; };
@@ -111,11 +118,14 @@
 		016C5E7812EEF41A00C1740C /* StudioManTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudioManTests.h; sourceTree = "<group>"; };
 		016C5E7A12EEF41A00C1740C /* StudioManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudioManTests.m; sourceTree = "<group>"; };
 		016C5E8412EF234A00C1740C /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		01813E7A132DB0D200A4B975 /* SMTermMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTermMO.h; sourceTree = "<group>"; };
+		01813E7B132DB0D300A4B975 /* SMTermMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTermMO.m; sourceTree = "<group>"; };
+		01813E7D132DB22100A4B975 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		01813E7F132DB54800A4B975 /* SMRecordMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMRecordMO.h; sourceTree = "<group>"; };
+		01813E80132DB54800A4B975 /* SMRecordMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMRecordMO.m; sourceTree = "<group>"; };
 		01A43B2713240852005EEA4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		01A43B311324267D005EEA4B /* SMRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMRecord.h; sourceTree = "<group>"; };
-		01A43B321324267D005EEA4B /* SMRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMRecord.m; sourceTree = "<group>"; };
-		01A43B3413248B67005EEA4B /* SMGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMGroup.h; sourceTree = "<group>"; };
-		01A43B3513248B67005EEA4B /* SMGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMGroup.m; sourceTree = "<group>"; };
+		01A43B3413248B67005EEA4B /* SMGroupMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMGroupMO.h; sourceTree = "<group>"; };
+		01A43B3513248B67005EEA4B /* SMGroupMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMGroupMO.m; sourceTree = "<group>"; };
 		01A43B3713248CC9005EEA4B /* SMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMConstants.h; sourceTree = "<group>"; };
 		01A43B3813248CCA005EEA4B /* SMConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMConstants.m; sourceTree = "<group>"; };
 		01CC73DC131647C4000A681E /* AFFoundationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFoundationConstants.h; sourceTree = "<group>"; };
@@ -226,6 +236,16 @@
 		01CC74711316484B000A681E /* AFSwitchControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFSwitchControl.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		01CC74A3131649EF000A681E /* AmberKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AmberKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CC74A5131649F4000A681E /* AmberFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AmberFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01CE6F12132DCA66000878F5 /* SMPropertyMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPropertyMO.h; sourceTree = "<group>"; };
+		01CE6F13132DCA66000878F5 /* SMPropertyMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPropertyMO.m; sourceTree = "<group>"; };
+		01CE6F15132DCA8E000878F5 /* SMEmailMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMEmailMO.h; sourceTree = "<group>"; };
+		01CE6F16132DCA8E000878F5 /* SMEmailMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMEmailMO.m; sourceTree = "<group>"; };
+		01CE6F1B132DCAF1000878F5 /* SMAddressMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAddressMO.h; sourceTree = "<group>"; };
+		01CE6F1C132DCAF1000878F5 /* SMAddressMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAddressMO.m; sourceTree = "<group>"; };
+		01CE6F1E132DCB05000878F5 /* SMPhoneMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPhoneMO.h; sourceTree = "<group>"; };
+		01CE6F1F132DCB05000878F5 /* SMPhoneMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPhoneMO.m; sourceTree = "<group>"; };
+		01CE6F21132DCB16000878F5 /* SMPersonMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPersonMO.h; sourceTree = "<group>"; };
+		01CE6F22132DCB16000878F5 /* SMPersonMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPersonMO.m; sourceTree = "<group>"; };
 		F37EB13A1308825900BBEEDA /* SMCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCalendarView.h; sourceTree = "<group>"; };
 		F37EB13B1308825900BBEEDA /* SMCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCalendarView.m; sourceTree = "<group>"; };
 		F388BBED13084C6700DF97BE /* NSSplitView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSplitView+Additions.h"; sourceTree = "<group>"; };
@@ -240,6 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01813E7E132DB22100A4B975 /* AddressBook.framework in Frameworks */,
 				01A43B2813240852005EEA4B /* QuartzCore.framework in Frameworks */,
 				01CC74A4131649EF000A681E /* AmberKit.framework in Frameworks */,
 				016C5E4D12EEF41900C1740C /* Cocoa.framework in Frameworks */,
@@ -260,6 +281,7 @@
 		016C5E3D12EEF41900C1740C = {
 			isa = PBXGroup;
 			children = (
+				01813E7D132DB22100A4B975 /* AddressBook.framework */,
 				01A43B2713240852005EEA4B /* QuartzCore.framework */,
 				01CC74A5131649F4000A681E /* AmberFoundation.framework */,
 				01CC74A3131649EF000A681E /* AmberKit.framework */,
@@ -303,10 +325,22 @@
 		016C5E5212EEF41900C1740C /* StudioMan */ = {
 			isa = PBXGroup;
 			children = (
-				01A43B311324267D005EEA4B /* SMRecord.h */,
-				01A43B321324267D005EEA4B /* SMRecord.m */,
-				01A43B3413248B67005EEA4B /* SMGroup.h */,
-				01A43B3513248B67005EEA4B /* SMGroup.m */,
+				01813E7F132DB54800A4B975 /* SMRecordMO.h */,
+				01813E80132DB54800A4B975 /* SMRecordMO.m */,
+				01813E7A132DB0D200A4B975 /* SMTermMO.h */,
+				01813E7B132DB0D300A4B975 /* SMTermMO.m */,
+				01A43B3413248B67005EEA4B /* SMGroupMO.h */,
+				01A43B3513248B67005EEA4B /* SMGroupMO.m */,
+				01CE6F21132DCB16000878F5 /* SMPersonMO.h */,
+				01CE6F22132DCB16000878F5 /* SMPersonMO.m */,
+				01CE6F12132DCA66000878F5 /* SMPropertyMO.h */,
+				01CE6F13132DCA66000878F5 /* SMPropertyMO.m */,
+				01CE6F15132DCA8E000878F5 /* SMEmailMO.h */,
+				01CE6F16132DCA8E000878F5 /* SMEmailMO.m */,
+				01CE6F1B132DCAF1000878F5 /* SMAddressMO.h */,
+				01CE6F1C132DCAF1000878F5 /* SMAddressMO.m */,
+				01CE6F1E132DCB05000878F5 /* SMPhoneMO.h */,
+				01CE6F1F132DCB05000878F5 /* SMPhoneMO.m */,
 				016C5E5E12EEF41900C1740C /* SMTerm.h */,
 				016C5E5F12EEF41900C1740C /* SMTerm.m */,
 				01A43B3713248CC9005EEA4B /* SMConstants.h */,
@@ -698,9 +732,15 @@
 				016C5E6912EEF41A00C1740C /* SMTerm.xcdatamodeld in Sources */,
 				F388BBEF13084C6700DF97BE /* NSSplitView+Additions.m in Sources */,
 				F37EB13C1308825900BBEEDA /* SMCalendarView.m in Sources */,
-				01A43B331324267E005EEA4B /* SMRecord.m in Sources */,
-				01A43B3613248B68005EEA4B /* SMGroup.m in Sources */,
+				01A43B3613248B68005EEA4B /* SMGroupMO.m in Sources */,
 				01A43B3913248CCB005EEA4B /* SMConstants.m in Sources */,
+				01813E7C132DB0D300A4B975 /* SMTermMO.m in Sources */,
+				01813E81132DB54800A4B975 /* SMRecordMO.m in Sources */,
+				01CE6F14132DCA66000878F5 /* SMPropertyMO.m in Sources */,
+				01CE6F17132DCA8E000878F5 /* SMEmailMO.m in Sources */,
+				01CE6F1D132DCAF1000878F5 /* SMAddressMO.m in Sources */,
+				01CE6F20132DCB05000878F5 /* SMPhoneMO.m in Sources */,
+				01CE6F23132DCB16000878F5 /* SMPersonMO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
