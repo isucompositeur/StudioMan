@@ -14,6 +14,6 @@
 @private
 }
 @property (nonatomic, retain) NSString * label;
-@property (nonatomic, retain) UNKNOWN_TYPE displayText;
+@property (nonatomic, retain) NSString * displayText;
 
 @end
