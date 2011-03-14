@@ -8,8 +8,6 @@
 
 #import "SMConstants.h"
 
-NSString * const MyStringConstant = @"MyString";
-
 NSString * const SMTermEntity = @"Term";
 NSString * const SMRecordEntity = @"Record";
 NSString * const SMGroupEntity = @"Group";
@@ -28,11 +26,12 @@ NSString * const SMPersonToEmailRelationshipKey = @"emails";
 NSString * const SMPersonToAddressRelationshipKey = @"addresses";
 NSString * const SMPersonToPhoneRelationshipKey = @"phones";
 
-
 NSString * const SMRecordUniqueIDKey = @"uniqueId";
 NSString * const SMRecordCreationDateKey = @"creationDate";
 NSString * const SMRecordModificationDateKey = @"modificationDate";
 
 NSString * const SMTermNameKey = @"termName";
+NSString * const SMTermStartDateKey = @"startDate";
+NSString * const SMTermEndDateKey = @"endDate";
 
 NSString * const SMGroupNameKey = @"groupName";
