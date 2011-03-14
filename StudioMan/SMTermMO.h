@@ -17,5 +17,7 @@
 }
 @property (nonatomic, retain) NSString* termName;
 @property (nonatomic, retain) NSSet* groups;
+@property (nonatomic, retain) NSDate* startDate;
+@property (nonatomic, retain) NSDate* endDate;
 
 @end

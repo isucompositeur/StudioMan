@@ -14,6 +14,8 @@ NSString * const SMABTermPrefix = @"StudioMan - ";
 @implementation SMTermMO
 @dynamic termName;
 @dynamic groups;
+@dynamic startDate;
+@dynamic endDate;
 
 - (void)awakeFromInsert
 {

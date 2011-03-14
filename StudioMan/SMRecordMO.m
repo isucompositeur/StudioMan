@@ -17,7 +17,7 @@
 
 - (void)awakeFromInsert
 {
-    mirrorRecord = [[ABAddressBook sharedAddressBook] recordForUniqueId:self.uniqueId];
+    self.uniqueId = [mirrorRecord valueForProperty:kABUIDProperty];
     self.creationDate = [mirrorRecord valueForProperty:kABCreationDateProperty];
 }
 

@@ -17,6 +17,8 @@
 - (void)awakeFromInsert {
     mirrorRecord = [[ABGroup alloc] initWithAddressBook:[ABAddressBook sharedAddressBook]];
     [[ABAddressBook sharedAddressBook] addRecord:mirrorRecord];
+    
+    [super awakeFromInsert];
 }
 
 - (void)addPeopleObject:(SMPersonMO *)value {    

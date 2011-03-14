@@ -52,10 +52,10 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     }
     
     rootTermObject = [NSEntityDescription insertNewObjectForEntityForName:SMTermEntity inManagedObjectContext:[self managedObjectContext]];
-    [rootTermObject setValue:@"Untitled term" forKey:@"displayText"];
+    [rootTermObject setValue:@"Untitled term" forKey:SMTermNameKey];
     NSManagedObject *newGroup = [NSEntityDescription insertNewObjectForEntityForName:SMGroupEntity inManagedObjectContext:[self managedObjectContext]];
     [newGroup setValue:@"Students" forKey:SMGroupNameKey];
-    [newGroup setValue:rootTermObject forKey:@"term"];
+    [newGroup setValue:rootTermObject forKey:SMGroupToTermRelationshipKey];
     calendarIsActive = YES;
     
     return self;
