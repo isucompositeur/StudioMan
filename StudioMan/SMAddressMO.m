@@ -43,5 +43,10 @@
 @dynamic zip;
 @dynamic person;
 
+- (NSString *) displayText
+{
+    return [NSString stringWithFormat:@"%@\n%@, %@ %@",self.street, self.city,
+            self.state, self.zip];
+}
 
 @end

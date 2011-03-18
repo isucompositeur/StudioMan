@@ -39,5 +39,8 @@
 @dynamic number;
 @dynamic person;
 
-
+- (NSString *)displayText
+{
+    return self.number;
+}
 @end

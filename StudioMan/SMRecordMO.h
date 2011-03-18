@@ -45,6 +45,7 @@
 @private
     
 }
+@property (nonatomic, assign) BOOL leaf;
 @property (nonatomic, retain) NSDate * creationDate;
 @property (nonatomic, retain) NSDate * modificationDate;
 @property (nonatomic, retain) NSString * uniqueId;

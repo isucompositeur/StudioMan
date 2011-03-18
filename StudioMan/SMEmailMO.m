@@ -39,5 +39,9 @@
 @dynamic address;
 @dynamic person;
 
+- (NSString *)displayText
+{
+    return self.address;
+}
 
 @end

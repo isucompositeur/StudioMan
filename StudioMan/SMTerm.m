@@ -35,7 +35,10 @@
 #import "SMTerm.h"
 #import "AmberKit/AmberKit.h"
 #import <Foundation/NSGeometry.h>
+#import "SMGroupMO.h"
+#import "SMPersonMO.h"
 
+static const NSUInteger SMCalendarControlAddSegmentIndex = 0;
 static const NSUInteger SMCalendarControlShowHideSegmentIndex = 1;
 static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
 
@@ -75,6 +78,7 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
+    [sidebarSegmentedControl setMenu:addButtonMenu forSegment:SMCalendarControlAddSegmentIndex];
 }
 
 - (void)awakeFromNib
@@ -92,6 +96,16 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
         case 0:
             [sourceListTreeController addChild:sidebarControl];
             //NSLog(@"%@",[rootTermObject valueForKey:@"groups"]);
+            
+            id selectedObject = [[sourceListTreeController selectedObjects] objectAtIndex:0];
+            if ([selectedObject isKindOfClass:[SMGroupMO class]]) {
+                NSLog(@"is a group");
+                [sourceListTreeController addChild:sidebarControl];
+            } else if([selectedObject isKindOfClass:[SMPersonMO class]]) {
+                NSLog(@"is a person");
+                [sourceListTreeController insert:sidebarControl];
+            } else {}
+            
             break;
         case SMCalendarControlShowHideSegmentIndex:
             NSLog(@"clicked cal icon. Selected: %s",[sidebarControl isSelectedForSegment:clickedSegment] ? "YES" : "NO");

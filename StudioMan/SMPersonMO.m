@@ -51,6 +51,13 @@
 @dynamic addresses;
 @dynamic group;
 
+- (void)awakeFromInsert {
+    mirrorRecord = [[ABPerson alloc] initWithAddressBook:[ABAddressBook sharedAddressBook]];
+    [[ABAddressBook sharedAddressBook] addRecord:mirrorRecord];
+    
+    [super awakeFromInsert];
+}
+
 - (void)addEmailsObject:(SMEmailMO *)value {    
     NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
     [self willChangeValueForKey:@"emails" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
@@ -137,6 +144,19 @@
     [self didChangeValueForKey:@"addresses" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
 }
 
+- (NSSet *)people {
+    return nil;
+}
+
+- (NSString *)displayText
+{
+    return [NSString stringWithFormat:@"%@, %@", self.lastName, self.firstName];
+}
+
+- (BOOL)leaf
+{
+    return YES;
+}
 
 
 @end

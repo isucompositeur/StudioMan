@@ -42,7 +42,7 @@
 @interface SMPersonMO : SMRecordMO {
 @private
 }
-@property (nonatomic, retain) id people;
+@property (nonatomic, retain) NSSet* people;
 @property (nonatomic, retain) NSString * firstName;
 @property (nonatomic, retain) NSString * note;
 @property (nonatomic, retain) NSDate * birthday;

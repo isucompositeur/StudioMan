@@ -473,7 +473,6 @@
 																											</object>
 																											<int key="NSResizingMask">3</int>
 																											<bool key="NSIsResizeable">YES</bool>
-																											<bool key="NSIsEditable">YES</bool>
 																											<reference key="NSTableView" ref="1063112511"/>
 																										</object>
 																									</object>
@@ -498,7 +497,7 @@
 																										</object>
 																									</object>
 																									<double key="NSRowHeight">20</double>
-																									<int key="NSTvFlags">1379926016</int>
+																									<int key="NSTvFlags">1111490560</int>
 																									<reference key="NSDelegate"/>
 																									<reference key="NSDataSource"/>
 																									<int key="NSColumnAutoresizingStyle">4</int>
@@ -880,6 +879,7 @@
 				<bool key="NSPreservesSelection">YES</bool>
 				<bool key="NSSelectsInsertedObjects">YES</bool>
 				<string key="NSTreeContentChildrenKey">people</string>
+				<string key="NSTreeContentLeafKey">leaf</string>
 			</object>
 			<object class="NSCustomObject" id="796877042">
 				<string key="NSClassName">NSApplication</string>

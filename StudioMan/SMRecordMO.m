@@ -42,6 +42,7 @@
 @dynamic modificationDate;
 @dynamic uniqueId;
 @dynamic displayText;
+@dynamic leaf;
 
 - (void)awakeFromInsert
 {
@@ -58,6 +59,11 @@
 {
     [[ABAddressBook sharedAddressBook] save];
     self.modificationDate = [mirrorRecord valueForProperty:kABModificationDateProperty];
+}
+
+- (BOOL)leaf
+{
+    return NO;
 }
 
 @end
