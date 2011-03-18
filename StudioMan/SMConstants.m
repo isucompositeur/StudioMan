@@ -26,6 +26,8 @@ NSString * const SMPersonToEmailRelationshipKey = @"emails";
 NSString * const SMPersonToAddressRelationshipKey = @"addresses";
 NSString * const SMPersonToPhoneRelationshipKey = @"phones";
 
+NSString * const SMDisplayTextKey = @"displayText";
+
 NSString * const SMRecordUniqueIDKey = @"uniqueId";
 NSString * const SMRecordCreationDateKey = @"creationDate";
 NSString * const SMRecordModificationDateKey = @"modificationDate";

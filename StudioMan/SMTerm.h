@@ -67,13 +67,17 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     
     NSMutableDictionary *collapsedViewRects;
     IBOutlet NSObjectController *termController;
+    
+    NSArray *sourceListSortDescriptors;
 
 }
 
 @property (retain) AFCalendarControl *calendarControl;
 @property (nonatomic, retain) SMTermMO *rootTermObject;
+@property (nonatomic, retain) NSArray *sourceListSortDescriptors;
 
 - (IBAction)clickSideBarControl:(id)sender;
+- (IBAction)addPerson:(id)sender;
 - (void)animationDidEnd;
 - (BOOL)itemIsGroup:(id)item;
 

@@ -45,6 +45,7 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
 @implementation SMTerm
 @synthesize calendarControl;
 @synthesize rootTermObject;
+@synthesize sourceListSortDescriptors;
 
 - (id)init
 {
@@ -61,6 +62,10 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     //temporary placeholders until new term sheet is implemented
     [rootTermObject setValue:[NSDate date] forKey:SMTermStartDateKey];
     [rootTermObject setValue:[NSDate date] forKey:SMTermEndDateKey];
+    
+    //creating sort descriptors
+    NSSortDescriptor *sort = [[[NSSortDescriptor alloc] initWithKey:SMGroupNameKey ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+    sourceListSortDescriptors = [[NSArray alloc] initWithObjects:sort, nil];
     
     NSManagedObject *newGroup = [NSEntityDescription insertNewObjectForEntityForName:SMGroupEntity inManagedObjectContext:[self managedObjectContext]];
     [newGroup setValue:@"Students" forKey:SMGroupNameKey];
@@ -95,15 +100,7 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     
     switch (clickedSegment) {
         case 0:
-            [sourceListTreeController addChild:sidebarControl];
-            //NSLog(@"%@",[rootTermObject valueForKey:@"groups"]);
-            
-            id selectedObject = [[sourceListTreeController selectedObjects] objectAtIndex:0];
-            if ([selectedObject isKindOfClass:[SMGroupMO class]]) {
-                [sourceListTreeController addChild:sidebarControl];
-            } else if([selectedObject isKindOfClass:[SMPersonMO class]]) {
-                [sourceListTreeController insert:sidebarControl];
-            } else {}
+            [self addPerson:sidebarControl];
             
             break;
         case SMCalendarControlShowHideSegmentIndex:
@@ -126,6 +123,18 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
             break;
     }
     
+}
+
+- (IBAction)addPerson:(id)sender
+{
+    [sourceListTreeController addChild:sender];
+    
+    id selectedObject = [[sourceListTreeController selectedObjects] objectAtIndex:0];
+    if ([selectedObject isKindOfClass:[SMGroupMO class]]) {
+        [sourceListTreeController addChild:sender];
+    } else if([selectedObject isKindOfClass:[SMPersonMO class]]) {
+        [sourceListTreeController insert:sender];
+    } else {}
 }
 
 - (void)animationDidEnd {
