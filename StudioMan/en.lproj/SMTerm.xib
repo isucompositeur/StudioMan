@@ -650,7 +650,7 @@
 																				<string key="NSFrameSize">{180, 180}</string>
 																				<reference key="NSSuperview" ref="396215917"/>
 																				<reference key="NSWindow"/>
-																				<reference key="NSNextKeyView" ref="635134640"/>
+																				<reference key="NSNextKeyView"/>
 																				<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																				<string key="NSClassName">AFCalendarControl</string>
 																			</object>
@@ -737,7 +737,7 @@
 														<string key="NSFrameSize">{540, 480}</string>
 														<reference key="NSSuperview" ref="1039600158"/>
 														<reference key="NSWindow"/>
-														<reference key="NSNextKeyView" ref="118095720"/>
+														<reference key="NSNextKeyView" ref="1039600158"/>
 													</object>
 													<string key="NSLabel">Tab</string>
 													<reference key="NSColor" ref="125112798"/>
@@ -873,7 +873,7 @@
 				<string key="NSTreeContentChildrenKey">people</string>
 				<string key="NSTreeContentLeafKey">leaf</string>
 			</object>
-			<object class="NSCustomObject" id="1033790398">
+			<object class="NSCustomObject" id="426914968">
 				<string key="NSClassName">SMAddGroupSheetController</string>
 			</object>
 			<object class="NSCustomObject" id="796877042">
@@ -1150,7 +1150,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">add:</string>
-						<reference key="source" ref="1033790398"/>
+						<reference key="source" ref="426914968"/>
 						<reference key="destination" ref="201719933"/>
 					</object>
 					<int key="connectionID">100237</int>
@@ -1158,7 +1158,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">sourceListTreeController</string>
-						<reference key="source" ref="1033790398"/>
+						<reference key="source" ref="426914968"/>
 						<reference key="destination" ref="820996844"/>
 					</object>
 					<int key="connectionID">100238</int>
@@ -1166,7 +1166,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">term</string>
-						<reference key="source" ref="1033790398"/>
+						<reference key="source" ref="426914968"/>
 						<reference key="destination" ref="512844837"/>
 					</object>
 					<int key="connectionID">100239</int>
@@ -1174,7 +1174,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">termWindow</string>
-						<reference key="source" ref="1033790398"/>
+						<reference key="source" ref="426914968"/>
 						<reference key="destination" ref="275939982"/>
 					</object>
 					<int key="connectionID">100241</int>
@@ -1571,7 +1571,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100234</int>
-						<reference key="object" ref="1033790398"/>
+						<reference key="object" ref="426914968"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</object>

@@ -26,6 +26,20 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(termWindowWillClose:)
+                                                 name:NSWindowWillCloseNotification
+                                               object:termWindow];
+}
+
+- (void)termWindowWillClose:(NSNotification *)note {
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self name:nil object:nil];
+    [newGroupSheet autorelease];
+    [newGroupController autorelease];
+}
+
 - (NSManagedObjectContext *)documentManagedObjectContext
 {
     return [sourceListTreeController managedObjectContext];
@@ -99,6 +113,28 @@
     [[self managedObjectContext] reset];
     
     [newGroupSheet orderOut:self];
+}
+
+- (NSUndoManager *)windowWillReturnUndoManager:(NSWindow *)sender {
+    return [[self managedObjectContext] undoManager];
+}
+
+- (IBAction)undo:sender {
+    [[[self managedObjectContext] undoManager] undo];
+}
+
+- (IBAction)redo:sender {
+    [[[self managedObjectContext] undoManager] redo];
+}
+
+- (BOOL)validateUserInterfaceItem:(id <NSValidatedUserInterfaceItem>)anItem {
+    if ([anItem action] == @selector(undo:)) {
+        return [[[self managedObjectContext] undoManager] canUndo];
+    }
+    if ([anItem action] == @selector(redo:)) {
+        return [[[self managedObjectContext] undoManager] canRedo];
+    }
+    return YES;
 }
 
 - (void)dealloc

@@ -37,7 +37,7 @@
 #import "AmberKit/AFCalendarControl.h"
 #import "SMConstants.h"
 
-@class SMTermMO;
+@class SMTermMO, SMPersonMO;
 
 @interface SMTerm : NSPersistentDocument <NSSplitViewDelegate,NSSplitViewDelegateAdditions,
 NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
