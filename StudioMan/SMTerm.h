@@ -53,6 +53,7 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     IBOutlet NSView *helperView;
     IBOutlet NSView *mainView;
     
+    IBOutlet NSSearchField *personSearchField;
     IBOutlet NSSegmentedControl *sidebarSegmentedControl;
     IBOutlet NSMenu *addButtonMenu;
     
@@ -78,6 +79,7 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
 
 - (IBAction)clickSideBarControl:(id)sender;
 - (IBAction)addPerson:(id)sender;
+- (IBAction)searchForPerson:(id)sender;
 - (void)animationDidEnd;
 - (BOOL)itemIsGroup:(id)item;
 

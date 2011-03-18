@@ -137,6 +137,22 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     } else {}
 }
 
+- (IBAction)searchForPerson:(id)sender
+{
+    if(![[sender stringValue] isEmpty]) {
+        NSString *searchString = [sender stringValue];
+        NSPredicate *personPredicate = [NSPredicate predicateWithFormat:@"(firstName CONTAINS[cd] %@) OR (lastName CONTAINS[cd] %@)",searchString, searchString];
+
+        [sourceListTreeController setFetchPredicate:personPredicate];
+    } else {
+        [sourceListTreeController setFetchPredicate:nil];
+    }
+    NSLog(@"term: %@",[(NSSearchField *)sender stringValue]);
+
+    [sourceListTreeController fetch:sender];
+    [sourceList reloadData];
+}
+
 - (void)animationDidEnd {
     isAnimating = NO;
 }
@@ -218,6 +234,7 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
 }
 # pragma mark -
 # pragma mark NSToolbarDelegate methods
+
 
 
 @end
