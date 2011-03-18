@@ -44,6 +44,7 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
 
 @implementation SMTerm
 @synthesize calendarControl;
+@synthesize rootTermObject;
 
 - (id)init
 {
@@ -54,7 +55,7 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
         collapsedViewRects = [[NSMutableDictionary alloc] init];
     }
     
-    rootTermObject = [NSEntityDescription insertNewObjectForEntityForName:SMTermEntity inManagedObjectContext:[self managedObjectContext]];
+    self.rootTermObject = [NSEntityDescription insertNewObjectForEntityForName:SMTermEntity inManagedObjectContext:[self managedObjectContext]];
     [rootTermObject setValue:@"Untitled term" forKey:SMTermNameKey];
     
     //temporary placeholders until new term sheet is implemented
@@ -99,10 +100,8 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
             
             id selectedObject = [[sourceListTreeController selectedObjects] objectAtIndex:0];
             if ([selectedObject isKindOfClass:[SMGroupMO class]]) {
-                NSLog(@"is a group");
                 [sourceListTreeController addChild:sidebarControl];
             } else if([selectedObject isKindOfClass:[SMPersonMO class]]) {
-                NSLog(@"is a person");
                 [sourceListTreeController insert:sidebarControl];
             } else {}
             

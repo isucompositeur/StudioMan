@@ -37,12 +37,14 @@
 #import "AmberKit/AFCalendarControl.h"
 #import "SMConstants.h"
 
+@class SMTermMO;
+
 @interface SMTerm : NSPersistentDocument <NSSplitViewDelegate,NSSplitViewDelegateAdditions,
 NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     
     IBOutlet NSWindow *window; // temp until XCode4 is fixed
     IBOutlet NSManagedObjectContext *managedObjectContext; // temp until XCode4 is fixed
-    NSManagedObject *rootTermObject;
+    SMTermMO *rootTermObject;
     
     IBOutlet NSSplitView *mainSplitView;
     IBOutlet NSSplitView *sidebarSplitView;
@@ -69,6 +71,7 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
 }
 
 @property (retain) AFCalendarControl *calendarControl;
+@property (nonatomic, retain) SMTermMO *rootTermObject;
 
 - (IBAction)clickSideBarControl:(id)sender;
 - (void)animationDidEnd;

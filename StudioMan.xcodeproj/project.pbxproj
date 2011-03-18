@@ -36,6 +36,8 @@
 		01CE6F1D132DCAF1000878F5 /* SMAddressMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F1C132DCAF1000878F5 /* SMAddressMO.m */; };
 		01CE6F20132DCB05000878F5 /* SMPhoneMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F1F132DCB05000878F5 /* SMPhoneMO.m */; };
 		01CE6F23132DCB16000878F5 /* SMPersonMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F22132DCB16000878F5 /* SMPersonMO.m */; };
+		01DA380913335318009054EB /* SMAddGroupSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DA380813335317009054EB /* SMAddGroupSheet.xib */; };
+		01DA380C1333542F009054EB /* SMAddGroupSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DA380B1333542E009054EB /* SMAddGroupSheetController.m */; };
 		F37EB13C1308825900BBEEDA /* SMCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37EB13B1308825900BBEEDA /* SMCalendarView.m */; };
 		F388BBEF13084C6700DF97BE /* NSSplitView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F388BBEE13084C6700DF97BE /* NSSplitView+Additions.m */; };
 		F3A3F45D1301AD110094138A /* plus.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F45C1301AD110094138A /* plus.tiff */; };
@@ -246,6 +248,9 @@
 		01CE6F1F132DCB05000878F5 /* SMPhoneMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPhoneMO.m; sourceTree = "<group>"; };
 		01CE6F21132DCB16000878F5 /* SMPersonMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPersonMO.h; sourceTree = "<group>"; };
 		01CE6F22132DCB16000878F5 /* SMPersonMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPersonMO.m; sourceTree = "<group>"; };
+		01DA380813335317009054EB /* SMAddGroupSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMAddGroupSheet.xib; sourceTree = "<group>"; };
+		01DA380A1333542E009054EB /* SMAddGroupSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAddGroupSheetController.h; sourceTree = "<group>"; };
+		01DA380B1333542E009054EB /* SMAddGroupSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAddGroupSheetController.m; sourceTree = "<group>"; };
 		F37EB13A1308825900BBEEDA /* SMCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCalendarView.h; sourceTree = "<group>"; };
 		F37EB13B1308825900BBEEDA /* SMCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCalendarView.m; sourceTree = "<group>"; };
 		F388BBED13084C6700DF97BE /* NSSplitView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSplitView+Additions.h"; sourceTree = "<group>"; };
@@ -343,6 +348,8 @@
 				01CE6F1F132DCB05000878F5 /* SMPhoneMO.m */,
 				016C5E5E12EEF41900C1740C /* SMTerm.h */,
 				016C5E5F12EEF41900C1740C /* SMTerm.m */,
+				01DA380A1333542E009054EB /* SMAddGroupSheetController.h */,
+				01DA380B1333542E009054EB /* SMAddGroupSheetController.m */,
 				01A43B3713248CC9005EEA4B /* SMConstants.h */,
 				01A43B3813248CCA005EEA4B /* SMConstants.m */,
 				F37EB13A1308825900BBEEDA /* SMCalendarView.h */,
@@ -350,6 +357,7 @@
 				F388BBED13084C6700DF97BE /* NSSplitView+Additions.h */,
 				F388BBEE13084C6700DF97BE /* NSSplitView+Additions.m */,
 				016C5E6112EEF41900C1740C /* SMTerm.xib */,
+				01DA380813335317009054EB /* SMAddGroupSheet.xib */,
 				016C5E6412EEF41A00C1740C /* MainMenu.xib */,
 				016C5E6712EEF41A00C1740C /* SMTerm.xcdatamodeld */,
 				016C5E5312EEF41900C1740C /* Supporting Files */,
@@ -692,6 +700,7 @@
 				01CC741B131647C4000A681E /* amberfoundation.doxyconf in Resources */,
 				01CC747B1316484B000A681E /* AmberKit-Info.plist in Resources */,
 				01CC747C1316484B000A681E /* amberkit.doxyconf in Resources */,
+				01DA380913335318009054EB /* SMAddGroupSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +750,7 @@
 				01CE6F1D132DCAF1000878F5 /* SMAddressMO.m in Sources */,
 				01CE6F20132DCB05000878F5 /* SMPhoneMO.m in Sources */,
 				01CE6F23132DCB16000878F5 /* SMPersonMO.m in Sources */,
+				01DA380C1333542F009054EB /* SMAddGroupSheetController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
