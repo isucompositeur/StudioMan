@@ -16,6 +16,7 @@
 static int SMGroupChangeContext = 520932930;
 static int SMPersonChangeContext = 28925691;
 
+
 static NSString *termManagedObjectKey = @"termManagedObject";
 
 NSString * const SMFilterValueKey = @"filterValue";
@@ -61,7 +62,60 @@ NSString * const SMFilterValueKey = @"filterValue";
 }
 
 # pragma mark -
-# pragma mark 
+# pragma mark NSOutlineViewDataSource methods
+
+- (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item
+{
+    if (item == nil) {
+        return [[rootTreeNode childNodes] objectAtIndex:index];
+    } else {
+        return [[item childNodes] objectAtIndex:index];
+    }
+}
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item
+{
+    if([item parentNode] == rootTreeNode) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item
+{
+    if (item == nil) {
+        return [[rootTreeNode childNodes] count];
+    } else {
+        return [[item childNodes] count];
+    }
+}
+
+- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
+{
+    return [[item representedObject] displayText];
+}
+
+# pragma mark -
+# pragma mark NSOutlineViewDelegate methods
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item
+{
+    if([item parentNode] == nil) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (void)outlineView:(NSOutlineView *)sender willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item {
+    if([item parentNode] == rootTreeNode) {
+        NSMutableAttributedString *newTitle = [[cell attributedStringValue] mutableCopy];
+        [newTitle replaceCharactersInRange:NSMakeRange(0,[newTitle length]) withString:[[newTitle string] uppercaseString]];
+        [cell setAttributedStringValue:newTitle];
+        [newTitle release];
+    }
+}
 
 # pragma mark -
 # pragma mark Custom logic
@@ -92,6 +146,7 @@ NSString * const SMFilterValueKey = @"filterValue";
     
     [self didChangeValueForKey:termManagedObjectKey];
     [self updateGroups];
+    [sourceListView reloadData];
 }
 
 - (void)setFilterValue:(NSString *)value

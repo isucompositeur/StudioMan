@@ -12,7 +12,7 @@ extern NSString * const SMFilterValueKey;
 
 @class SMTermMO, SMSourceListNode;
 
-@interface SMSourceListController : NSController {
+@interface SMSourceListController : NSController <NSOutlineViewDelegate, NSOutlineViewDataSource> {
 @private
     
     SMTermMO *termManagedObject;
@@ -22,6 +22,7 @@ extern NSString * const SMFilterValueKey;
     
     SMSourceListNode *rootTreeNode;
     
+    IBOutlet NSOutlineView *sourceListView;
 }
 
 @property (retain, nonatomic) SMTermMO *termManagedObject;

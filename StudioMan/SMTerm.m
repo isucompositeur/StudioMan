@@ -216,26 +216,6 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
 }
 
 # pragma mark -
-# pragma mark NSOutlineViewDelegate methods
-
-- (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item
-{
-    if([self itemIsGroup:item]) {
-        return YES;
-    } else {
-        return NO;
-    }
-}
-
-- (void)outlineView:(NSOutlineView *)sender willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item {
-    if([self itemIsGroup:item]) {
-        NSMutableAttributedString *newTitle = [[cell attributedStringValue] mutableCopy];
-        [newTitle replaceCharactersInRange:NSMakeRange(0,[newTitle length]) withString:[[newTitle string] uppercaseString]];
-        [cell setAttributedStringValue:newTitle];
-        [newTitle release];
-    }
-}
-# pragma mark -
 # pragma mark NSToolbarDelegate methods
 
 
