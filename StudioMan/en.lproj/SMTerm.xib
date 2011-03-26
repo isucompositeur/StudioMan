@@ -106,9 +106,11 @@
 								<string key="NSToolbarItemPaletteLabel">Search</string>
 								<nil key="NSToolbarItemToolTip"/>
 								<object class="NSSearchField" key="NSToolbarItemView" id="927391097">
-									<nil key="NSNextResponder"/>
+									<reference key="NSNextResponder"/>
 									<int key="NSvFlags">268</int>
 									<string key="NSFrame">{{0, 14}, {96, 22}}</string>
+									<reference key="NSSuperview"/>
+									<reference key="NSNextKeyView"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSSearchFieldCell" key="NSCell" id="957717190">
 										<int key="NSCellFlags">343014976</int>
@@ -879,7 +881,7 @@
 			<object class="NSCustomObject" id="1033790398">
 				<string key="NSClassName">SMAddGroupSheetController</string>
 			</object>
-			<object class="NSCustomObject" id="379299323">
+			<object class="NSCustomObject" id="959976956">
 				<string key="NSClassName">SMSourceListController</string>
 			</object>
 			<object class="NSCustomObject" id="796877042">
@@ -1138,22 +1140,6 @@
 					<int key="connectionID">100213</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.displayText</string>
-						<reference key="source" ref="174554006"/>
-						<reference key="destination" ref="820996844"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="174554006"/>
-							<reference key="NSDestination" ref="820996844"/>
-							<string key="NSLabel">value: arrangedObjects.displayText</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.displayText</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">100233</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">add:</string>
 						<reference key="source" ref="1033790398"/>
@@ -1245,9 +1231,45 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">sourceListController</string>
 						<reference key="source" ref="512844837"/>
-						<reference key="destination" ref="379299323"/>
+						<reference key="destination" ref="959976956"/>
 					</object>
 					<int key="connectionID">100261</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: filterValue</string>
+						<reference key="source" ref="927391097"/>
+						<reference key="destination" ref="959976956"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="927391097"/>
+							<reference key="NSDestination" ref="959976956"/>
+							<string key="NSLabel">value: filterValue</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">filterValue</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100264</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.arrangedObjects.displayText</string>
+						<reference key="source" ref="174554006"/>
+						<reference key="destination" ref="959976956"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="174554006"/>
+							<reference key="NSDestination" ref="959976956"/>
+							<string key="NSLabel">value: self.arrangedObjects.displayText</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.arrangedObjects.displayText</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSConditionallySetsEditable</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100275</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1646,7 +1668,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100260</int>
-						<reference key="object" ref="379299323"/>
+						<reference key="object" ref="959976956"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</object>
@@ -1806,7 +1828,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100261</int>
+			<int key="maxID">100275</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const SMFilterValueKey;
+
 @class SMTermMO, SMSourceListNode;
 
 @interface SMSourceListController : NSController {
@@ -25,8 +27,11 @@
 @property (retain, nonatomic) SMTermMO *termManagedObject;
 @property (retain, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (retain, nonatomic) NSString *filterValue;
+@property (readonly, nonatomic) id arrangedObjects;
 
 - (void)updateGroups;
+- (void)updatePeopleForGroup:(SMSourceListNode *)group;
+- (id)arrangedObjects;
 
 @end
 

@@ -14,9 +14,14 @@
 #import "SMConstants.h"
 
 static int SMGroupChangeContext = 520932930;
+static int SMPersonChangeContext = 28925691;
+
 static NSString *termManagedObjectKey = @"termManagedObject";
 
+NSString * const SMFilterValueKey = @"filterValue";
+
 @implementation SMSourceListController
+
 @synthesize managedObjectContext;
 @synthesize filterValue;
 @synthesize termManagedObject;
@@ -56,6 +61,9 @@ static NSString *termManagedObjectKey = @"termManagedObject";
 }
 
 # pragma mark -
+# pragma mark 
+
+# pragma mark -
 # pragma mark Custom logic
 
 - (void)setTermManagedObject:(SMTermMO *)term
@@ -86,15 +94,46 @@ static NSString *termManagedObjectKey = @"termManagedObject";
     [self updateGroups];
 }
 
+- (void)setFilterValue:(NSString *)value
+{
+    [self willChangeValueForKey:SMFilterValueKey];
+    filterValue = value;
+    [self didChangeValueForKey:SMFilterValueKey];
+}
+
 - (void)updateGroups
 {
+    for (SMSourceListNode *groupNode in [rootTreeNode childNodes]) {
+        [[groupNode representedObject] removeObserver:self forKeyPath:SMGroupToPersonRelationshipKey];
+    }
+    
     [[rootTreeNode mutableChildNodes] removeAllObjects];
     
     NSSet *groups = [termManagedObject valueForKey:SMTermToGroupRelationshipKey];
     
     for (SMGroupMO* group  in groups) {
-        [[rootTreeNode mutableChildNodes] addObject:[SMSourceListNode treeNodeWithRepresentedObject:group]];
+        SMSourceListNode *newGroup = [SMSourceListNode treeNodeWithRepresentedObject:group];
+        [[rootTreeNode mutableChildNodes] addObject:newGroup];
+        [group addObserver:self forKeyPath:SMGroupToPersonRelationshipKey options:0 context:&SMPersonChangeContext];
+        
+        [self updatePeopleForGroup:newGroup];
     }
+}
+
+- (void)updatePeopleForGroup:(SMSourceListNode *)group
+{
+    [[group mutableChildNodes] removeAllObjects];
+    NSSet *people = [[group representedObject] valueForKey:SMGroupToPersonRelationshipKey];
+    
+    for (SMPersonMO *person in people) {
+        SMSourceListNode *newPerson = [SMSourceListNode treeNodeWithRepresentedObject:person];
+        [[group mutableChildNodes] addObject:newPerson];
+    }
+}
+
+- (id)arrangedObjects
+{
+    return rootTreeNode;
 }
 
 @end
