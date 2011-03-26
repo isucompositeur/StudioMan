@@ -2,21 +2,11 @@
 //  SMSourceListController.m
 //  StudioMan
 //
-<<<<<<< HEAD
-//  Created by Nicholas Meyer on 3/24/11.
-=======
 //  Created by Nicholas Meyer on 3/25/11.
->>>>>>> de7d2b53132fba31754de3a5024546ca6f6631eb
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import "SMSourceListController.h"
-<<<<<<< HEAD
-
-
-@implementation SMSourceListController
-
-=======
 #import "SMTermMO.h"
 #import "SMGroupMO.h"
 #import "SMPersonMO.h"
@@ -37,7 +27,6 @@ NSString * const SMFilterValueKey = @"filterValue";
 @synthesize filterValue;
 @synthesize termManagedObject;
 
->>>>>>> de7d2b53132fba31754de3a5024546ca6f6631eb
 - (id)init
 {
     self = [super init];
@@ -50,11 +39,6 @@ NSString * const SMFilterValueKey = @"filterValue";
 
 - (void)dealloc
 {
-<<<<<<< HEAD
-    [super dealloc];
-}
-
-=======
     self.managedObjectContext = nil;
     self.termManagedObject = nil;
     
@@ -207,5 +191,4 @@ NSString * const SMFilterValueKey = @"filterValue";
     return rootTreeNode;
 }
 
->>>>>>> de7d2b53132fba31754de3a5024546ca6f6631eb
 @end
