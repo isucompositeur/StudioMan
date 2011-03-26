@@ -34,10 +34,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NSSplitView+Additions.h"
-#import "AmberKit/AFCalendarControl.h"
 #import "SMConstants.h"
 
-@class SMTermMO;
+@class SMTermMO, SMSourceListController, AFCalendarControl;
 
 @interface SMTerm : NSPersistentDocument <NSSplitViewDelegate,NSSplitViewDelegateAdditions,
 NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
@@ -63,6 +62,7 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     BOOL isAnimating; // HACK... need to bring this into the view by
                       // proper use of Core Animation
     
+    IBOutlet SMSourceListController *sourceListController;
     IBOutlet NSTreeController *sourceListTreeController;
     IBOutlet NSOutlineView *sourceList;
     

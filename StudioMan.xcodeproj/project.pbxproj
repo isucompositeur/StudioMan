@@ -38,11 +38,13 @@
 		01CE6F23132DCB16000878F5 /* SMPersonMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F22132DCB16000878F5 /* SMPersonMO.m */; };
 		01DA380913335318009054EB /* SMAddGroupSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DA380813335317009054EB /* SMAddGroupSheet.xib */; };
 		01DA380C1333542F009054EB /* SMAddGroupSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DA380B1333542E009054EB /* SMAddGroupSheetController.m */; };
+		F30AE5C6133E4BB500563101 /* SMSourceListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F30AE5C5133E4BB500563101 /* SMSourceListNode.m */; };
 		F37EB13C1308825900BBEEDA /* SMCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37EB13B1308825900BBEEDA /* SMCalendarView.m */; };
 		F388BBEF13084C6700DF97BE /* NSSplitView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F388BBEE13084C6700DF97BE /* NSSplitView+Additions.m */; };
 		F3A3F45D1301AD110094138A /* plus.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F45C1301AD110094138A /* plus.tiff */; };
 		F3A3F45F1301ADA80094138A /* Calendars_Off.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F45E1301ADA80094138A /* Calendars_Off.png */; };
 		F3A3F4611301ADB00094138A /* Calendars_On.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F4601301ADB00094138A /* Calendars_On.png */; };
+		F3D7600B133CE25D0030F503 /* SMSourceListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D7600A133CE25D0030F503 /* SMSourceListController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,6 +253,8 @@
 		01DA380813335317009054EB /* SMAddGroupSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMAddGroupSheet.xib; sourceTree = "<group>"; };
 		01DA380A1333542E009054EB /* SMAddGroupSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAddGroupSheetController.h; sourceTree = "<group>"; };
 		01DA380B1333542E009054EB /* SMAddGroupSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAddGroupSheetController.m; sourceTree = "<group>"; };
+		F30AE5C4133E4BB400563101 /* SMSourceListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSourceListNode.h; sourceTree = "<group>"; };
+		F30AE5C5133E4BB500563101 /* SMSourceListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSourceListNode.m; sourceTree = "<group>"; };
 		F37EB13A1308825900BBEEDA /* SMCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCalendarView.h; sourceTree = "<group>"; };
 		F37EB13B1308825900BBEEDA /* SMCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCalendarView.m; sourceTree = "<group>"; };
 		F388BBED13084C6700DF97BE /* NSSplitView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSplitView+Additions.h"; sourceTree = "<group>"; };
@@ -258,6 +262,8 @@
 		F3A3F45C1301AD110094138A /* plus.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = plus.tiff; sourceTree = "<group>"; };
 		F3A3F45E1301ADA80094138A /* Calendars_Off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendars_Off.png; sourceTree = "<group>"; };
 		F3A3F4601301ADB00094138A /* Calendars_On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendars_On.png; sourceTree = "<group>"; };
+		F3D76009133CE25D0030F503 /* SMSourceListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSourceListController.h; sourceTree = "<group>"; };
+		F3D7600A133CE25D0030F503 /* SMSourceListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSourceListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +354,10 @@
 				01CE6F1F132DCB05000878F5 /* SMPhoneMO.m */,
 				016C5E5E12EEF41900C1740C /* SMTerm.h */,
 				016C5E5F12EEF41900C1740C /* SMTerm.m */,
+				F3D76009133CE25D0030F503 /* SMSourceListController.h */,
+				F3D7600A133CE25D0030F503 /* SMSourceListController.m */,
+				F30AE5C4133E4BB400563101 /* SMSourceListNode.h */,
+				F30AE5C5133E4BB500563101 /* SMSourceListNode.m */,
 				01DA380A1333542E009054EB /* SMAddGroupSheetController.h */,
 				01DA380B1333542E009054EB /* SMAddGroupSheetController.m */,
 				01A43B3713248CC9005EEA4B /* SMConstants.h */,
@@ -751,6 +761,8 @@
 				01CE6F20132DCB05000878F5 /* SMPhoneMO.m in Sources */,
 				01CE6F23132DCB16000878F5 /* SMPersonMO.m in Sources */,
 				01DA380C1333542F009054EB /* SMAddGroupSheetController.m in Sources */,
+				F3D7600B133CE25D0030F503 /* SMSourceListController.m in Sources */,
+				F30AE5C6133E4BB500563101 /* SMSourceListNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,6 +37,7 @@
 #import <Foundation/NSGeometry.h>
 #import "SMGroupMO.h"
 #import "SMPersonMO.h"
+#import "SMSourceListController.h"
 
 static const NSUInteger SMCalendarControlAddSegmentIndex = 0;
 static const NSUInteger SMCalendarControlShowHideSegmentIndex = 1;
@@ -85,6 +86,8 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
     [sidebarSegmentedControl setMenu:addButtonMenu forSegment:SMCalendarControlAddSegmentIndex];
+    sourceListController.managedObjectContext = [self managedObjectContext];
+    sourceListController.termManagedObject = self.rootTermObject;
 }
 
 - (void)awakeFromNib
