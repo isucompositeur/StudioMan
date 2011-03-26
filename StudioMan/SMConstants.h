@@ -50,6 +50,10 @@ extern NSString * const SMPersonToEmailRelationshipKey;
 extern NSString * const SMPersonToAddressRelationshipKey;
 extern NSString * const SMPersonToPhoneRelationshipKey;
 
+extern NSString * const SMPersonSearchToolbarItemIdentifier;
+
+extern NSString * const SMDisplayTextKey;
+
 extern NSString * const SMRecordUniqueIDKey;
 extern NSString * const SMRecordCreationDateKey;
 extern NSString * const SMRecordModificationDateKey;

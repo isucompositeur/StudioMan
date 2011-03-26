@@ -37,6 +37,7 @@
 #import <Foundation/NSGeometry.h>
 #import "SMGroupMO.h"
 #import "SMPersonMO.h"
+#import "SMSourceListController.h"
 
 static const NSUInteger SMCalendarControlAddSegmentIndex = 0;
 static const NSUInteger SMCalendarControlShowHideSegmentIndex = 1;
@@ -45,6 +46,7 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
 @implementation SMTerm
 @synthesize calendarControl;
 @synthesize rootTermObject;
+@synthesize sourceListSortDescriptors;
 
 - (id)init
 {
@@ -61,6 +63,10 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     //temporary placeholders until new term sheet is implemented
     [rootTermObject setValue:[NSDate date] forKey:SMTermStartDateKey];
     [rootTermObject setValue:[NSDate date] forKey:SMTermEndDateKey];
+    
+    //creating sort descriptors
+    NSSortDescriptor *sort = [[[NSSortDescriptor alloc] initWithKey:SMGroupNameKey ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+    sourceListSortDescriptors = [[NSArray alloc] initWithObjects:sort, nil];
     
     NSManagedObject *newGroup = [NSEntityDescription insertNewObjectForEntityForName:SMGroupEntity inManagedObjectContext:[self managedObjectContext]];
     [newGroup setValue:@"Students" forKey:SMGroupNameKey];
@@ -80,6 +86,8 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
     [sidebarSegmentedControl setMenu:addButtonMenu forSegment:SMCalendarControlAddSegmentIndex];
+    sourceListController.managedObjectContext = [self managedObjectContext];
+    sourceListController.termManagedObject = self.rootTermObject;
 }
 
 - (void)awakeFromNib
@@ -95,15 +103,7 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     
     switch (clickedSegment) {
         case 0:
-            [sourceListTreeController addChild:sidebarControl];
-            //NSLog(@"%@",[rootTermObject valueForKey:@"groups"]);
-            
-            id selectedObject = [[sourceListTreeController selectedObjects] objectAtIndex:0];
-            if ([selectedObject isKindOfClass:[SMGroupMO class]]) {
-                [sourceListTreeController addChild:sidebarControl];
-            } else if([selectedObject isKindOfClass:[SMPersonMO class]]) {
-                [sourceListTreeController insert:sidebarControl];
-            } else {}
+            [self addPerson:sidebarControl];
             
             break;
         case SMCalendarControlShowHideSegmentIndex:
@@ -126,6 +126,34 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
             break;
     }
     
+}
+
+- (IBAction)addPerson:(id)sender
+{
+    [sourceListTreeController addChild:sender];
+    
+    id selectedObject = [[sourceListTreeController selectedObjects] objectAtIndex:0];
+    if ([selectedObject isKindOfClass:[SMGroupMO class]]) {
+        [sourceListTreeController addChild:sender];
+    } else if([selectedObject isKindOfClass:[SMPersonMO class]]) {
+        [sourceListTreeController insert:sender];
+    } else {}
+}
+
+- (IBAction)searchForPerson:(id)sender
+{
+    if(![[sender stringValue] isEmpty]) {
+        NSString *searchString = [sender stringValue];
+        NSPredicate *personPredicate = [NSPredicate predicateWithFormat:@"(firstName CONTAINS[cd] %@) OR (lastName CONTAINS[cd] %@)",searchString, searchString];
+
+        [sourceListTreeController setFetchPredicate:personPredicate];
+    } else {
+        [sourceListTreeController setFetchPredicate:nil];
+    }
+    NSLog(@"term: %@",[(NSSearchField *)sender stringValue]);
+
+    [sourceListTreeController fetch:sender];
+    [sourceList reloadData];
 }
 
 - (void)animationDidEnd {
@@ -188,27 +216,8 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
 }
 
 # pragma mark -
-# pragma mark NSOutlineViewDelegate methods
-
-- (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item
-{
-    if([self itemIsGroup:item]) {
-        return YES;
-    } else {
-        return NO;
-    }
-}
-
-- (void)outlineView:(NSOutlineView *)sender willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item {
-    if([self itemIsGroup:item]) {
-        NSMutableAttributedString *newTitle = [[cell attributedStringValue] mutableCopy];
-        [newTitle replaceCharactersInRange:NSMakeRange(0,[newTitle length]) withString:[[newTitle string] uppercaseString]];
-        [cell setAttributedStringValue:newTitle];
-        [newTitle release];
-    }
-}
-# pragma mark -
 # pragma mark NSToolbarDelegate methods
+
 
 
 @end

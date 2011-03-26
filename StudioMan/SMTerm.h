@@ -34,10 +34,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NSSplitView+Additions.h"
-#import "AmberKit/AFCalendarControl.h"
 #import "SMConstants.h"
 
-@class SMTermMO, SMPersonMO;
+@class SMTermMO, SMSourceListController, AFCalendarControl;
 
 @interface SMTerm : NSPersistentDocument <NSSplitViewDelegate,NSSplitViewDelegateAdditions,
 NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
@@ -53,6 +52,7 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     IBOutlet NSView *helperView;
     IBOutlet NSView *mainView;
     
+    IBOutlet NSSearchField *personSearchField;
     IBOutlet NSSegmentedControl *sidebarSegmentedControl;
     IBOutlet NSMenu *addButtonMenu;
     
@@ -62,18 +62,24 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     BOOL isAnimating; // HACK... need to bring this into the view by
                       // proper use of Core Animation
     
+    IBOutlet SMSourceListController *sourceListController;
     IBOutlet NSTreeController *sourceListTreeController;
     IBOutlet NSOutlineView *sourceList;
     
     NSMutableDictionary *collapsedViewRects;
     IBOutlet NSObjectController *termController;
+    
+    NSArray *sourceListSortDescriptors;
 
 }
 
 @property (retain) AFCalendarControl *calendarControl;
 @property (nonatomic, retain) SMTermMO *rootTermObject;
+@property (nonatomic, retain) NSArray *sourceListSortDescriptors;
 
 - (IBAction)clickSideBarControl:(id)sender;
+- (IBAction)addPerson:(id)sender;
+- (IBAction)searchForPerson:(id)sender;
 - (void)animationDidEnd;
 - (BOOL)itemIsGroup:(id)item;
 
