@@ -39,3 +39,7 @@ NSString * const SMTermStartDateKey = @"startDate";
 NSString * const SMTermEndDateKey = @"endDate";
 
 NSString * const SMGroupNameKey = @"groupName";
+
+NSString * const SMFirstNameKey = @"firstName";
+NSString * const SMLastNameKey = @"lastName";
+NSString * const SMNoteKey = @"note";

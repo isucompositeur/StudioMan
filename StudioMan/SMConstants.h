@@ -63,3 +63,7 @@ extern NSString * const SMTermStartDateKey;
 extern NSString * const SMTermEndDateKey;
 
 extern NSString * const SMGroupNameKey;
+
+extern NSString * const SMFirstNameKey;
+extern NSString * const SMLastNameKey;
+extern NSString * const SMNoteKey;

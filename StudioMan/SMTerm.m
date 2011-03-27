@@ -103,7 +103,7 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     
     switch (clickedSegment) {
         case 0:
-            [self addPerson:sidebarControl];
+            [sourceListController addPerson:sidebarControl];
             
             break;
         case SMCalendarControlShowHideSegmentIndex:
