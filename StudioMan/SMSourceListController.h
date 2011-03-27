@@ -36,7 +36,7 @@
 
 extern NSString * const SMFilterValueKey;
 
-@class SMTermMO, SMSourceListNode;
+@class SMTermMO, SMGroupMO, SMSourceListNode;
 
 @interface SMSourceListController : NSController <NSOutlineViewDelegate, NSOutlineViewDataSource> {
 @private
@@ -45,19 +45,30 @@ extern NSString * const SMFilterValueKey;
     NSManagedObjectContext *managedObjectContext;
     
     NSString *filterValue;
+    NSPredicate *filterPredicate;
     
     SMSourceListNode *rootTreeNode;
+    SMSourceListNode *_filteredRootTreeNode;
+    BOOL filterIsDirty;
     
     IBOutlet NSOutlineView *sourceListView;
+    NSMutableArray *expandedItems;
     
+    id selectedObject;
+    id selection;
 }
 
 @property (retain, nonatomic) SMTermMO *termManagedObject;
 @property (retain, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (retain, nonatomic) NSString *filterValue;
+@property (readonly, nonatomic) SMSourceListNode *filteredRootTreeNode;
+@property (readonly, nonatomic) id selectedObject;
+@property (readonly, nonatomic) id selection;
 
 - (IBAction)addPerson:(id)sender;
-- (IBAction)addGroup:(id)sender;
+- (void)insertGroup:(SMGroupMO *)newGroup;
+
+- (void)expandItems:(id)sender;
 
 @end
 

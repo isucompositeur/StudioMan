@@ -62,4 +62,14 @@
     [super dealloc];
 }
 
+- (BOOL)isExpanded
+{
+    return [(NSNumber *)[[self representedObject] valueForKey:@"isExpanded"] boolValue];
+}
+
+- (void)setIsExpanded:(BOOL)expanded
+{
+    [[self representedObject] setValue:[NSNumber numberWithBool:expanded] forKey:@"isExpanded"];
+}
+
 @end

@@ -7,25 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
-@class SMTerm;
+@class SMTerm, SMSourceListController;
 
 @interface SMAddGroupSheetController : NSObject {
 @private
     
     IBOutlet NSWindow *termWindow;
-    IBOutlet NSTreeController *sourceListTreeController;
     IBOutlet NSObjectController *newGroupController;
     IBOutlet NSPanel *newGroupSheet;
-    
     IBOutlet NSManagedObjectContext *managedObjectContext;
     IBOutlet SMTerm *term;
+    IBOutlet SMSourceListController *sourceListController;
     
 }
 
 @property (nonatomic, retain) NSWindow *termWindow;
-@property (nonatomic, retain) NSTreeController *sourceListTreeController;
 @property (nonatomic, retain) NSObjectController *newGroupController;
 @property (nonatomic, retain) NSPanel *newGroupSheet;
+@property (nonatomic, retain) SMSourceListController *sourceListController;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *documentManagedObjectContext;
 

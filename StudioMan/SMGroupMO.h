@@ -43,5 +43,6 @@
 @property (nonatomic, retain) NSString * groupName;
 @property (nonatomic, retain) NSManagedObject * term;
 @property (nonatomic, retain) NSSet* people;
+@property (nonatomic, assign) BOOL isExpanded;
 
 @end

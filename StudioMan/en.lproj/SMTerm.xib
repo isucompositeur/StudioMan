@@ -657,6 +657,7 @@
 																				<string key="NSFrameSize">{180, 180}</string>
 																				<reference key="NSSuperview" ref="396215917"/>
 																				<reference key="NSWindow"/>
+																				<reference key="NSNextKeyView" ref="635134640"/>
 																				<int key="NSViewLayerContentsRedrawPolicy">2</int>
 																				<string key="NSClassName">AFCalendarControl</string>
 																			</object>
@@ -739,7 +740,7 @@
 														<string key="NSFrameSize">{540, 480}</string>
 														<reference key="NSSuperview" ref="1039600158"/>
 														<reference key="NSWindow"/>
-														<reference key="NSNextKeyView" ref="1039600158"/>
+														<reference key="NSNextKeyView" ref="118095720"/>
 													</object>
 													<string key="NSLabel">Tab</string>
 													<reference key="NSColor" ref="125112798"/>
@@ -788,6 +789,7 @@
 							<string key="NSFrame">{{20, 3}, {104, 25}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSegmentedCell" key="NSCell" id="937707957">
 								<int key="NSCellFlags">67239424</int>
@@ -1216,11 +1218,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">addGroup:</string>
-						<reference key="source" ref="408546666"/>
+						<string key="label">add:</string>
+						<reference key="source" ref="426914968"/>
 						<reference key="destination" ref="201719933"/>
 					</object>
-					<int key="connectionID">100286</int>
+					<int key="connectionID">100292</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">sourceListController</string>
+						<reference key="source" ref="426914968"/>
+						<reference key="destination" ref="408546666"/>
+					</object>
+					<int key="connectionID">100293</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1779,7 +1789,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100286</int>
+			<int key="maxID">100293</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1922,7 +1932,7 @@
 							<string>managedObjectContext</string>
 							<string>newGroupController</string>
 							<string>newGroupSheet</string>
-							<string>sourceListTreeController</string>
+							<string>sourceListController</string>
 							<string>term</string>
 							<string>termWindow</string>
 						</object>
@@ -1931,7 +1941,7 @@
 							<string>NSManagedObjectContext</string>
 							<string>NSObjectController</string>
 							<string>NSPanel</string>
-							<string>NSTreeController</string>
+							<string>SMSourceListController</string>
 							<string>SMTerm</string>
 							<string>NSWindow</string>
 						</object>
@@ -1943,7 +1953,7 @@
 							<string>managedObjectContext</string>
 							<string>newGroupController</string>
 							<string>newGroupSheet</string>
-							<string>sourceListTreeController</string>
+							<string>sourceListController</string>
 							<string>term</string>
 							<string>termWindow</string>
 						</object>
@@ -1962,8 +1972,8 @@
 								<string key="candidateClassName">NSPanel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">sourceListTreeController</string>
-								<string key="candidateClassName">NSTreeController</string>
+								<string key="name">sourceListController</string>
+								<string key="candidateClassName">SMSourceListController</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">term</string>
@@ -1984,35 +1994,14 @@
 					<string key="className">SMSourceListController</string>
 					<string key="superclassName">NSController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>addGroup:</string>
-							<string>addPerson:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-						</object>
+						<string key="NS.key.0">addPerson:</string>
+						<string key="NS.object.0">id</string>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>addGroup:</string>
-							<string>addPerson:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBActionInfo">
-								<string key="name">addGroup:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">addPerson:</string>
-								<string key="candidateClassName">id</string>
-							</object>
+						<string key="NS.key.0">addPerson:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">addPerson:</string>
+							<string key="candidateClassName">id</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">

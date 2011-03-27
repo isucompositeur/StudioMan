@@ -42,22 +42,48 @@
 static int SMGroupChangeContext = 520932930;
 static int SMPersonChangeContext = 28925691;
 
-
 static NSString *termManagedObjectKey = @"termManagedObject";
+static NSString *SMSelectionKey = @"selection";
+static NSString *SMSelectedObjectKey = @"selectedObject";
 
 NSString * const SMFilterValueKey = @"filterValue";
+
+@interface SMSourceListController (Private)
+
+- (void)_setSelectedObject:(id)selectedObject;
+
+@end
+
+@implementation SMSourceListController (Private)
+
+- (void)_setSelectedObject:(id)newSelectedObject
+{
+    [self willChangeValueForKey:SMSelectedObjectKey];
+    selectedObject = newSelectedObject;
+    [self didChangeValueForKey:SMSelectedObjectKey];
+}
+
+- (void)_setSelection:(id)newSelection
+{
+    [self willChangeValueForKey:SMSelectionKey];
+    selection = newSelection;
+    [self didChangeValueForKey:SMSelectionKey];
+}
+
+@end
 
 @implementation SMSourceListController
 
 @synthesize managedObjectContext;
 @synthesize filterValue;
 @synthesize termManagedObject;
+@synthesize selectedObject, selection;
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        // Initialization code here.
+        expandedItems = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -97,7 +123,7 @@ NSString * const SMFilterValueKey = @"filterValue";
 - (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item
 {
     if (item == nil) {
-        return [[rootTreeNode childNodes] objectAtIndex:index];
+        return [[self.filteredRootTreeNode childNodes] objectAtIndex:index];
     } else {
         return [[item childNodes] objectAtIndex:index];
     }
@@ -105,7 +131,7 @@ NSString * const SMFilterValueKey = @"filterValue";
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item
 {
-    if([item parentNode] == rootTreeNode && [[item childNodes] count] > 0) {
+    if([item parentNode] == self.filteredRootTreeNode && [[item childNodes] count] > 0) {
         return YES;
     } else {
         return NO;
@@ -115,7 +141,7 @@ NSString * const SMFilterValueKey = @"filterValue";
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item
 {
     if (item == nil) {
-        return [[rootTreeNode childNodes] count];
+        return [[self.filteredRootTreeNode childNodes] count];
     } else {
         return [[item childNodes] count];
     }
@@ -123,6 +149,7 @@ NSString * const SMFilterValueKey = @"filterValue";
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
+    /* #TODO: make this key flexible. */
     return [[item representedObject] displayText];
 }
 
@@ -131,7 +158,7 @@ NSString * const SMFilterValueKey = @"filterValue";
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item
 {
-    if([item parentNode] == rootTreeNode) {
+    if([item parentNode] == self.filteredRootTreeNode) {
         return YES;
     } else {
         return NO;
@@ -140,12 +167,33 @@ NSString * const SMFilterValueKey = @"filterValue";
 
 - (void)outlineView:(NSOutlineView *)sender willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item 
 {
-    if([item parentNode] == rootTreeNode) {
+    if([item parentNode] == self.filteredRootTreeNode) {
         NSMutableAttributedString *newTitle = [[cell attributedStringValue] mutableCopy];
         [newTitle replaceCharactersInRange:NSMakeRange(0,[newTitle length]) withString:[[newTitle string] uppercaseString]];
         [cell setAttributedStringValue:newTitle];
         [newTitle release];
     }
+}
+
+- (void)outlineViewSelectionDidChange:(NSNotification *)notification
+{
+    [self _setSelection:[sourceListView itemAtRow:[sourceListView selectedRow]]];
+    [self _setSelectedObject:[selection representedObject]];
+}
+
+- (void)outlineViewItemDidExpand:(NSNotification *)notification
+{
+    SMSourceListNode *item = [[notification userInfo] objectForKey:@"NSObject"];
+    item.isExpanded = YES;
+    [expandedItems addObject:item];
+}
+
+- (void)outlineViewItemDidCollapse:(NSNotification *)notification
+{
+    NSLog(@"collapsing!");
+    SMSourceListNode *item = [[notification userInfo] objectForKey:@"NSObject"];
+    item.isExpanded = NO;
+    [expandedItems removeObject:item];
 }
 
 # pragma mark -
@@ -206,22 +254,75 @@ NSString * const SMFilterValueKey = @"filterValue";
 {
     [self willChangeValueForKey:SMFilterValueKey];
     filterValue = value;
+    if (value != nil) {
+        filterPredicate = [[NSPredicate predicateWithFormat:@"%K CONTAINS[cd] %@",SMDisplayTextKey,filterValue] retain];
+    }
+    filterIsDirty = YES;
     [self didChangeValueForKey:SMFilterValueKey];
+    
+    [sourceListView reloadData];    
 }
 
-- (IBAction)addGroup:(id)sender
-{
-    SMGroupMO *newGroup = [NSEntityDescription insertNewObjectForEntityForName:SMGroupEntity inManagedObjectContext:self.managedObjectContext];
-    [newGroup setValue:@"New group" forKey:SMGroupNameKey];
-    [newGroup setValue:termManagedObject forKey:SMGroupToTermRelationshipKey];
+- (SMSourceListNode *)filteredRootTreeNode {
     
+    if(self.filterValue == nil) {
+        
+        _filteredRootTreeNode = rootTreeNode;
+    }
+    
+    if(filterIsDirty) {
+        
+        _filteredRootTreeNode = [[SMSourceListNode alloc] initWithRepresentedObject:[rootTreeNode representedObject]];
+        [[_filteredRootTreeNode mutableChildNodes] removeAllObjects];
+        
+        for (SMSourceListNode *groupNode in [rootTreeNode childNodes]) {
+            
+            SMSourceListNode *filteredGroupNode = [SMSourceListNode treeNodeWithRepresentedObject:[groupNode representedObject]];
+            [[_filteredRootTreeNode mutableChildNodes] addObject:filteredGroupNode];
+            if(groupNode.isExpanded) {
+                [expandedItems addObject:filteredGroupNode];
+            }
+                        
+            NSLog(@"predicate: %@",filterPredicate);
+            for (SMSourceListNode *personNode in [[groupNode childNodes] filteredArrayUsingPredicate:filterPredicate]) {
+                
+                [[filteredGroupNode mutableChildNodes] addObject:[SMSourceListNode treeNodeWithRepresentedObject:[personNode representedObject]]];
+            }
+            
+            if ([[filteredGroupNode childNodes] count] == 0) {
+                [[_filteredRootTreeNode mutableChildNodes] removeObject:filteredGroupNode];
+            }
+        }
+        
+        filterIsDirty = NO;
+    }
+    [self performSelector:@selector(expandItems:) withObject:self afterDelay:0.0];
+    
+    return _filteredRootTreeNode;    
+}
+
+- (void)expandItems:(id)sender
+{
+    for (id item in expandedItems) {
+        if([sourceListView rowForItem:item] > -1)
+            [sourceListView expandItem:item];
+    }
+}
+
+# pragma mark -
+# pragma mark Bindable properties
+
+# pragma mark -
+# pragma mark Actions
+
+- (void)insertGroup:(SMGroupMO *)newGroup 
+{
     SMSourceListNode *newGroupNode = [SMSourceListNode treeNodeWithRepresentedObject:newGroup];
     [[rootTreeNode mutableChildNodes] addObject:newGroupNode];
     
     [sourceListView reloadData];
     NSIndexSet *newSelectionIndex = [NSIndexSet indexSetWithIndex:[sourceListView rowForItem:newGroupNode]];
     [sourceListView selectRowIndexes:newSelectionIndex byExtendingSelection:NO];
-    
 }
 
 - (IBAction)addPerson:(id)sender

@@ -38,6 +38,7 @@
 @dynamic groupName;
 @dynamic term;
 @dynamic people;
+@dynamic isExpanded;
 
 - (void)awakeFromInsert {
     mirrorRecord = [[ABGroup alloc] initWithAddressBook:[ABAddressBook sharedAddressBook]];

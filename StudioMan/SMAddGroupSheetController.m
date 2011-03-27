@@ -10,11 +10,12 @@
 #import "SMTerm.h"
 #import "SMGroupMO.h"
 #import "SMConstants.h"
+#import "SMSourceListController.h"
 
 
 @implementation SMAddGroupSheetController
 
-@synthesize termWindow, sourceListTreeController, newGroupSheet, newGroupController;
+@synthesize termWindow, newGroupSheet, sourceListController, newGroupController;
 
 - (id)init
 {
@@ -42,7 +43,7 @@
 
 - (NSManagedObjectContext *)documentManagedObjectContext
 {
-    return [sourceListTreeController managedObjectContext];
+    return [term managedObjectContext];
 }
 
 - (NSManagedObjectContext *)managedObjectContext {
@@ -107,6 +108,7 @@
         NSDictionary *values = [sheetObject dictionaryWithValuesForKeys:keys];
         [newGroup setValuesForKeysWithDictionary:values];
         [newGroup setValue:term.rootTermObject forKey:SMGroupToTermRelationshipKey];
+        [sourceListController insertGroup:newGroup];
     }
     
     [newGroupController setContent:nil];

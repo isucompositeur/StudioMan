@@ -88,6 +88,8 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     [sidebarSegmentedControl setMenu:addButtonMenu forSegment:SMCalendarControlAddSegmentIndex];
     sourceListController.managedObjectContext = [self managedObjectContext];
     sourceListController.termManagedObject = self.rootTermObject;
+    
+    NSLog(@"%@",[sourceList exposedBindings]);
 }
 
 - (void)awakeFromNib
