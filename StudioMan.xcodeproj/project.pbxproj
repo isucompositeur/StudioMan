@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0130B934133FDC1500000DB9 /* SMImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0130B933133FDC1500000DB9 /* SMImageToDataTransformer.m */; };
 		016C5E4D12EEF41900C1740C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016C5E4C12EEF41900C1740C /* Cocoa.framework */; };
 		016C5E5712EEF41900C1740C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E5512EEF41900C1740C /* InfoPlist.strings */; };
 		016C5E5A12EEF41900C1740C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C5E5912EEF41900C1740C /* main.m */; };
@@ -36,6 +37,8 @@
 		01CE6F1D132DCAF1000878F5 /* SMAddressMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F1C132DCAF1000878F5 /* SMAddressMO.m */; };
 		01CE6F20132DCB05000878F5 /* SMPhoneMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F1F132DCB05000878F5 /* SMPhoneMO.m */; };
 		01CE6F23132DCB16000878F5 /* SMPersonMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F22132DCB16000878F5 /* SMPersonMO.m */; };
+		01D5A125133F6D4D00F9190F /* SMPersonCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D5A124133F6D4D00F9190F /* SMPersonCardView.m */; };
+		01D5A128133F6E1C00F9190F /* SMComboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D5A127133F6E1B00F9190F /* SMComboView.m */; };
 		01DA380913335318009054EB /* SMAddGroupSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DA380813335317009054EB /* SMAddGroupSheet.xib */; };
 		01DA380C1333542F009054EB /* SMAddGroupSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DA380B1333542E009054EB /* SMAddGroupSheetController.m */; };
 		F30AE5C6133E4BB500563101 /* SMSourceListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F30AE5C5133E4BB500563101 /* SMSourceListNode.m */; };
@@ -100,6 +103,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0130B932133FDC1500000DB9 /* SMImageToDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMImageToDataTransformer.h; sourceTree = "<group>"; };
+		0130B933133FDC1500000DB9 /* SMImageToDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMImageToDataTransformer.m; sourceTree = "<group>"; };
 		016C5E4812EEF41900C1740C /* StudioMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudioMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		016C5E4C12EEF41900C1740C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		016C5E4F12EEF41900C1740C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -250,6 +255,10 @@
 		01CE6F1F132DCB05000878F5 /* SMPhoneMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPhoneMO.m; sourceTree = "<group>"; };
 		01CE6F21132DCB16000878F5 /* SMPersonMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPersonMO.h; sourceTree = "<group>"; };
 		01CE6F22132DCB16000878F5 /* SMPersonMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPersonMO.m; sourceTree = "<group>"; };
+		01D5A123133F6D4C00F9190F /* SMPersonCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPersonCardView.h; sourceTree = "<group>"; };
+		01D5A124133F6D4D00F9190F /* SMPersonCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPersonCardView.m; sourceTree = "<group>"; };
+		01D5A126133F6E1B00F9190F /* SMComboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMComboView.h; sourceTree = "<group>"; };
+		01D5A127133F6E1B00F9190F /* SMComboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMComboView.m; sourceTree = "<group>"; };
 		01DA380813335317009054EB /* SMAddGroupSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMAddGroupSheet.xib; sourceTree = "<group>"; };
 		01DA380A1333542E009054EB /* SMAddGroupSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAddGroupSheetController.h; sourceTree = "<group>"; };
 		01DA380B1333542E009054EB /* SMAddGroupSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAddGroupSheetController.m; sourceTree = "<group>"; };
@@ -336,6 +345,8 @@
 		016C5E5212EEF41900C1740C /* StudioMan */ = {
 			isa = PBXGroup;
 			children = (
+				0130B932133FDC1500000DB9 /* SMImageToDataTransformer.h */,
+				0130B933133FDC1500000DB9 /* SMImageToDataTransformer.m */,
 				01813E7F132DB54800A4B975 /* SMRecordMO.h */,
 				01813E80132DB54800A4B975 /* SMRecordMO.m */,
 				01813E7A132DB0D200A4B975 /* SMTermMO.h */,
@@ -362,6 +373,10 @@
 				01DA380B1333542E009054EB /* SMAddGroupSheetController.m */,
 				01A43B3713248CC9005EEA4B /* SMConstants.h */,
 				01A43B3813248CCA005EEA4B /* SMConstants.m */,
+				01D5A123133F6D4C00F9190F /* SMPersonCardView.h */,
+				01D5A124133F6D4D00F9190F /* SMPersonCardView.m */,
+				01D5A126133F6E1B00F9190F /* SMComboView.h */,
+				01D5A127133F6E1B00F9190F /* SMComboView.m */,
 				F37EB13A1308825900BBEEDA /* SMCalendarView.h */,
 				F37EB13B1308825900BBEEDA /* SMCalendarView.m */,
 				F388BBED13084C6700DF97BE /* NSSplitView+Additions.h */,
@@ -763,6 +778,9 @@
 				01DA380C1333542F009054EB /* SMAddGroupSheetController.m in Sources */,
 				F3D7600B133CE25D0030F503 /* SMSourceListController.m in Sources */,
 				F30AE5C6133E4BB500563101 /* SMSourceListNode.m in Sources */,
+				01D5A125133F6D4D00F9190F /* SMPersonCardView.m in Sources */,
+				01D5A128133F6E1C00F9190F /* SMComboView.m in Sources */,
+				0130B934133FDC1500000DB9 /* SMImageToDataTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

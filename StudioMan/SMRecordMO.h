@@ -50,5 +50,6 @@
 @property (nonatomic, retain) NSDate * modificationDate;
 @property (nonatomic, retain) NSString * uniqueId;
 @property (nonatomic, retain) NSString * displayText;
+@property (nonatomic, retain) id image;
 
 @end

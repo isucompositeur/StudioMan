@@ -43,6 +43,7 @@
 @dynamic uniqueId;
 @dynamic displayText;
 @dynamic leaf;
+@dynamic image;
 
 - (void)awakeFromInsert
 {
