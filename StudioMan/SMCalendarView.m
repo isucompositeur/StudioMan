@@ -51,11 +51,31 @@
     [super dealloc];
 }
 
+- (BOOL)isFlipped
+{
+    return YES;
+}
+
 - (void)drawRect:(NSRect)dirtyRect
 {
     [[NSColor whiteColor] set];
     NSBezierPath *framePath = [NSBezierPath bezierPathWithRect:[self bounds]];
     [framePath fill];
+    
+    [[NSGraphicsContext currentContext] saveGraphicsState];
+    [[NSGraphicsContext currentContext] setShouldAntialias:NO];
+    
+    NSBezierPath *gridPath = [[NSBezierPath alloc] init];
+    
+    [gridPath moveToPoint:NSMakePoint(0, 0)];
+    
+    [gridPath lineToPoint:NSMakePoint([self bounds].size.width, 0)];
+    
+    [[NSColor blackColor] set];
+    
+    [gridPath stroke];
+    
+    [[NSGraphicsContext currentContext] restoreGraphicsState];
     // Drawing code here.
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012FA21413454FB0002985F0 /* SMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012FA21213454FB0002985F0 /* SMDetailViewController.m */; };
+		012FA21513454FB0002985F0 /* SMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012FA21313454FB0002985F0 /* SMDetailViewController.xib */; };
+		012FA221134560E0002985F0 /* SMStudioDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012FA220134560DF002985F0 /* SMStudioDetailView.m */; };
+		012FA224134560EB002985F0 /* SMPersonDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012FA223134560EB002985F0 /* SMPersonDetailView.m */; };
 		0130B934133FDC1500000DB9 /* SMImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0130B933133FDC1500000DB9 /* SMImageToDataTransformer.m */; };
 		016C5E4D12EEF41900C1740C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016C5E4C12EEF41900C1740C /* Cocoa.framework */; };
 		016C5E5712EEF41900C1740C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E5512EEF41900C1740C /* InfoPlist.strings */; };
@@ -38,7 +42,6 @@
 		01CE6F20132DCB05000878F5 /* SMPhoneMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F1F132DCB05000878F5 /* SMPhoneMO.m */; };
 		01CE6F23132DCB16000878F5 /* SMPersonMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE6F22132DCB16000878F5 /* SMPersonMO.m */; };
 		01D5A125133F6D4D00F9190F /* SMPersonCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D5A124133F6D4D00F9190F /* SMPersonCardView.m */; };
-		01D5A128133F6E1C00F9190F /* SMComboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D5A127133F6E1B00F9190F /* SMComboView.m */; };
 		01DA380913335318009054EB /* SMAddGroupSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DA380813335317009054EB /* SMAddGroupSheet.xib */; };
 		01DA380C1333542F009054EB /* SMAddGroupSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DA380B1333542E009054EB /* SMAddGroupSheetController.m */; };
 		F30AE5C6133E4BB500563101 /* SMSourceListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F30AE5C5133E4BB500563101 /* SMSourceListNode.m */; };
@@ -103,6 +106,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012FA21113454FAF002985F0 /* SMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDetailViewController.h; sourceTree = "<group>"; };
+		012FA21213454FB0002985F0 /* SMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMDetailViewController.m; sourceTree = "<group>"; };
+		012FA21313454FB0002985F0 /* SMDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMDetailViewController.xib; sourceTree = "<group>"; };
+		012FA21F134560DF002985F0 /* SMStudioDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStudioDetailView.h; sourceTree = "<group>"; };
+		012FA220134560DF002985F0 /* SMStudioDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStudioDetailView.m; sourceTree = "<group>"; };
+		012FA222134560EB002985F0 /* SMPersonDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMPersonDetailView.h; path = ../SMPersonDetailView.h; sourceTree = "<group>"; };
+		012FA223134560EB002985F0 /* SMPersonDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMPersonDetailView.m; path = ../SMPersonDetailView.m; sourceTree = "<group>"; };
 		0130B932133FDC1500000DB9 /* SMImageToDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMImageToDataTransformer.h; sourceTree = "<group>"; };
 		0130B933133FDC1500000DB9 /* SMImageToDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMImageToDataTransformer.m; sourceTree = "<group>"; };
 		016C5E4812EEF41900C1740C /* StudioMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudioMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,8 +267,6 @@
 		01CE6F22132DCB16000878F5 /* SMPersonMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPersonMO.m; sourceTree = "<group>"; };
 		01D5A123133F6D4C00F9190F /* SMPersonCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPersonCardView.h; sourceTree = "<group>"; };
 		01D5A124133F6D4D00F9190F /* SMPersonCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPersonCardView.m; sourceTree = "<group>"; };
-		01D5A126133F6E1B00F9190F /* SMComboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMComboView.h; sourceTree = "<group>"; };
-		01D5A127133F6E1B00F9190F /* SMComboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMComboView.m; sourceTree = "<group>"; };
 		01DA380813335317009054EB /* SMAddGroupSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMAddGroupSheet.xib; sourceTree = "<group>"; };
 		01DA380A1333542E009054EB /* SMAddGroupSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAddGroupSheetController.h; sourceTree = "<group>"; };
 		01DA380B1333542E009054EB /* SMAddGroupSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAddGroupSheetController.m; sourceTree = "<group>"; };
@@ -371,16 +379,21 @@
 				F30AE5C5133E4BB500563101 /* SMSourceListNode.m */,
 				01DA380A1333542E009054EB /* SMAddGroupSheetController.h */,
 				01DA380B1333542E009054EB /* SMAddGroupSheetController.m */,
+				012FA21113454FAF002985F0 /* SMDetailViewController.h */,
+				012FA21213454FB0002985F0 /* SMDetailViewController.m */,
+				012FA21F134560DF002985F0 /* SMStudioDetailView.h */,
+				012FA220134560DF002985F0 /* SMStudioDetailView.m */,
+				012FA222134560EB002985F0 /* SMPersonDetailView.h */,
+				012FA223134560EB002985F0 /* SMPersonDetailView.m */,
 				01A43B3713248CC9005EEA4B /* SMConstants.h */,
 				01A43B3813248CCA005EEA4B /* SMConstants.m */,
 				01D5A123133F6D4C00F9190F /* SMPersonCardView.h */,
 				01D5A124133F6D4D00F9190F /* SMPersonCardView.m */,
-				01D5A126133F6E1B00F9190F /* SMComboView.h */,
-				01D5A127133F6E1B00F9190F /* SMComboView.m */,
 				F37EB13A1308825900BBEEDA /* SMCalendarView.h */,
 				F37EB13B1308825900BBEEDA /* SMCalendarView.m */,
 				F388BBED13084C6700DF97BE /* NSSplitView+Additions.h */,
 				F388BBEE13084C6700DF97BE /* NSSplitView+Additions.m */,
+				012FA21313454FB0002985F0 /* SMDetailViewController.xib */,
 				016C5E6112EEF41900C1740C /* SMTerm.xib */,
 				01DA380813335317009054EB /* SMAddGroupSheet.xib */,
 				016C5E6412EEF41A00C1740C /* MainMenu.xib */,
@@ -726,6 +739,7 @@
 				01CC747B1316484B000A681E /* AmberKit-Info.plist in Resources */,
 				01CC747C1316484B000A681E /* amberkit.doxyconf in Resources */,
 				01DA380913335318009054EB /* SMAddGroupSheet.xib in Resources */,
+				012FA21513454FB0002985F0 /* SMDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,8 +793,10 @@
 				F3D7600B133CE25D0030F503 /* SMSourceListController.m in Sources */,
 				F30AE5C6133E4BB500563101 /* SMSourceListNode.m in Sources */,
 				01D5A125133F6D4D00F9190F /* SMPersonCardView.m in Sources */,
-				01D5A128133F6E1C00F9190F /* SMComboView.m in Sources */,
 				0130B934133FDC1500000DB9 /* SMImageToDataTransformer.m in Sources */,
+				012FA21413454FB0002985F0 /* SMDetailViewController.m in Sources */,
+				012FA221134560E0002985F0 /* SMStudioDetailView.m in Sources */,
+				012FA224134560EB002985F0 /* SMPersonDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

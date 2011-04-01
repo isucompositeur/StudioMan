@@ -67,3 +67,6 @@ extern NSString * const SMGroupNameKey;
 extern NSString * const SMFirstNameKey;
 extern NSString * const SMLastNameKey;
 extern NSString * const SMNoteKey;
+
+extern NSString * const kSMStudioDetailView;
+extern NSString * const kSMPersonDetailView;

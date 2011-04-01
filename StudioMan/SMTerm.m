@@ -38,6 +38,7 @@
 #import "SMGroupMO.h"
 #import "SMPersonMO.h"
 #import "SMSourceListController.h"
+#import "SMDetailViewController.h"
 
 static const NSUInteger SMCalendarControlAddSegmentIndex = 0;
 static const NSUInteger SMCalendarControlShowHideSegmentIndex = 1;
@@ -88,6 +89,8 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     [sidebarSegmentedControl setMenu:addButtonMenu forSegment:SMCalendarControlAddSegmentIndex];
     sourceListController.managedObjectContext = [self managedObjectContext];
     sourceListController.termManagedObject = self.rootTermObject;
+    
+    [mainSplitView replaceSubview:mainView with:[detailViewController view]];
     
     NSLog(@"%@",[sourceList exposedBindings]);
 }

@@ -43,3 +43,6 @@ NSString * const SMGroupNameKey = @"groupName";
 NSString * const SMFirstNameKey = @"firstName";
 NSString * const SMLastNameKey = @"lastName";
 NSString * const SMNoteKey = @"note";
+
+NSString * const kSMStudioDetailView = @"studioDetailView";
+NSString * const kSMPersonDetailView = @"personDetailView";

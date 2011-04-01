@@ -36,7 +36,7 @@
 #import "NSSplitView+Additions.h"
 #import "SMConstants.h"
 
-@class SMTermMO, SMSourceListController, AFCalendarControl;
+@class SMTermMO, SMSourceListController, AFCalendarControl, SMDetailViewController;
 
 @interface SMTerm : NSPersistentDocument <NSSplitViewDelegate,NSSplitViewDelegateAdditions,
 NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
@@ -51,6 +51,8 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     IBOutlet NSView *sourceView;
     IBOutlet NSView *helperView;
     IBOutlet NSView *mainView;
+
+    IBOutlet SMDetailViewController *detailViewController;
     
     IBOutlet NSSearchField *personSearchField;
     IBOutlet NSSegmentedControl *sidebarSegmentedControl;
