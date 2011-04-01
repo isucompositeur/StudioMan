@@ -108,7 +108,6 @@
 									<int key="NSvFlags">268</int>
 									<string key="NSFrame">{{0, 14}, {96, 22}}</string>
 									<reference key="NSSuperview"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSSearchFieldCell" key="NSCell" id="957717190">
@@ -722,10 +721,24 @@
 								<object class="NSCustomView" id="635134640">
 									<reference key="NSNextResponder" ref="657551834"/>
 									<int key="NSvFlags">256</int>
+									<object class="NSMutableArray" key="NSSubviews">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSCustomView" id="210481764">
+											<reference key="NSNextResponder" ref="635134640"/>
+											<int key="NSvFlags">274</int>
+											<string key="NSFrameSize">{540, 480}</string>
+											<reference key="NSSuperview" ref="635134640"/>
+											<reference key="NSWindow"/>
+											<int key="NSViewLayerContentsRedrawPolicy">2</int>
+											<string key="NSClassName">NSView</string>
+										</object>
+									</object>
 									<string key="NSFrame">{{181, 0}, {540, 480}}</string>
 									<reference key="NSSuperview" ref="657551834"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="118095720"/>
+									<bool key="NSViewIsLayerTreeHost">YES</bool>
+									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 									<string key="NSClassName">NSView</string>
 								</object>
 							</object>
@@ -1205,6 +1218,30 @@
 					</object>
 					<int key="connectionID">100338</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">mainSplitView</string>
+						<reference key="source" ref="183378030"/>
+						<reference key="destination" ref="620409687"/>
+					</object>
+					<int key="connectionID">100339</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">superview</string>
+						<reference key="source" ref="183378030"/>
+						<reference key="destination" ref="635134640"/>
+					</object>
+					<int key="connectionID">100342</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">detailView</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="210481764"/>
+					</object>
+					<int key="connectionID">100343</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -1280,6 +1317,7 @@
 						<reference key="object" ref="635134640"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="210481764"/>
 						</object>
 						<reference key="parent" ref="657551834"/>
 					</object>
@@ -1567,6 +1605,11 @@
 						<reference key="object" ref="183378030"/>
 						<reference key="parent" ref="0"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100340</int>
+						<reference key="object" ref="210481764"/>
+						<reference key="parent" ref="635134640"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1617,6 +1660,7 @@
 					<string>100256.IBPluginDependency</string>
 					<string>100334.CustomClassName</string>
 					<string>100334.IBPluginDependency</string>
+					<string>100340.IBPluginDependency</string>
 					<string>5.IBEditorWindowLastContentRect</string>
 					<string>5.IBPluginDependency</string>
 					<string>5.IBWindowTemplateEditedContentRect</string>
@@ -1678,6 +1722,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>SMDetailViewController</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{133, 170}, {507, 413}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{133, 170}, {507, 413}}</string>
@@ -1699,7 +1744,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100338</int>
+			<int key="maxID">100343</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1941,11 +1986,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>personDetailView</string>
 							<string>studioDetailView</string>
+							<string>superview</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>SMPersonDetailView</string>
 							<string>SMStudioDetailView</string>
+							<string>NSView</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -1954,6 +2001,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>personDetailView</string>
 							<string>studioDetailView</string>
+							<string>superview</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1964,6 +2012,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">studioDetailView</string>
 								<string key="candidateClassName">SMStudioDetailView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">superview</string>
+								<string key="candidateClassName">NSView</string>
 							</object>
 						</object>
 					</object>
@@ -2066,6 +2118,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addButtonMenu</string>
 							<string>calendarControl</string>
+							<string>detailView</string>
 							<string>detailViewController</string>
 							<string>helperView</string>
 							<string>mainSplitView</string>
@@ -2086,6 +2139,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSMenu</string>
 							<string>AFCalendarControl</string>
+							<string>NSView</string>
 							<string>SMDetailViewController</string>
 							<string>NSView</string>
 							<string>NSSplitView</string>
@@ -2109,6 +2163,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addButtonMenu</string>
 							<string>calendarControl</string>
+							<string>detailView</string>
 							<string>detailViewController</string>
 							<string>helperView</string>
 							<string>mainSplitView</string>
@@ -2134,6 +2189,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">calendarControl</string>
 								<string key="candidateClassName">AFCalendarControl</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">detailView</string>
+								<string key="candidateClassName">NSView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">detailViewController</string>

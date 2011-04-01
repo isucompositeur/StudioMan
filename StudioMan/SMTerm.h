@@ -52,6 +52,7 @@ NSOutlineViewDelegate,NSToolbarDelegate,NSOutlineViewDelegate> {
     IBOutlet NSView *helperView;
     IBOutlet NSView *mainView;
 
+    IBOutlet NSView *detailView;
     IBOutlet SMDetailViewController *detailViewController;
     
     IBOutlet NSSearchField *personSearchField;

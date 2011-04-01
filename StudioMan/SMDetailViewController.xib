@@ -30,20 +30,18 @@
 			</object>
 			<object class="NSCustomView" id="1005">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">268</int>
+				<int key="NSvFlags">274</int>
 				<string key="NSFrameSize">{480, 480}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<string key="NSClassName">SMPersonDetailView</string>
 			</object>
 			<object class="NSCustomView" id="973372171">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">268</int>
+				<int key="NSvFlags">274</int>
 				<string key="NSFrameSize">{480, 480}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<string key="NSClassName">SMStudioDetailView</string>
 			</object>
 		</array>
@@ -134,9 +132,24 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">SMDetailViewController</string>
 					<string key="superclassName">NSViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="selectPersonDetailView:">id</string>
+						<string key="selectStudioDetailView:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="selectPersonDetailView:">
+							<string key="name">selectPersonDetailView:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="selectStudioDetailView:">
+							<string key="name">selectStudioDetailView:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="personDetailView">SMPersonDetailView</string>
 						<string key="studioDetailView">SMStudioDetailView</string>
+						<string key="superview">NSView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="personDetailView">
@@ -146,6 +159,10 @@
 						<object class="IBToOneOutletInfo" key="studioDetailView">
 							<string key="name">studioDetailView</string>
 							<string key="candidateClassName">SMStudioDetailView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="superview">
+							<string key="name">superview</string>
+							<string key="candidateClassName">NSView</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -159,6 +176,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/SMPersonDetailView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">SMStudioDetailView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/SMStudioDetailView.h</string>
 					</object>
 				</object>
 			</array>

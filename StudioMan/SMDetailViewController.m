@@ -7,7 +7,7 @@
 //
 
 #import "SMDetailViewController.h"
-
+#import <QuartzCore/QuartzCore.h>
 
 @implementation SMDetailViewController
 
@@ -21,6 +21,19 @@
     return self;
 }
 
+- (void)awakeFromNib
+{
+    displayedView = [self view];
+    [studioDetailView setFrame:[superview bounds]];
+    [personDetailView setFrame:[superview bounds]];
+    
+    transition = [CATransition animation];
+    [transition setType:kCATransitionFade];
+    
+    [superview setAnimations:[NSDictionary dictionaryWithObjectsAndKeys:transition, @"subviews", nil]];
+    
+}
+
 - (void)dealloc
 {
     [super dealloc];
@@ -28,18 +41,17 @@
 
 - (IBAction)selectPersonDetailView:(id)sender
 {
-    NSToolbarItem *personDetailItem = (NSToolbarItem *)sender;
-    if([[[personDetailItem toolbar] selectedItemIdentifier] isEqualToString:[personDetailItem itemIdentifier]]) {
-        NSLog(@"person already selected");
+    if(displayedView != personDetailView) {
+        [[superview animator] replaceSubview:displayedView with:personDetailView];
+        displayedView = personDetailView;
     }
-    NSLog(@"person OOOH");
 }
 
 - (IBAction)selectStudioDetailView:(id)sender
 {
-    NSToolbarItem *studioDetailItem = (NSToolbarItem *)sender;
-    if([[[studioDetailItem toolbar] selectedItemIdentifier] isEqualToString:[studioDetailItem itemIdentifier]]) {
-        NSLog(@"studio already selected");
+    if(displayedView != studioDetailView) {
+        [[superview animator] replaceSubview:displayedView with:studioDetailView];
+        displayedView = studioDetailView;
     }
     NSLog(@"studio AHHHH");
 }

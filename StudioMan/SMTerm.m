@@ -90,7 +90,7 @@ static const NSTimeInterval SMCalendarControlAnimationDuration = 0.2;
     sourceListController.managedObjectContext = [self managedObjectContext];
     sourceListController.termManagedObject = self.rootTermObject;
     
-    [mainSplitView replaceSubview:mainView with:[detailViewController view]];
+    [mainView replaceSubview:detailView with:[detailViewController view]];
     
     NSLog(@"%@",[sourceList exposedBindings]);
 }

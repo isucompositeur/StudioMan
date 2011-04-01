@@ -7,14 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <QuartzCore/QuartzCore.h>
 #import "SMStudioDetailView.h"
 #import "SMPersonDetailView.h"
 
 @interface SMDetailViewController : NSViewController {
 @private
     
+    IBOutlet NSView *superview;
+    IBOutlet NSView *displayedView;
     IBOutlet SMStudioDetailView *studioDetailView;
     IBOutlet SMPersonDetailView *personDetailView;
+    
+    CATransition *transition;
     
 }
 
