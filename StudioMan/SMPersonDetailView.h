@@ -8,11 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "SMPersonCardView.h"
+#import "SMCalendarView.h"
 
 @interface SMPersonDetailView : NSView {
 @private
-    
-    
+    SMPersonCardView *cardView;
+    SMCalendarView *calendarView;
 }
 
 @end
