@@ -10,8 +10,8 @@
 		012FA21413454FB0002985F0 /* SMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012FA21213454FB0002985F0 /* SMDetailViewController.m */; };
 		012FA21513454FB0002985F0 /* SMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012FA21313454FB0002985F0 /* SMDetailViewController.xib */; };
 		012FA221134560E0002985F0 /* SMStudioDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012FA220134560DF002985F0 /* SMStudioDetailView.m */; };
-		012FA224134560EB002985F0 /* SMPersonDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012FA223134560EB002985F0 /* SMPersonDetailView.m */; };
 		0130B934133FDC1500000DB9 /* SMImageToDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0130B933133FDC1500000DB9 /* SMImageToDataTransformer.m */; };
+		0130D4001345741A00033C7E /* SMPersonDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0130D3FF1345741A00033C7E /* SMPersonDetailView.m */; };
 		016C5E4D12EEF41900C1740C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016C5E4C12EEF41900C1740C /* Cocoa.framework */; };
 		016C5E5712EEF41900C1740C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 016C5E5512EEF41900C1740C /* InfoPlist.strings */; };
 		016C5E5A12EEF41900C1740C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C5E5912EEF41900C1740C /* main.m */; };
@@ -111,10 +111,10 @@
 		012FA21313454FB0002985F0 /* SMDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMDetailViewController.xib; sourceTree = "<group>"; };
 		012FA21F134560DF002985F0 /* SMStudioDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStudioDetailView.h; sourceTree = "<group>"; };
 		012FA220134560DF002985F0 /* SMStudioDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStudioDetailView.m; sourceTree = "<group>"; };
-		012FA222134560EB002985F0 /* SMPersonDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMPersonDetailView.h; path = ../SMPersonDetailView.h; sourceTree = "<group>"; };
-		012FA223134560EB002985F0 /* SMPersonDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMPersonDetailView.m; path = ../SMPersonDetailView.m; sourceTree = "<group>"; };
 		0130B932133FDC1500000DB9 /* SMImageToDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMImageToDataTransformer.h; sourceTree = "<group>"; };
 		0130B933133FDC1500000DB9 /* SMImageToDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMImageToDataTransformer.m; sourceTree = "<group>"; };
+		0130D3FE1345741A00033C7E /* SMPersonDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPersonDetailView.h; sourceTree = "<group>"; };
+		0130D3FF1345741A00033C7E /* SMPersonDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPersonDetailView.m; sourceTree = "<group>"; };
 		016C5E4812EEF41900C1740C /* StudioMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudioMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		016C5E4C12EEF41900C1740C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		016C5E4F12EEF41900C1740C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -381,10 +381,10 @@
 				01DA380B1333542E009054EB /* SMAddGroupSheetController.m */,
 				012FA21113454FAF002985F0 /* SMDetailViewController.h */,
 				012FA21213454FB0002985F0 /* SMDetailViewController.m */,
+				0130D3FE1345741A00033C7E /* SMPersonDetailView.h */,
+				0130D3FF1345741A00033C7E /* SMPersonDetailView.m */,
 				012FA21F134560DF002985F0 /* SMStudioDetailView.h */,
 				012FA220134560DF002985F0 /* SMStudioDetailView.m */,
-				012FA222134560EB002985F0 /* SMPersonDetailView.h */,
-				012FA223134560EB002985F0 /* SMPersonDetailView.m */,
 				01A43B3713248CC9005EEA4B /* SMConstants.h */,
 				01A43B3813248CCA005EEA4B /* SMConstants.m */,
 				01D5A123133F6D4C00F9190F /* SMPersonCardView.h */,
@@ -796,7 +796,7 @@
 				0130B934133FDC1500000DB9 /* SMImageToDataTransformer.m in Sources */,
 				012FA21413454FB0002985F0 /* SMDetailViewController.m in Sources */,
 				012FA221134560E0002985F0 /* SMStudioDetailView.m in Sources */,
-				012FA224134560EB002985F0 /* SMPersonDetailView.m in Sources */,
+				0130D4001345741A00033C7E /* SMPersonDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

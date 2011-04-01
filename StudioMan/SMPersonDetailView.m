@@ -26,6 +26,7 @@
     [super dealloc];
 }
 
+
 - (void)drawRect:(NSRect)dirtyRect
 {
     [[NSColor blueColor] set];

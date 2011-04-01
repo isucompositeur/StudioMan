@@ -12,6 +12,7 @@
 @interface SMPersonDetailView : NSView {
 @private
     
+    
 }
 
 @end
